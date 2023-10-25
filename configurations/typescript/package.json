@@ -1,0 +1,8 @@
+{
+  "name": "@linkmaster/tsconfig",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": ["typescript", "tsconfig"],
+  "author": "Daniil Shilo [tokiory] <tokiory.work@gmail.com>",
+  "license": "MIT"
+}

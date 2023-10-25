@@ -1,0 +1,6 @@
+{
+  "extends": "@linkmaster/tsconfig/tsconfig.json",
+    "include": [
+      "src"
+    ],
+}

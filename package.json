@@ -1,0 +1,19 @@
+{
+  "name": "linkmaster",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "build:web": "turbo --filter=uikit --filter=web build",
+    "deploy:web:dev": "vercel",
+    "deploy:web:prod": "vercel --prod"
+  },
+  "keywords": [],
+  "author": "Daniil Shilo [tokiory] <tokiory.work@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "turbo": "^1.10.16",
+    "vercel": "^32.5.0"
+  }
+}

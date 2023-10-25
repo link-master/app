@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@": ["src/*"]
+    }
+  },
+  "extends": "@linkmaster/tsconfig/tsconfig.json",
+  "include": [
+    "lib/components",
+    "lib/types"
+  ],
+  "exclude": ["node_modules", "dist", "rollup.config.ts"]
+}

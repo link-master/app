@@ -1,0 +1,4 @@
+.turbo
+dist
+.vercel
+node_modules
