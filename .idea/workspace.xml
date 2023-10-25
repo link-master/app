@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09f6e1da-80c2-4212-8c5c-63ad3fde2165" name="Changes" comment="feat(ui): add a few ui componentsff">
-      <change afterPath="$PROJECT_DIR$/packages/uikit/README.md" afterDir="false" />
+    <list default="true" id="09f6e1da-80c2-4212-8c5c-63ad3fde2165" name="Changes" comment="feat(ui): add a few ui components">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/Button/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/Button/Button.tsx" afterDir="false" />
     </list>
@@ -40,6 +39,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.CodyProjectSettingsMigration": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
@@ -86,6 +86,7 @@
       <updated>1694351472739</updated>
       <workItem from="1694351473826" duration="1191000" />
       <workItem from="1698231734823" duration="16785000" />
+      <workItem from="1698254871641" duration="217000" />
     </task>
     <task id="LOCAL-00001" summary="feat(init): initialize new project">
       <option name="closed" value="true" />
@@ -103,7 +104,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698248091149</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat(ui): add a few ui components">
+      <option name="closed" value="true" />
+      <created>1698254979285</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1698254979286</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,6 +131,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat(init): initialize new project" />
+    <MESSAGE value="feat(ui): add a few ui componentsff" />
     <MESSAGE value="feat(ui): add a few ui components" />
     <option name="LAST_COMMIT_MESSAGE" value="feat(ui): add a few ui components" />
   </component>

@@ -1,4 +1,4 @@
-import {Size} from "@/types/theme.types.ts";
+import {Size, Theme} from "@/types/theme.types.ts";
 import clsx from "clsx";
 import {PropsWithChildren} from "react";
 import {ButtonProps} from './Button.types.ts';
@@ -14,34 +14,32 @@ const getButtonSize = (size: Size): string[] => {
   }
 };
 
-export const Button = ({theme = 'primary', size = 'medium', children, className, onClick}: PropsWithChildren<ButtonProps>) => {
-
-  const classes = [
-    'rounded-md', 'border', 'text-slate-800', 'text-base', 'select-none',
-    getButtonSize(size),
-  ];
-
-  let colors: string[];
-
+const getButtonTheme = (theme: Theme): string[] => {
   // We can't set color and then push colors into color variable (via string interpolation), 'cause Tailwind won't include our classes
   // @see: https://tailwindcss.ru/docs/content-configuration/#imena-dinamicheskih-klassov
   switch(theme) {
     case "secondary":
-      colors = [
+      return [
         'bg-slate-200',
         'hover:bg-slate-300',
         'border-slate-400',
       ];
-      break;
     default:
-      colors = [
+      return [
         'bg-emerald-200',
         'hover:bg-emerald-300',
         'border-emerald-400',
       ]
   }
+}
 
-  classes.push(...colors);
+export const Button = ({theme = 'primary', size = 'medium', children, className, onClick}: PropsWithChildren<ButtonProps>) => {
+
+  const classes = [
+    'rounded-md', 'border', 'text-slate-800', 'text-base', 'select-none',
+    getButtonSize(size),
+    getButtonTheme(theme),
+  ];
 
   return (
     <button
