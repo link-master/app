@@ -1,6 +1,6 @@
-import {Theme} from "../../types/theme.types.ts";
+import {BasicThemeProperties} from "@/types/theme.types.ts";
 
-export interface ButtonProps {
-  theme: Theme;
+export interface ButtonProps extends BasicThemeProperties {
+  onClick: () => void;
 }
 
