@@ -1,5 +1,5 @@
 {
-  "name": "@linkmaster/tsconfig",
+  "name": "@linkmaster/ts-config",
   "version": "1.0.0",
   "description": "",
   "keywords": ["typescript", "tsconfig"],

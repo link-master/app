@@ -17,7 +17,7 @@ export const Card = ({padding = 'medium', children, className}: PropsWithChildre
 
   const classes = [
     'bg-slate-100',
-    'border-slate-400',
+    'border-slate-300',
     'border',
     'rounded-md',
     getCardPadding(padding),

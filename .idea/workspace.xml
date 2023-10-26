@@ -4,9 +4,63 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09f6e1da-80c2-4212-8c5c-63ad3fde2165" name="Changes" comment="feat(ui): add a few ui components">
+    <list default="true" id="09f6e1da-80c2-4212-8c5c-63ad3fde2165" name="Changes" comment="refactor(ui/button): move theme logic directly from button component">
+      <change afterPath="$PROJECT_DIR$/apps/web/postcss.config.cjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/components/Navigation/Navigation.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/components/Navigation/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/components/Navigation/navigation.types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/components/Tutorial/Tutorial.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/components/Tutorial/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/layout/DefaultLayout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/layout/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/router.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/routes/HomePage/HomePage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/routes/HomePage/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/styles/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/tailwind.config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configurations/postcss/index.cjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configurations/postcss/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configurations/tailwind/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/uikit/lib/components/Heading/Heading.stories.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/uikit/lib/components/Heading/Heading.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/uikit/lib/components/Heading/heading.types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/uikit/lib/components/Heading/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/uikit/lib/components/Input/Input.stories.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/uikit/lib/components/Input/Input.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/uikit/lib/components/Input/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/uikit/lib/components/Input/input.data.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/uikit/lib/components/Input/input.types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/uikit/lib/components/Link/Link.stories.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/uikit/lib/components/Link/Link.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/uikit/lib/components/Link/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/uikit/lib/components/Link/link.types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/uikit/lib/components/Switch/Switch.stories.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/uikit/lib/components/Switch/Switch.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/uikit/lib/components/Switch/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/uikit/lib/components/Switch/switch.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/UI_Kit__Storybook.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/UI_Kit__Storybook.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/UI_Kit__Watch.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/UI_Kit__Watch.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Web__Run_Development_Server.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Web__Development.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/scopes/UI_Kit.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/public/vite.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/assets/react.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/vite.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configurations/typescript/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/configurations/typescript/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configurations/typescript/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/configurations/typescript/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/uikit/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/Button/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/Button/Button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/Card/Card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/Card/Card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/uikit/node_modules/@linkmaster/tsconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/uikit/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/uikit/postcss.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/postcss.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/uikit/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/tailwind.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/uikit/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +75,8 @@
   </component>
   <component name="NamedScopeManager">
     <order>
-      <scope name="UI Kit" />
+      <scope name=" UI Kit" />
+      <scope name="✨ Webapp" />
     </order>
   </component>
   <component name="ProjectColorInfo">{
@@ -43,7 +98,9 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/tokiory/Software/linkmaster/packages/uikit/lib/components/Card",
+    "javascript.nodejs.core.library.configured.version": "16.17.1",
+    "javascript.nodejs.core.library.typings.version": "16.18.59",
+    "last_opened_file_path": "/Users/tokiory/Software/linkmaster/packages/uikit/lib/components/Link",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -56,24 +113,31 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/packages/uikit/lib/components/Card" />
-      <recent name="$PROJECT_DIR$/packages/uikit/lib/components/Text" />
+      <recent name="$PROJECT_DIR$/packages/uikit/lib/components/Link" />
+      <recent name="$PROJECT_DIR$/packages/uikit/lib/components/Switch" />
+      <recent name="$PROJECT_DIR$/packages/uikit/lib/components/Input" />
+      <recent name="$PROJECT_DIR$/apps/web" />
+      <recent name="$PROJECT_DIR$/configurations/postcss" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/web/src/routes/HomePage" />
+      <recent name="$PROJECT_DIR$/apps/web/src" />
+      <recent name="$PROJECT_DIR$/apps/web" />
       <recent name="$PROJECT_DIR$/packages/uikit/lib" />
       <recent name="$PROJECT_DIR$/configurations/typescript" />
-      <recent name="$PROJECT_DIR$/packages/uikit/components/Button" />
-      <recent name="$PROJECT_DIR$/packages" />
-      <recent name="$PROJECT_DIR$/apps/web" />
     </key>
   </component>
   <component name="RunManager" selected="npm.UI Kit: Storybook">
     <list>
+      <item itemvalue="npm.UI Kit: Storybook" />
+      <item itemvalue="npm.UI Kit: Watch" />
+      <item itemvalue="npm.UI Kit: Build" />
+      <item itemvalue="npm.Web: Development" />
+      <item itemvalue="npm.Web: Build" />
+      <item itemvalue="npm.Web: Preview Production" />
+      <item itemvalue="npm.Web: Lint" />
       <item itemvalue="npm.Global: Build" />
       <item itemvalue="npm.Global: Lint" />
-      <item itemvalue="npm.Web: Run Development Server" />
-      <item itemvalue="npm.UI Kit: Watch" />
-      <item itemvalue="npm.UI Kit: Storybook" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -86,7 +150,9 @@
       <updated>1694351472739</updated>
       <workItem from="1694351473826" duration="1191000" />
       <workItem from="1698231734823" duration="16785000" />
-      <workItem from="1698254871641" duration="217000" />
+      <workItem from="1698254871641" duration="6305000" />
+      <workItem from="1698304886984" duration="7104000" />
+      <workItem from="1698318930484" duration="7584000" />
     </task>
     <task id="LOCAL-00001" summary="feat(init): initialize new project">
       <option name="closed" value="true" />
@@ -112,7 +178,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698254979286</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="refactor(ui/button): move theme logic directly from button component">
+      <option name="closed" value="true" />
+      <created>1698255112656</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1698255112656</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,6 +207,7 @@
     <MESSAGE value="feat(init): initialize new project" />
     <MESSAGE value="feat(ui): add a few ui componentsff" />
     <MESSAGE value="feat(ui): add a few ui components" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(ui): add a few ui components" />
+    <MESSAGE value="refactor(ui/button): move theme logic directly from button component" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor(ui/button): move theme logic directly from button component" />
   </component>
 </project>

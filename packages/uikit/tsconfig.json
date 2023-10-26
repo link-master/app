@@ -5,7 +5,7 @@
       "@/*": ["lib/*"]
     }
   },
-  "extends": "@linkmaster/tsconfig/tsconfig.json",
+  "extends": "@linkmaster/ts-config/tsconfig.json",
   "include": [
     "lib",
     "index.ts",

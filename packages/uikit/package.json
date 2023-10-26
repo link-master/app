@@ -22,7 +22,9 @@
     "react": "^18.2.0"
   },
   "devDependencies": {
-    "@linkmaster/tsconfig": "workspace:^",
+    "@linkmaster/postcss-config": "workspace:^",
+    "@linkmaster/tailwind-config": "workspace:^",
+    "@linkmaster/ts-config": "workspace:^",
     "@rollup/plugin-typescript": "^11.1.5",
     "@storybook/addon-essentials": "^7.5.1",
     "@storybook/addon-interactions": "^7.5.1",
@@ -30,6 +32,7 @@
     "@storybook/addon-onboarding": "^1.0.8",
     "@storybook/blocks": "^7.5.1",
     "@storybook/builder-vite": "^7.5.1",
+    "@storybook/preview-api": "^7.5.1",
     "@storybook/react": "^7.5.1",
     "@storybook/react-vite": "^7.5.1",
     "@storybook/testing-library": "^0.2.2",
