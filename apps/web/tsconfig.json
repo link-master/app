@@ -1,6 +1,12 @@
 {
-  "extends": "@linkmaster/tsconfig/tsconfig.json",
-    "include": [
+  "extends": "@linkmaster/ts-config/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+    }
+  },
+  "include": [
       "src"
-    ],
+    ]
 }

@@ -6,7 +6,7 @@ import {SwitchProps} from './switch.types.ts';
 const getSwitchTheme = (theme: Theme) => {
   switch(theme) {
     case 'secondary':
-      return 'bg-slate-700';
+      return 'bg-zinc-700';
     default:
       return 'bg-amber-500';
   }
@@ -16,7 +16,7 @@ const getSwitchTheme = (theme: Theme) => {
 export const Switch = ({theme = 'primary', value = false, onToggle, disabled}: SwitchProps) => {
   const checkboxRef = useRef<HTMLInputElement>(null);
 
-  const outerClasses = ['relative', 'rounded-2xl', 'w-10', 'bg-slate-100', 'border', 'border-slate-300', 'h-6', 'p-1'];
+  const outerClasses = ['relative', 'rounded-2xl', 'w-10', 'bg-zinc-100', 'border', 'border-zinc-300', 'h-6', 'p-1'];
   const innerClasses = [
     'rounded-full',
     'transition-all',
@@ -25,7 +25,7 @@ export const Switch = ({theme = 'primary', value = false, onToggle, disabled}: S
     'absolute',
     'mx-1',
     'top-1/2',
-    'translate-y-[-50%]',
+    'tranzinc-y-[-50%]',
     getSwitchTheme(theme),
   ];
 
@@ -36,8 +36,8 @@ export const Switch = ({theme = 'primary', value = false, onToggle, disabled}: S
   }
 
   if (disabled) {
-    outerClasses.push('bg-slate-200');
-    innerClasses.push('bg-slate-300');
+    outerClasses.push('bg-zinc-200');
+    innerClasses.push('bg-zinc-300');
   }
 
   const onSwitchToggle  = () => {

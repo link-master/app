@@ -2,9 +2,14 @@
   "name": "@linkmaster/uikit",
   "version": "1.0.0",
   "description": "UI Kit for linkmaster",
-  "main": "dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./styles": "./dist/index.css"
+  },
+  "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "rollup --config rollup.config.ts --configPlugin typescript",
+    "devbuild": "NODE_ENV=development rollup --config rollup.config.ts --configPlugin typescript",
+    "build": "NODE_ENV=production rollup --config rollup.config.ts --configPlugin typescript",
     "watch": "rollup --config rollup.config.ts --configPlugin typescript -w",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
@@ -17,7 +22,7 @@
   "author": "Daniil Shilo [tokiory] <tokiory.work@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@fontsource-variable/inter": "^5.0.15",
+    "@fontsource-variable/rubik": "^5.0.19",
     "clsx": "^2.0.0",
     "react": "^18.2.0"
   },
@@ -25,6 +30,8 @@
     "@linkmaster/postcss-config": "workspace:^",
     "@linkmaster/tailwind-config": "workspace:^",
     "@linkmaster/ts-config": "workspace:^",
+    "@rollup/plugin-alias": "^5.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-typescript": "^11.1.5",
     "@storybook/addon-essentials": "^7.5.1",
     "@storybook/addon-interactions": "^7.5.1",
@@ -36,6 +43,7 @@
     "@storybook/react": "^7.5.1",
     "@storybook/react-vite": "^7.5.1",
     "@storybook/testing-library": "^0.2.2",
+    "@types/node": "^20.8.9",
     "@types/react": "^18.2.15",
     "autoprefixer": "^10.4.16",
     "postcss": "^8.4.31",

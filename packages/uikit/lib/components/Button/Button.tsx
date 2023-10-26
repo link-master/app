@@ -20,17 +20,17 @@ const getButtonTheme = (theme: Theme): string[] => {
   switch(theme) {
     case "secondary":
       return [
-        'bg-slate-100',
-        'hover:bg-slate-200',
-        'border-slate-300',
-        'text-slate-800',
+        'bg-zinc-100',
+        'hover:bg-zinc-200',
+        'border-zinc-300',
+        'text-zinc-800',
       ];
     default:
       return [
-        'bg-slate-700',
-        'hover:bg-slate-600',
-        'border-slate-500',
-        'text-slate-100',
+        'bg-zinc-700',
+        'hover:bg-zinc-600',
+        'border-zinc-500',
+        'text-zinc-100',
       ]
   }
 }
@@ -38,7 +38,7 @@ const getButtonTheme = (theme: Theme): string[] => {
 export const Button = ({theme = 'primary', size = 'medium', children, className, onClick}: PropsWithChildren<ButtonProps>) => {
 
   const classes = [
-    'rounded-md', 'border', 'font-medium', 'text-base', 'select-none',
+    'rounded-md', 'border', 'font-medium', 'text-base', 'select-none', 'block',
     getButtonSize(size),
     getButtonTheme(theme),
   ];

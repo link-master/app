@@ -1,4 +1,4 @@
-import '@fontsource-variable/inter';
+import '@fontsource-variable/rubik';
 import '@/styles/main.css';
 
 // Components

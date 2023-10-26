@@ -6,9 +6,9 @@ import {TextProps} from './Text.types.ts';
 const getTextColor = (theme: Theme) => {
   switch(theme) {
     case "secondary":
-      return 'text-slate-400';
+      return 'text-zinc-400';
     default:
-      return 'text-slate-800';
+      return 'text-zinc-800';
   }
 };
 
@@ -23,16 +23,21 @@ const getTextSize = (size: Size) => {
   }
 };
 
-export const Text = ({theme = 'primary', size = 'medium', children, className}: PropsWithChildren<TextProps>) => {
+export const Text = ({theme = 'primary', size = 'medium', children, bold, italic, className, inline}: PropsWithChildren<TextProps>) => {
 
   const classes = [
     'text-base',
     getTextColor(theme),
     getTextSize(size),
+    {
+      'font-semibold': bold,
+      italic: italic,
+      'inline-block': inline,
+    },
   ];
 
   return (
-    <div className={clsx(classes, className)}>
+    <div className={clsx(classes, className, )}>
       {children}
     </div>
   );

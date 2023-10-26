@@ -1,0 +1,17 @@
+{
+  "name": "@linkmaster/tailwind-config",
+  "version": "1.0.0",
+  "description": "Tailwind config for linkmaster project",
+  "main": "index.ts",
+  "scripts": {},
+  "keywords": [
+    "config",
+    "tailwind"
+  ],
+  "author": "Daniil Shilo [tokiory] <tokiory.work@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.3.4",
+    "typescript": "^5.0.2"
+  }
+}

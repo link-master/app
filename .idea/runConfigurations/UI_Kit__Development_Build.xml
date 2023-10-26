@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="UI Kit: Development Build" type="js.build_tools.npm" folderName="UI Kit">
+    <package-json value="$PROJECT_DIR$/packages/uikit/package.json" />
+    <command value="run" />
+    <scripts>
+      <script value="devbuild" />
+    </scripts>
+    <node-interpreter value="project" />
+    <envs />
+    <method v="2" />
+  </configuration>
+</component>

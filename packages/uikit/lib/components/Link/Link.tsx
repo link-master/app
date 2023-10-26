@@ -7,10 +7,10 @@ const getLinkColor = (theme: Theme) => {
   switch(theme) {
     case "secondary":
       return [
-        'text-slate-400',
-        'border-b-slate-400',
-        'hover:text-slate-500',
-        'hover:border-b-slate-500',
+        'text-zinc-400',
+        'border-b-zinc-400',
+        'hover:text-zinc-500',
+        'hover:border-b-zinc-500',
       ];
     default:
       return [

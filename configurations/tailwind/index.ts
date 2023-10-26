@@ -10,7 +10,8 @@ const baseFontPlugin = createPlugin(({addBase}) => {
 const baseColorPlugin = createPlugin(({addBase}) => {
   addBase({
     'html': {
-      color: 'rgb(30 41 59 / var(--tw-text-opacity));'
+      color: '#27272a',
+      backgroundColor: '#fafafa',
     }
   })
 });
@@ -21,12 +22,12 @@ export default function getTailwindConfig(content: string[]): Config {
     theme: {
       extend: {
         fontFamily: {
-          sans: ['"Inter Variable"', 'sans-serif'],
+          sans: ['"Rubik Variable"', 'sans-serif'],
         },
       },
     },
     plugins: [
-      baseFontPlugin,
+      // baseFontPlugin,
       baseColorPlugin,
     ],
   };

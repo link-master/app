@@ -1,7 +1,7 @@
 import {storybookThemeArgumentTypes} from "@/data/storybook.ts";
 import {useArgs} from "@storybook/preview-api";
 import type { Meta, StoryObj } from '@storybook/react';
-import {ComponentProps, MouseEvent, useRef} from "react";
+import {ComponentProps} from "react";
 import { Switch } from './Switch.tsx';
 
 const render = (args: ComponentProps<typeof Switch>) => {

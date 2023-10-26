@@ -1,5 +1,4 @@
 import {Theme} from "@/types/theme.types.ts";
-import {MouseEventHandler} from "react";
 
 export interface SwitchProps {
   theme?: Theme;
