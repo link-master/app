@@ -9,3 +9,4 @@ export {Input} from './lib/components/Input'
 export {Heading} from './lib/components/Heading'
 export {Switch} from './lib/components/Switch'
 export {Link} from './lib/components/Link'
+export {Popup} from './lib/components/Popup';

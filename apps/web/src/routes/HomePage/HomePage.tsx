@@ -3,7 +3,6 @@ import {clsx} from "clsx";
 
 export const HomePage = () => {
   const links = [];
-
   const classes = [];
 
   if (links.length) {

@@ -14,7 +14,7 @@ export const Navigation = ({className}: NavigationProps) => {
     </NavigationItem>
   ))
   return (
-    <nav className={clsx('h-screen', 'p-4', 'gap-2', 'flex', 'flex-col', 'w-80', 'bg-zinc-100', 'border-r', 'shrink-0', className)}>
+    <nav className={clsx('h-screen', 'p-4', 'gap-2', 'flex', 'flex-col', 'w-80', 'bg-white', 'border-r', 'shrink-0', className)}>
       {navigationLinks}
     </nav>
   );

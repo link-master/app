@@ -1,0 +1,17 @@
+import {PropsWithChildren} from "react";
+import {Card} from "@/components/Card";
+import {PopupProps} from "./popup.types.ts";
+import {PopupWrapper} from "./PopupWrapper.tsx";
+import {createPortal} from 'react-dom';
+import {clsx} from "clsx";
+
+export const Popup = ({children, root, onClose, active, className}: PropsWithChildren<PopupProps>) => {
+  const popup = active && (
+    <PopupWrapper onClose={onClose}>
+      <Card className={clsx('z-20', className)}>
+        {children}
+      </Card>
+    </PopupWrapper>
+  );
+  return createPortal(popup, root ?? document.body);
+};

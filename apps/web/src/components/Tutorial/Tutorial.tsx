@@ -1,9 +1,11 @@
+import {CreateReferencePopup} from "@/components/CreateReferencePopup";
 import {Card, Text, Button, Heading} from "@linkmaster/uikit";
 import {useState} from "react";
 
 export const Tutorial = () => {
 
     const [slideIndex, setSlideIndex] = useState(0);
+    const [isReferencePopupVisible, setIsReferencePopupVisible] = useState(false);
 
     const slides = [
     (
@@ -99,18 +101,22 @@ export const Tutorial = () => {
         </div>
       ) :
       (
-        <div className="flex gap-2 mt-8">
+        <div className="flex gap-4 mt-8">
           <Button theme="secondary" onClick={() => setSlideIndex(slideIndex - 1)}>Назад</Button>
-          <Button className="w-full" onClick={() => setSlideIndex(slideIndex + 1)}>Добавить референс</Button>
+          <Button className="w-full" onClick={() => setIsReferencePopupVisible(true)}>Добавить референс</Button>
         </div>
       );
 
   return (
     <>
-      <Card padding="small" className="flex flex-col justify-between w-[624px] h-[285px]">
+      <Card className="flex flex-col justify-between w-[624px] h-[285px]">
         {slides[slideIndex]}
         {slideButtons}
       </Card>
+      <CreateReferencePopup
+        active={isReferencePopupVisible}
+        onClose={() => setIsReferencePopupVisible(false)}
+      />
     </>
   );
 };
