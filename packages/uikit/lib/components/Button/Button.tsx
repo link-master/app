@@ -20,9 +20,9 @@ const getButtonTheme = (theme: Theme): string[] => {
   switch(theme) {
     case "secondary":
       return [
-        'bg-zinc-200',
-        'hover:bg-zinc-300',
-        'border-zinc-400',
+        'bg-zinc-100',
+        'hover:bg-zinc-200',
+        'border-zinc-300',
         'text-zinc-800',
       ];
     default:

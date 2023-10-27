@@ -2,6 +2,6 @@ import {Size, Theme} from "@/types/theme.types.ts";
 
 export interface CardProps {
   padding?: Size;
-  theme: Theme;
+  theme?: Theme;
   className?: string | string[];
 }
