@@ -1,5 +1,8 @@
 import {CollectionsPage} from "@/routes/CollectionsPage";
 import {HomePage} from "@/routes/HomePage";
+import {ReferencesPage} from "@/routes/ReferencesPage";
+import {SettingsPage} from "@/routes/SettingsPage";
+import {TemplatesPage} from "@/routes/TemplatesPage";
 
 export interface NavigationItem {
   name: string;
@@ -12,6 +15,18 @@ export const routes = {
   home: {
     path: "/",
     element: <HomePage />,
+  },
+  settings: {
+    path: "/settings",
+    element: <SettingsPage />
+  },
+  references: {
+    path: '/references',
+    element: <ReferencesPage />
+  },
+  templates: {
+    path: '/templates',
+    element: <TemplatesPage />
   },
   collections: {
     path: "/collections/",
@@ -27,7 +42,7 @@ export const navigation: NavigationItem[] = [
   },
   {
     name: 'Референсы / Рефы',
-    url: routes.collections.path,
+    url: routes.references.path,
     icon: 'fe:link',
   },
   {
@@ -37,7 +52,7 @@ export const navigation: NavigationItem[] = [
   },
   {
     name: 'Шаблоны',
-    url: routes.collections.path,
+    url: routes.templates.path,
     icon: 'fe:sitemap',
   },
   {

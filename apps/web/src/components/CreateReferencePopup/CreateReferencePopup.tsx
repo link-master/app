@@ -1,12 +1,6 @@
+import {CreateReferencePopupProps} from "./createReferencePopup.types.ts";
 import {Popup, Input, Button, Heading} from "@linkmaster/uikit";
 import {FormEvent, useState} from "react";
-
-interface CreateReferencePopupProps {
-  name?: string;
-  url?: string;
-  active?: boolean;
-  onClose?: () => void;
-}
 
 export const CreateReferencePopup = ({active, onClose, name = '', url = ''}: CreateReferencePopupProps) => {
   const [referenceUrl, setReferenceUrl] = useState(url);

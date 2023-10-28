@@ -25,7 +25,7 @@ export const Switch = ({theme = 'primary', value = false, onToggle, disabled}: S
     'absolute',
     'mx-1',
     'top-1/2',
-    'tranzinc-y-[-50%]',
+    'translate-y-[-50%]',
     getSwitchTheme(theme),
   ];
 

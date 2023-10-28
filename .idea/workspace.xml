@@ -5,23 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09f6e1da-80c2-4212-8c5c-63ad3fde2165" name="Changes" comment="feat(app): tutorial is done">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/public/library.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/public/linkmaster.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/src/components/Navigation/NavigationSynchronization.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/src/components/Tutorial/tutorial.types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/src/routes/CollectionsPage/CollectionsPage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/src/routes/CollectionsPage/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/linkmaster.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/components/CreateRefPopup/CreateRefPopup.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/components/CreateRefPopup/createRefPopup.types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/components/CreateRefPopup/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/components/CreateReferencePopup/createReferencePopup.types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/routes/ReferencesPage/ReferencesPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/routes/ReferencesPage/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/routes/SettingsPage/SettingsPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/routes/SettingsPage/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/routes/TemplatesPage/TemplatesPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/routes/TemplatesPage/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/types/collection.types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/types/reference.types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/public/library.svg" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/assets/library.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/web/src/components/CreateReferencePopup/CreateReferencePopup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/components/CreateReferencePopup/CreateReferencePopup.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/components/Navigation/Navigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/components/Navigation/Navigation.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/web/src/components/Tutorial/Tutorial.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/components/Tutorial/Tutorial.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/data/navigation.data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/data/navigation.data.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/router.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/router.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/Button/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/Button/Button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/Input/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/Input/Input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/Popup/Popup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/Popup/Popup.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/data/navigation.data.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/data/navigation.data.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/routes/CollectionsPage/CollectionsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/routes/CollectionsPage/CollectionsPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/Switch/Switch.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/Switch/Switch.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,42 +55,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.CodyProjectSettingsMigration": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "javascript.nodejs.core.library.configured.version": "16.17.1",
-    "javascript.nodejs.core.library.typings.version": "16.18.59",
-    "last_opened_file_path": "/Users/tokiory/Software/linkmaster/docs",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.scopes",
-    "ts.external.directory.path": "/Users/tokiory/Software/linkmaster/packages/uikit/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.CodyProjectSettingsMigration&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;16.17.1&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;16.18.59&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/tokiory/Software/linkmaster/apps/web/src/routes&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.scopes&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/tokiory/Software/linkmaster/packages/uikit/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/web/src/routes" />
       <recent name="$PROJECT_DIR$/docs" />
       <recent name="$PROJECT_DIR$/apps/web/public" />
       <recent name="$PROJECT_DIR$/packages/uikit/lib/components/Link" />
       <recent name="$PROJECT_DIR$/packages/uikit/lib/components/Switch" />
-      <recent name="$PROJECT_DIR$/packages/uikit/lib/components/Input" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/web/src/assets" />
       <recent name="$PROJECT_DIR$/apps/web/src/routes/CollectionsPage" />
       <recent name="$PROJECT_DIR$/apps/web/src/data" />
       <recent name="$PROJECT_DIR$/apps/web/src/routes/HomePage" />
       <recent name="$PROJECT_DIR$/apps/web/src" />
-      <recent name="$PROJECT_DIR$/apps/web" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.UI Kit: Build">
+  <component name="RunManager" selected="npm.Web: Development">
     <list>
       <item itemvalue="npm.UI Kit: Storybook" />
       <item itemvalue="npm.UI Kit: Watch" />
@@ -119,7 +121,9 @@
       <workItem from="1698341018742" duration="3899000" />
       <workItem from="1698383665898" duration="3073000" />
       <workItem from="1698388371990" duration="6892000" />
-      <workItem from="1698405386298" duration="10923000" />
+      <workItem from="1698405386298" duration="12808000" />
+      <workItem from="1698434648378" duration="1861000" />
+      <workItem from="1698491239382" duration="126000" />
     </task>
     <task id="LOCAL-00001" summary="feat(init): initialize new project">
       <option name="closed" value="true" />
@@ -209,7 +213,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698407572358</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="feat(app): tutorial is done">
+      <option name="closed" value="true" />
+      <created>1698423287935</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1698423287935</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

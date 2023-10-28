@@ -1,6 +1,8 @@
 import {CreateReferencePopup} from "@/components/CreateReferencePopup";
+import {CreateRefPopup} from "@/components/CreateRefPopup";
 import {TutorialUserData} from "@/components/Tutorial/tutorial.types.ts";
 import {Card, Text, Button, Heading, Input} from "@linkmaster/uikit";
+import {Switch} from "@linkmaster/uikit";
 import {useState} from "react";
 
 export const Tutorial = () => {
@@ -10,6 +12,8 @@ export const Tutorial = () => {
   });
   const [slideIndex, setSlideIndex] = useState(0);
   const [isReferencePopupVisible, setIsReferencePopupVisible] = useState(false);
+  const [isRefPopupVisible, setIsRefPopupVisible] = useState(false);
+  const [hasToDeleteTutorialItems, setHasToDeleteTutorialItems] = useState(false);
 
   const closeTutorial = () => {
 
@@ -61,7 +65,7 @@ export const Tutorial = () => {
         <Text className="mt-3">
           Давайте создадим один референс для того познакомиться с интерфейсом. Создать референс достаточно легко - просто нажмите на кнопку.
         </Text>
-        <Button className="w-full mt-3" onClick={() => setIsReferencePopupVisible(true)}>Создать референс</Button>
+        <Button className="w-full mt-3" onClick={() => setIsReferencePopupVisible(true)}>Создать референс 💫</Button>
         <CreateReferencePopup
           name="Linkmaster - Приложение для хранения ссылок"
           url="https://linkmaster.vercel.app"
@@ -89,12 +93,10 @@ export const Tutorial = () => {
         <Text className="mt-3">
           Теперь давайте создадим один реф, просто кликните на кнопку, после нажатия вы увидите окошко для создания рефа, ничего нового😉
         </Text>
-        <Button className="w-full mt-3" onClick={() => setIsReferencePopupVisible(true)}>Создать реф ✨</Button>
-        <CreateReferencePopup
-          name="Linkmaster - Приложение для хранения ссылок"
-          url="https://linkmaster.vercel.app"
-          active={isReferencePopupVisible}
-          onClose={() => setIsReferencePopupVisible(false)}
+        <Button className="w-full mt-3" onClick={() => setIsRefPopupVisible(true)}>Создать реф ✨</Button>
+        <CreateRefPopup
+          active={isRefPopupVisible}
+          onClose={() => setIsRefPopupVisible(false)}
         />
       </>
     ),
@@ -115,12 +117,20 @@ export const Tutorial = () => {
       <>
         <Heading className="text-center font-semibold">Готово!</Heading>
         <Text className="mt-3">
-          Вот и все, вы можете начинать пользоваться Linkmaster! Данный туториал можно вызвать повторно из меню настроек.
+          Вот и все, вы можете начинать пользоваться Linkmaster!
         </Text>
         <Text className="mt-3">
-          Вы можете добавить данное приложение в закладки, чтобы не потерять его или установить его прямо в браузер (в
-          случае если вы пользуетесь Google Chrome).
+          Вы можете добавить данное приложение в закладки, чтобы не потерять его или установить его прямо в браузер.
         </Text>
+        <div className="mt-3 flex gap-2">
+          <Switch
+            value={hasToDeleteTutorialItems}
+            onToggle={() => setHasToDeleteTutorialItems(!hasToDeleteTutorialItems)}
+          />
+          <Text>
+            Удалить записи, которые были созданы во время туториала
+          </Text>
+        </div>
       </>
     ),
   ];
