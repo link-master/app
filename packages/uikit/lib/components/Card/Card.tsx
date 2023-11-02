@@ -19,7 +19,7 @@ const getCardTheme = (theme: Theme) => {
     case "secondary":
       return 'bg-zinc-100 border-zinc-200';
     default:
-      return 'bg-white border-zinc-100';
+      return 'bg-white';
   }
 };
 export const Card = ({padding = 'medium', theme = 'primary', children, className}: PropsWithChildren<CardProps>) => {

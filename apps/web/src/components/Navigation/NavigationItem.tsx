@@ -7,7 +7,7 @@ export const NavigationItem = ({active, children, href}: PropsWithChildren<Navig
   const color = active ? 'bg-zinc-200' : 'hover:bg-zinc-100';
   return (
     <Link
-      className={clsx('flex', 'gap-2', 'items-center', 'rounded-md', 'px-4', 'py-2', color)}
+      className={clsx('flex', 'gap-2', 'items-center', 'transition-colors', 'rounded-md', 'px-4', 'py-2', color)}
       to={href}
     >
       {children}
