@@ -5,11 +5,13 @@ import {useAtom} from "@/hooks/useAtom.ts";
 import collectionStore from "@/stores/collection.store.ts";
 import {Collection} from "@/types/collection.types.ts";
 import {Button} from "@linkmaster/uikit";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 
 export const CollectionsPage = () => {
-  const collections = useAtom(collectionStore.$store, collectionStore.$localStore);
+  const collections = useAtom(collectionStore);
   const [isCreatingCollection, setIsCreatingCollection] = useState(false);
+
+  console.log({collections});
 
   const onCreateCollection = (collection?: Collection) => {
 

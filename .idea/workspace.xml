@@ -4,31 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09f6e1da-80c2-4212-8c5c-63ad3fde2165" name="Changes" comment="feat(tutorial): update tutorial">
-      <change afterPath="$PROJECT_DIR$/apps/web/src/components/CollectionList/CollectionList.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/src/components/CollectionList/CollectionListItem.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/src/components/CollectionList/collectionList.types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/src/components/CollectionList/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/src/components/CollectionsStub/CollectionsStub.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/src/components/CollectionsStub/collectionsStub.types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/src/components/CollectionsStub/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/src/components/PopupCreateCollection/PopupCreateCollection.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/src/components/PopupCreateCollection/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/src/components/PopupCreateCollection/popupCreateCollection.types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/src/hooks/useAtom.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/src/stores/collection.store.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/src/stores/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/src/stores/reference.storage.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/src/types/collection.types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/src/types/reference.types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/src/utils/unstorage.ts" afterDir="false" />
+    <list default="true" id="09f6e1da-80c2-4212-8c5c-63ad3fde2165" name="Changes" comment="feat(collections): add collections">
+      <change afterPath="$PROJECT_DIR$/apps/web/src/stores/reference.store.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/types/store.types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/utils/db.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/components/Navigation/NavigationItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/components/Navigation/NavigationItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/components/CreateReferencePopup/CreateReferencePopup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/components/CreateReferencePopup/CreateReferencePopup.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/components/CreateReferencePopup/createReferencePopup.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/components/CreateReferencePopup/createReferencePopup.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/hooks/useAtom.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/hooks/useAtom.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/web/src/routes/CollectionsPage/CollectionsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/routes/CollectionsPage/CollectionsPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/vite.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/Card/Card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/Card/Card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/routes/ReferencesPage/ReferencesPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/routes/ReferencesPage/ReferencesPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/stores/collection.store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/stores/collection.store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/stores/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/stores/reference.storage.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/types/reference.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/types/reference.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/utils/unstorage.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,7 +88,7 @@
       <recent name="$PROJECT_DIR$/apps/web/src/routes/HomePage" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.UI Kit: Build">
+  <component name="RunManager" selected="npm.Web: Development">
     <list>
       <item itemvalue="npm.UI Kit: Storybook" />
       <item itemvalue="npm.UI Kit: Watch" />
@@ -141,7 +132,9 @@
       <workItem from="1698861444420" duration="41000" />
       <workItem from="1698921136145" duration="988000" />
       <workItem from="1698922686436" duration="290000" />
-      <workItem from="1698933285734" duration="7114000" />
+      <workItem from="1698933285734" duration="8045000" />
+      <workItem from="1699007838056" duration="6107000" />
+      <workItem from="1699124308813" duration="3157000" />
     </task>
     <task id="LOCAL-00001" summary="feat(init): initialize new project">
       <option name="closed" value="true" />
@@ -247,7 +240,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698491516079</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="feat(collections): add collections">
+      <option name="closed" value="true" />
+      <created>1698940503702</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1698940503702</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,6 +274,7 @@
     <MESSAGE value="feat(app): started making an application" />
     <MESSAGE value="feat(app): tutorial is done" />
     <MESSAGE value="feat(tutorial): update tutorial" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(tutorial): update tutorial" />
+    <MESSAGE value="feat(collections): add collections" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(collections): add collections" />
   </component>
 </project>
