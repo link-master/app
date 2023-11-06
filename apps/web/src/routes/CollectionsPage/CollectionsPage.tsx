@@ -1,17 +1,17 @@
 import {CollectionList} from "@/components/CollectionList";
 import {CollectionsStub} from "@/components/CollectionsStub";
 import {PopupCreateCollection} from "@/components/PopupCreateCollection";
-import {useAtom} from "@/hooks/useAtom.ts";
-import collectionStore from "@/stores/collection.store.ts";
+import {useAppDispatch, useAppSelector} from "@/store";
+import {collectionSlice} from "@/store/features/collection/collectionSlice.ts";
 import {Collection} from "@/types/collection.types.ts";
 import {Button} from "@linkmaster/uikit";
 import {useState} from "react";
 
 export const CollectionsPage = () => {
-  const collections = useAtom(collectionStore);
   const [isCreatingCollection, setIsCreatingCollection] = useState(false);
+  const collections = useAppSelector(state => state.collection.value);
+  const dispatch = useAppDispatch();
 
-  console.log({collections});
 
   const onCreateCollection = (collection?: Collection) => {
 
@@ -21,7 +21,7 @@ export const CollectionsPage = () => {
       return;
     }
 
-    collectionStore.add(collection);
+    dispatch(collectionSlice.actions.add(collection))
     setIsCreatingCollection(false);
   }
 
