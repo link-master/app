@@ -1,4 +1,5 @@
 import {CreateReferencePopup} from "@/components/CreateReferencePopup";
+import {ReferenceList} from "@/components/ReferenceList";
 import {useAppDispatch, useAppSelector} from "@/store";
 import {referenceSlice} from "@/store/features/reference/referenceSlice.ts";
 import {Reference} from "@/types/reference.types.ts";
@@ -17,7 +18,7 @@ export const ReferencesPage = () => {
 
   return (
     <div className="h-screen w-screen p-8">
-      {JSON.stringify(references)}
+      <ReferenceList references={references} />
       <Button
         size="small"
         onClick={() => setIsCreatingReference(true)}

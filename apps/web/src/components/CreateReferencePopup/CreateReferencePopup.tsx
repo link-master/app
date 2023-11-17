@@ -4,6 +4,7 @@ import {Popup, Input, Button, Heading} from "@linkmaster/uikit";
 import {FormEvent, useState} from "react";
 
 export const CreateReferencePopup = ({active, onClose, name = '', url = '', onCreated}: CreateReferencePopupProps) => {
+  const root = document.getElementById('popup');
 
   const clearReferenceInfo = () => {
     setReferenceInfo({
@@ -14,9 +15,9 @@ export const CreateReferencePopup = ({active, onClose, name = '', url = '', onCr
   };
 
   const [referenceInfo, setReferenceInfo] = useState<Reference>({
-    name: '',
+    name,
+    url,
     id: crypto.randomUUID(),
-    url: '',
   });
 
   const updateReferenceInfo = (event: FormEvent<HTMLInputElement>, field: keyof Reference) => {

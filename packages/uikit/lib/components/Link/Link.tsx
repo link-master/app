@@ -14,10 +14,10 @@ const getLinkColor = (theme: Theme) => {
       ];
     default:
       return [
-        'text-amber-500',
-        'border-b-amber-500',
-        'hover:text-amber-600',
-        'hover:border-b-amber-600',
+        'text-violet-500',
+        'border-b-violet-500',
+        'hover:text-violet-600',
+        'hover:border-b-violet-600',
       ];
   }
 };
@@ -33,7 +33,7 @@ const getLinkSize = (size: Size) => {
   }
 };
 
-export const Link = ({children, theme = 'primary', size = 'medium', href, target = '_blank'}: PropsWithChildren<LinkProps>) => {
+export const Link = ({children, theme = 'primary', size = 'medium', href, target = '_blank', onClick}: PropsWithChildren<LinkProps>) => {
 
   const classes = [
     'inline-block',
@@ -47,6 +47,7 @@ export const Link = ({children, theme = 'primary', size = 'medium', href, target
       href={href}
       target={target}
       className={clsx(classes)}
+      onClick={onClick}
     >
       {children}
     </a>

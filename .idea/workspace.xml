@@ -4,16 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09f6e1da-80c2-4212-8c5c-63ad3fde2165" name="Changes" comment="feat(atom): remove nanostores">
-      <change afterPath="$PROJECT_DIR$/apps/web/src/store/features/collection/collectionSlice.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/src/store/features/reference/referenceSlice.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/src/store/index.ts" afterDir="false" />
+    <list default="true" id="09f6e1da-80c2-4212-8c5c-63ad3fde2165" name="Changes" comment="feat(redux): add redux store">
+      <change afterPath="$PROJECT_DIR$/apps/web/src/components/ReferenceList/ReferenceList.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/components/ReferenceList/ReferenceListItem.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/components/ReferenceList/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/components/ReferenceList/referenceList.types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/store/middlewares/idb.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/store/types/redux.types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/routes/CollectionsPage/CollectionsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/routes/CollectionsPage/CollectionsPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/components/CreateReferencePopup/CreateReferencePopup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/components/CreateReferencePopup/CreateReferencePopup.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/web/src/routes/ReferencesPage/ReferencesPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/routes/ReferencesPage/ReferencesPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/Link/Link.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/Link/Link.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/Link/link.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/Link/link.types.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,24 +56,26 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;16.17.1&quot;,
     &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;16.18.59&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/tokiory/Software/linkmaster/apps/web/src/storages&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/tokiory/Software/linkmaster/apps/web/src/components/ReferenceList&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/Users/tokiory/Software/linkmaster/packages/uikit/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/web/src/components/ReferenceList" />
       <recent name="$PROJECT_DIR$/apps/web/src/storages" />
       <recent name="$PROJECT_DIR$/apps/web/src/routes" />
       <recent name="$PROJECT_DIR$/docs" />
       <recent name="$PROJECT_DIR$/apps/web/public" />
-      <recent name="$PROJECT_DIR$/packages/uikit/lib/components/Link" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/apps/web/src/components/CollectionList" />
@@ -81,7 +85,7 @@
       <recent name="$PROJECT_DIR$/apps/web/src/routes/HomePage" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.Web: Development">
+  <component name="RunManager" selected="npm.UI Kit: Build">
     <list>
       <item itemvalue="npm.UI Kit: Storybook" />
       <item itemvalue="npm.UI Kit: Watch" />
@@ -128,7 +132,14 @@
       <workItem from="1698933285734" duration="8045000" />
       <workItem from="1699007838056" duration="6107000" />
       <workItem from="1699124308813" duration="3157000" />
-      <workItem from="1699275670923" duration="2110000" />
+      <workItem from="1699275670923" duration="3781000" />
+      <workItem from="1699432222856" duration="1884000" />
+      <workItem from="1699529612875" duration="66000" />
+      <workItem from="1699530046824" duration="1184000" />
+      <workItem from="1699543652419" duration="756000" />
+      <workItem from="1699601148640" duration="663000" />
+      <workItem from="1699602050617" duration="112000" />
+      <workItem from="1699607259827" duration="1577000" />
     </task>
     <task id="LOCAL-00001" summary="feat(init): initialize new project">
       <option name="closed" value="true" />
@@ -266,7 +277,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699275864230</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="feat(redux): add redux store">
+      <option name="closed" value="true" />
+      <created>1699277923996</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1699277923996</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,6 +313,11 @@
     <MESSAGE value="feat(tutorial): update tutorial" />
     <MESSAGE value="feat(collections): add collections" />
     <MESSAGE value="feat(atom): remove nanostores" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(atom): remove nanostores" />
+    <MESSAGE value="feat(redux): add redux store" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(redux): add redux store" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
