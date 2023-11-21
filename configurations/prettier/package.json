@@ -1,0 +1,16 @@
+{
+  "name": "@linkmaster/prettier-config",
+  "version": "1.0.0",
+  "description": "Prettier config for linkmaster project",
+  "main": "index.mjs",
+  "scripts": {},
+  "keywords": [
+    "config",
+    "postcss"
+  ],
+  "author": "Daniil Shilo [tokiory] <tokiory.work@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^3.1.0"
+  }
+}
