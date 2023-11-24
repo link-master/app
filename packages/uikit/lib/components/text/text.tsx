@@ -1,7 +1,7 @@
 import {Size, Theme} from "@/types/theme.types.ts";
 import clsx from "clsx";
 import {PropsWithChildren} from "react";
-import {TextProps} from './Text.types.ts';
+import {TextProps} from './text.types.ts';
 
 const getTextColor = (theme: Theme) => {
   switch(theme) {

@@ -1,7 +1,7 @@
 import {storybookThemeArgumentTypes} from "@/data/storybook.ts";
 import type { Meta, StoryObj } from '@storybook/react';
 import {ComponentProps} from "react";
-import { Text } from './Text';
+import { Text } from './text.tsx';
 
 const render = (args: ComponentProps<typeof Text>) => <Text {...args}>Some text</Text>;
 

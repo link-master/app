@@ -1,26 +1,27 @@
 import {storybookThemeArgumentTypes} from "@/data/storybook.ts";
 import type { Meta, StoryObj } from '@storybook/react';
 import {ComponentProps} from "react";
-import { Button } from './Button';
+import { Link } from './link.tsx';
 
-const render = (args: ComponentProps<typeof Button>) => <Button {...args}>Some text</Button>;
+const render = (args: ComponentProps<typeof Link>) => <Link {...args}>Some text</Link>;
 
 const meta = {
-  title: 'UI/Button',
-  component: Button,
+  title: 'UI/Link',
+  component: Link,
   parameters: {
     layout: 'centered',
   },
   args: {
+    target: '_blank',
     size: 'medium',
-    theme: 'primary',
+    href: 'https://ya.ru',
   },
   argTypes: {
     size: storybookThemeArgumentTypes.size,
     theme: storybookThemeArgumentTypes.theme,
   },
   tags: ['autodocs'],
-} satisfies Meta<typeof Button>;
+} satisfies Meta<typeof Link>;
 
 type Story = StoryObj<typeof meta>;
 

@@ -1,5 +1,5 @@
 import {Size, Theme} from "@/types/theme.types.ts";
-import {FormEventHandler, MouseEvent} from "react";
+import {MouseEvent} from "react";
 
 
 export interface LinkProps {

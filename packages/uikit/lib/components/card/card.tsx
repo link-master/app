@@ -1,4 +1,4 @@
-import {CardProps} from "@/components/Card/Card.types.ts";
+import {CardProps} from "@/components/Card/card.types.ts";
 import {Size, Theme} from "@/types/theme.types.ts";
 import clsx from "clsx";
 import {PropsWithChildren} from "react";

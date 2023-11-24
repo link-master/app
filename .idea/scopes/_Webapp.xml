@@ -1,3 +1,3 @@
 <component name="DependencyValidationManager">
-  <scope name="✨ Webapp" pattern="file[linkmaster]:apps/web-old//*" />
+  <scope name="✨ Webapp" pattern="file[linkmaster]:apps/web-old//*||file[linkmaster]:apps/web//*" />
 </component>

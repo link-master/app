@@ -1,9 +1,17 @@
 import {PropsWithChildren, useEffect} from "react";
 import {Card} from "@/components/Card";
-import {PopupProps} from "./popup.types.ts";
-import {PopupWrapper} from "./PopupWrapper.tsx";
+import {PopupProps, PopupWrapperProps} from "./popup.types.ts";
 import {createPortal} from 'react-dom';
 import {clsx} from "clsx";
+
+const PopupWrapper = ({children, onClose}: PropsWithChildren<PopupWrapperProps>) => {
+  return (
+    <div className="popup absolute inset-0 h-screen w-screen z-10 flex justify-center items-center">
+      <div className="bg-zinc-800 opacity-20 absolute inset-0" onClick={onClose} />
+      {children}
+    </div>
+  );
+};
 
 export const Popup = ({children, root, onClose, active, className}: PropsWithChildren<PopupProps>) => {
   const popup = active && (
@@ -21,13 +29,11 @@ export const Popup = ({children, root, onClose, active, className}: PropsWithChi
       onClose();
 
     if (active) {
-      console.log(1);
-      window.addEventListener('keydown', onEscape);
+      addEventListener('keydown', onEscape);
     } else {
-      console.log(2);
-      window.removeEventListener('keydown', onEscape);
+      removeEventListener('keydown', onEscape);
     }
   }, [active]);
 
-  return createPortal(popup, root ?? document.body);
+  return createPortal(popup, document.querySelector(root ?? 'body')!);
 };

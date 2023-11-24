@@ -9,7 +9,8 @@ export const Input = (
     className,
     placeholder,
     label,
-    type = 'text'
+    type = 'text',
+    innerRef,
   }: InputProps) => {
 
   const classes: string[] = [
@@ -37,6 +38,7 @@ export const Input = (
       {label && <label className={clsx('block text-xs text-zinc-400 mb-[2px] ml-[2px]')}>{label}</label>}
       <input
         className={clsx(classes)}
+        ref={innerRef}
         type={type}
         value={value}
         onInput={onInput}

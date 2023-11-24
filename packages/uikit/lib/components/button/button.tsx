@@ -1,7 +1,7 @@
 import {Size, Theme} from "@/types/theme.types.ts";
 import clsx from "clsx";
 import {PropsWithChildren} from "react";
-import {ButtonProps} from './Button.types.ts';
+import {ButtonProps} from './button.types.ts';
 
 const getButtonSize = (size: Size): string[] => {
   switch (size) {
@@ -45,7 +45,7 @@ export const Button = ({theme = 'primary', size = 'medium', children, className,
 
   return (
     <button
-      onClick={onClick}
+      onClick={event => onClick && onClick(event)}
       className={clsx(classes, className)}
     >
       {children}

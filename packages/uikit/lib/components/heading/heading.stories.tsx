@@ -1,7 +1,7 @@
 import {storybookThemeArgumentTypes} from "@/data/storybook.ts";
 import type { Meta, StoryObj } from '@storybook/react';
 import {ComponentProps} from "react";
-import { Heading } from './Heading.tsx';
+import { Heading } from './heading.tsx';
 
 const render = (args: ComponentProps<typeof Heading>) => <Heading {...args}>Some Heading</Heading>;
 

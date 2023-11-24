@@ -1,5 +1,5 @@
 export interface PopupProps extends PopupWrapperProps {
-  root?: HTMLElement | null;
+  root?: string;
   className?: string | string[];
   active?: boolean;
 }
