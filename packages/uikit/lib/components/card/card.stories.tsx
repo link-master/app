@@ -1,11 +1,11 @@
-import {storybookThemeArgumentTypes} from "@/data/storybook.ts";
+import { storybookThemeArgumentTypes } from '@/data/storybook.ts';
 import type { Meta, StoryObj } from '@storybook/react';
-import {ComponentProps} from "react";
+import { ComponentProps } from 'react';
 import { Card } from './card.tsx';
-import {Text} from "@/components/Text";
+import { Text } from '@/components/text';
 
-const render = (args: ComponentProps<typeof Card>) => (
-  <Card {...args}>
+const render = (arguments_: ComponentProps<typeof Card>) => (
+  <Card {...arguments_}>
     <Text>Some Text!</Text>
   </Card>
 );

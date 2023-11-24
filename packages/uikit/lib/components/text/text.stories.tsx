@@ -1,9 +1,11 @@
-import {storybookThemeArgumentTypes} from "@/data/storybook.ts";
+import { storybookThemeArgumentTypes } from '@/data/storybook.ts';
 import type { Meta, StoryObj } from '@storybook/react';
-import {ComponentProps} from "react";
+import { ComponentProps } from 'react';
 import { Text } from './text.tsx';
 
-const render = (args: ComponentProps<typeof Text>) => <Text {...args}>Some text</Text>;
+const Render = (arguments_: ComponentProps<typeof Text>) => (
+  <Text {...arguments_}>Some text</Text>
+);
 
 const meta = {
   title: 'UI/Text',
@@ -12,8 +14,8 @@ const meta = {
     layout: 'centered',
   },
   args: {
-    theme: "primary",
-    size: "medium",
+    theme: 'primary',
+    size: 'medium',
   },
   argTypes: {
     size: storybookThemeArgumentTypes.size,
@@ -25,14 +27,14 @@ const meta = {
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
-  render,
+  render: Render,
   args: {
     theme: 'primary',
   },
 };
 
 export const Secondary: Story = {
-  render,
+  render: Render,
   args: {
     theme: 'secondary',
   },

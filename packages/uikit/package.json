@@ -9,6 +9,7 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "devbuild": "NODE_ENV=development rollup --config rollup.config.ts --configPlugin typescript",
+    "lint": "eslint --fix .",
     "build": "NODE_ENV=production rollup --config rollup.config.ts --configPlugin typescript",
     "watch": "rollup --config rollup.config.ts --configPlugin typescript -w",
     "storybook": "storybook dev -p 6006",
@@ -27,7 +28,9 @@
     "react": "^18.2.0"
   },
   "devDependencies": {
+    "@linkmaster/eslint-config": "workspace:^",
     "@linkmaster/postcss-config": "workspace:^",
+    "@linkmaster/prettier-config": "workspace:^",
     "@linkmaster/tailwind-config": "workspace:^",
     "@linkmaster/ts-config": "workspace:^",
     "@rollup/plugin-alias": "^5.0.1",
@@ -47,7 +50,9 @@
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "autoprefixer": "^10.4.16",
+    "eslint": "^8.53.0",
     "postcss": "^8.4.31",
+    "prettier": "^3.1.0",
     "react-dom": "^18.2.0",
     "rollup": "^4.1.4",
     "rollup-plugin-postcss": "^4.0.2",

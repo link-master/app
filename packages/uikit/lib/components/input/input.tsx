@@ -1,18 +1,16 @@
-import {clsx} from 'clsx';
-import {InputProps} from './input.types.ts';
+import { clsx } from 'clsx';
+import { InputProperties } from './input.types.ts';
 
-export const Input = (
-  {
-    value,
-    onInput,
-    errors,
-    className,
-    placeholder,
-    label,
-    type = 'text',
-    innerRef,
-  }: InputProps) => {
-
+export const Input = ({
+  value,
+  onInput,
+  errors,
+  className,
+  placeholder,
+  label,
+  type = 'text',
+  innerRef,
+}: InputProperties) => {
   const classes: string[] = [
     'px-2',
     'py-1',
@@ -22,20 +20,28 @@ export const Input = (
     'border-zinc-400',
     'rounded-md',
     'shadow-sm',
-    'w-full'
+    'w-full',
   ];
 
   if (errors?.length) {
     classes.push('border-red-400');
   }
 
-  const errorList = errors?.map(item => (
-    <div key={item} className={clsx('text-red-400', 'text-sm')}>{item}</div>
+  const errorList = errors?.map((item) => (
+    <div key={item} className={clsx('text-red-400', 'text-sm')}>
+      {item}
+    </div>
   ));
 
   return (
     <div className={clsx(className)}>
-      {label && <label className={clsx('block text-xs text-zinc-400 mb-[2px] ml-[2px]')}>{label}</label>}
+      {label && (
+        <label
+          className={clsx('block text-xs text-zinc-400 mb-[2px] ml-[2px]')}
+        >
+          {label}
+        </label>
+      )}
       <input
         className={clsx(classes)}
         ref={innerRef}
@@ -46,5 +52,5 @@ export const Input = (
       />
       {errorList}
     </div>
-  )
+  );
 };

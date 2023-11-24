@@ -1,29 +1,38 @@
-import {CardProps} from "@/components/Card/card.types.ts";
-import {Size, Theme} from "@/types/theme.types.ts";
-import clsx from "clsx";
-import {PropsWithChildren} from "react";
+import { CardProperties } from '@/components/card/card.types.ts';
+import { Size, Theme } from '@/types/theme.types.ts';
+import clsx from 'clsx';
+import { PropsWithChildren } from 'react';
 
 const getCardPadding = (padding: Size) => {
   switch (padding) {
-    case "small":
+    case 'small': {
       return 'py-3 px-4';
-    case "large":
+    }
+    case 'large': {
       return 'py-4 px-5';
-    default:
+    }
+    default: {
       return 'py-5 px-6';
+    }
   }
 };
 
 const getCardTheme = (theme: Theme) => {
   switch (theme) {
-    case "secondary":
+    case 'secondary': {
       return 'bg-zinc-100 border-zinc-200';
-    default:
+    }
+    default: {
       return 'bg-white';
+    }
   }
 };
-export const Card = ({padding = 'medium', theme = 'primary', children, className}: PropsWithChildren<CardProps>) => {
-
+export const Card = ({
+  padding = 'medium',
+  theme = 'primary',
+  children,
+  className,
+}: PropsWithChildren<CardProperties>) => {
   const classes = [
     'border',
     'rounded-md',
@@ -33,9 +42,5 @@ export const Card = ({padding = 'medium', theme = 'primary', children, className
     getCardTheme(theme),
   ];
 
-  return (
-    <div className={clsx(classes, className)}>
-      {children}
-    </div>
-  );
+  return <div className={clsx(classes, className)}>{children}</div>;
 };

@@ -1,22 +1,37 @@
-import {Theme} from "@/types/theme.types.ts";
-import clsx from "clsx";
-import {useRef} from "react";
-import {SwitchProps} from './switch.types.ts';
+import { Theme } from '@/types/theme.types.ts';
+import clsx from 'clsx';
+import { useRef } from 'react';
+import { SwitchProperties } from './switch.types.ts';
 
 const getSwitchTheme = (theme: Theme) => {
-  switch(theme) {
-    case 'secondary':
+  switch (theme) {
+    case 'secondary': {
       return 'bg-zinc-700';
-    default:
+    }
+    default: {
       return 'bg-amber-500';
+    }
   }
-}
+};
 
+export const Switch = ({
+  theme = 'primary',
+  value = false,
+  onToggle,
+  disabled,
+}: SwitchProperties) => {
+  const checkboxReference = useRef<HTMLInputElement>(null);
 
-export const Switch = ({theme = 'primary', value = false, onToggle, disabled}: SwitchProps) => {
-  const checkboxRef = useRef<HTMLInputElement>(null);
-
-  const outerClasses = ['relative', 'rounded-2xl', 'w-10', 'bg-zinc-100', 'border', 'border-zinc-300', 'h-6', 'p-1'];
+  const outerClasses = [
+    'relative',
+    'rounded-2xl',
+    'w-10',
+    'bg-zinc-100',
+    'border',
+    'border-zinc-300',
+    'h-6',
+    'p-1',
+  ];
   const innerClasses = [
     'rounded-full',
     'transition-all',
@@ -40,19 +55,19 @@ export const Switch = ({theme = 'primary', value = false, onToggle, disabled}: S
     innerClasses.push('bg-zinc-300');
   }
 
-  const onSwitchToggle  = () => {
-    if (disabled || !checkboxRef.current) {
+  const onSwitchToggle = () => {
+    if (disabled || !checkboxReference.current) {
       return;
     }
 
-    checkboxRef.current.checked = !value;
+    checkboxReference.current.checked = !value;
     onToggle && onToggle(!value);
-  }
+  };
 
   return (
-    <div className='flex'>
+    <div className="flex">
       <input
-        ref={checkboxRef}
+        ref={checkboxReference}
         className={clsx('sr-only')}
         onChange={onSwitchToggle}
         checked={value}
@@ -63,5 +78,5 @@ export const Switch = ({theme = 'primary', value = false, onToggle, disabled}: S
         <div className={clsx(innerClasses)} />
       </div>
     </div>
-  )
+  );
 };

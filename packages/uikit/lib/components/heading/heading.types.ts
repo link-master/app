@@ -1,8 +1,8 @@
-import {Theme} from "@/types/theme.types.ts";
+import { Theme } from '@/types/theme.types.ts';
 
 export type HeadingLevel = 1 | 2 | 3 | 4;
 
-export interface HeadingProps {
+export interface HeadingProperties {
   level?: HeadingLevel;
   theme?: Theme;
   className?: string | string[];

@@ -1,9 +1,11 @@
-import {storybookThemeArgumentTypes} from "@/data/storybook.ts";
+import { storybookThemeArgumentTypes } from '@/data/storybook.ts';
 import type { Meta, StoryObj } from '@storybook/react';
-import {ComponentProps} from "react";
+import { ComponentProps } from 'react';
 import { Heading } from './heading.tsx';
 
-const render = (args: ComponentProps<typeof Heading>) => <Heading {...args}>Some Heading</Heading>;
+const render = (arguments_: ComponentProps<typeof Heading>) => (
+  <Heading {...arguments_}>Some Heading</Heading>
+);
 
 const meta = {
   title: 'UI/Heading',
@@ -12,13 +14,13 @@ const meta = {
     layout: 'centered',
   },
   args: {
-    theme: "primary",
+    theme: 'primary',
     level: 1,
   },
   argTypes: {
     level: {
       options: [1, 2, 3, 4],
-      control: {type: 'select'},
+      control: { type: 'select' },
     },
     theme: storybookThemeArgumentTypes.theme,
   },

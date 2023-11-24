@@ -1,9 +1,11 @@
-import {storybookThemeArgumentTypes} from "@/data/storybook.ts";
+import { storybookThemeArgumentTypes } from '@/data/storybook.ts';
 import type { Meta, StoryObj } from '@storybook/react';
-import {ComponentProps} from "react";
+import { ComponentProps } from 'react';
 import { Link } from './link.tsx';
 
-const render = (args: ComponentProps<typeof Link>) => <Link {...args}>Some text</Link>;
+const render = (arguments_: ComponentProps<typeof Link>) => (
+  <Link {...arguments_}>Some text</Link>
+);
 
 const meta = {
   title: 'UI/Link',

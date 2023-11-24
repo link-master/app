@@ -1,11 +1,11 @@
-import typescript from "@rollup/plugin-typescript";
-import {fileURLToPath} from "node:url";
-import * as path from "path";
+import typescript from '@rollup/plugin-typescript';
+import { fileURLToPath } from 'node:url';
+import * as path from 'node:path';
 import postcss from 'rollup-plugin-postcss';
-import {defineConfig} from 'rollup';
+import { defineConfig } from 'rollup';
 import alias from '@rollup/plugin-alias';
 
-const isDev = process.env.NODE_ENV === 'development';
+const isDevelopment = process.env.NODE_ENV === 'development';
 
 export default defineConfig({
   input: 'index.ts',
@@ -21,17 +21,20 @@ export default defineConfig({
     }),
     alias({
       entries: [
-        {find: '@', replacement: fileURLToPath(new URL('./lib', import.meta.url))}
-      ]
+        {
+          find: '@',
+          replacement: fileURLToPath(new URL('lib', import.meta.url)),
+        },
+      ],
     }),
     postcss({
       config: {
-        path: "./postcss.config.js",
+        path: './postcss.config.js',
         ctx: {},
       },
-      extensions: [".css"],
-      minimize: !isDev,
-      extract: path.resolve('dist/index.css')
+      extensions: ['.css'],
+      minimize: !isDevelopment,
+      extract: path.resolve('dist/index.css'),
     }),
-  ]
+  ],
 });

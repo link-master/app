@@ -1,30 +1,42 @@
-import {Size, Theme} from "@/types/theme.types.ts";
-import clsx from "clsx";
-import {PropsWithChildren} from "react";
-import {TextProps} from './text.types.ts';
+import { Size, Theme } from '@/types/theme.types.ts';
+import clsx from 'clsx';
+import { PropsWithChildren } from 'react';
+import { TextProperties } from './text.types.ts';
 
 const getTextColor = (theme: Theme) => {
-  switch(theme) {
-    case "secondary":
+  switch (theme) {
+    case 'secondary': {
       return 'text-zinc-400';
-    default:
+    }
+    default: {
       return 'text-zinc-800';
+    }
   }
 };
 
 const getTextSize = (size: Size) => {
-  switch(size) {
-    case "small":
+  switch (size) {
+    case 'small': {
       return 'text-sm';
-    case "large":
+    }
+    case 'large': {
       return 'text-lg';
-    default:
+    }
+    default: {
       return 'text-base';
+    }
   }
 };
 
-export const Text = ({theme = 'primary', size = 'medium', children, bold, italic, className, inline}: PropsWithChildren<TextProps>) => {
-
+export const Text = ({
+  theme = 'primary',
+  size = 'medium',
+  children,
+  bold,
+  italic,
+  className,
+  inline,
+}: PropsWithChildren<TextProperties>) => {
   const classes = [
     'text-base',
     getTextColor(theme),
@@ -36,9 +48,5 @@ export const Text = ({theme = 'primary', size = 'medium', children, bold, italic
     },
   ];
 
-  return (
-    <div className={clsx(classes, className, )}>
-      {children}
-    </div>
-  );
+  return <div className={clsx(classes, className)}>{children}</div>;
 };

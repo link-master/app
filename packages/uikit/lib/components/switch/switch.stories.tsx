@@ -1,20 +1,18 @@
-import {storybookThemeArgumentTypes} from "@/data/storybook.ts";
-import {useArgs} from "@storybook/preview-api";
+import { storybookThemeArgumentTypes } from '@/data/storybook.ts';
+import { useArgs } from '@storybook/preview-api';
 import type { Meta, StoryObj } from '@storybook/react';
-import {ComponentProps} from "react";
+import { ComponentProps } from 'react';
 import { Switch } from './switch.tsx';
 
-const render = (args: ComponentProps<typeof Switch>) => {
-  const [{value}, setArgs] = useArgs();
+const Render = (arguments_: ComponentProps<typeof Switch>) => {
+  const [{ value }, setArguments] = useArgs();
 
   const toggle = (state: boolean) => {
-    setArgs({value: state});
-  }
+    setArguments({ value: state });
+  };
 
-  return (
-    <Switch {...args} value={value} onToggle={toggle} />
-  );
-}
+  return <Switch {...arguments_} value={value} onToggle={toggle} />;
+};
 
 const meta = {
   title: 'UI/Switch',
@@ -23,7 +21,7 @@ const meta = {
     layout: 'centered',
   },
   args: {
-    theme: "primary",
+    theme: 'primary',
   },
   argTypes: {
     theme: storybookThemeArgumentTypes.theme,
@@ -34,14 +32,14 @@ const meta = {
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
-  render,
+  render: Render,
   args: {
     theme: 'primary',
   },
 };
 
 export const Secondary: Story = {
-  render,
+  render: Render,
   args: {
     theme: 'secondary',
   },

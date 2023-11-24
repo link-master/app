@@ -1,40 +1,51 @@
-import {LinkProps} from "@/components/Link/link.types.ts";
-import {Size, Theme} from "@/types/theme.types.ts";
-import {clsx} from "clsx";
-import {PropsWithChildren} from "react";
+import { LinkProperties } from '@/components/link/link.types.ts';
+import { Size, Theme } from '@/types/theme.types.ts';
+import { clsx } from 'clsx';
+import { PropsWithChildren } from 'react';
 
 const getLinkColor = (theme: Theme) => {
-  switch(theme) {
-    case "secondary":
+  switch (theme) {
+    case 'secondary': {
       return [
         'text-zinc-400',
         'border-b-zinc-400',
         'hover:text-zinc-500',
         'hover:border-b-zinc-500',
       ];
-    default:
+    }
+    default: {
       return [
         'text-violet-500',
         'border-b-violet-500',
         'hover:text-violet-600',
         'hover:border-b-violet-600',
       ];
+    }
   }
 };
 
 const getLinkSize = (size: Size) => {
-  switch(size) {
-    case "small":
+  switch (size) {
+    case 'small': {
       return 'text-sm';
-    case "large":
+    }
+    case 'large': {
       return 'text-lg';
-    default:
+    }
+    default: {
       return 'text-base';
+    }
   }
 };
 
-export const Link = ({children, theme = 'primary', size = 'medium', href, target = '_blank', onClick}: PropsWithChildren<LinkProps>) => {
-
+export const Link = ({
+  children,
+  theme = 'primary',
+  size = 'medium',
+  href,
+  target = '_blank',
+  onClick,
+}: PropsWithChildren<LinkProperties>) => {
   const classes = [
     'inline-block',
     'border-b',
@@ -43,12 +54,7 @@ export const Link = ({children, theme = 'primary', size = 'medium', href, target
   ];
 
   return (
-    <a
-      href={href}
-      target={target}
-      className={clsx(classes)}
-      onClick={onClick}
-    >
+    <a href={href} target={target} className={clsx(classes)} onClick={onClick}>
       {children}
     </a>
   );

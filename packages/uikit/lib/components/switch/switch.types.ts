@@ -1,6 +1,6 @@
-import {Theme} from "@/types/theme.types.ts";
+import { Theme } from '@/types/theme.types.ts';
 
-export interface SwitchProps {
+export interface SwitchProperties {
   theme?: Theme;
   value?: boolean;
   disabled?: boolean;

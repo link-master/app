@@ -1,9 +1,9 @@
-import {AVAILABLE_INPUT_TYPES} from "@/components/Input/input.data.ts";
-import {FormEventHandler, HTMLInputTypeAttribute, Ref} from "react";
+import { AVAILABLE_INPUT_TYPES } from '@/components/input/input.data.ts';
+import { FormEventHandler, HTMLInputTypeAttribute, Ref } from 'react';
 
-export type AvailableInputTypes = typeof AVAILABLE_INPUT_TYPES[number];
+export type AvailableInputTypes = (typeof AVAILABLE_INPUT_TYPES)[number];
 
-export interface InputProps  {
+export interface InputProperties {
   innerRef?: Ref<HTMLInputElement>;
   value?: string;
   placeholder?: string;
