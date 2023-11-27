@@ -1,6 +1,9 @@
+import { FEATURE_COLLECTION } from '@/data/feature';
 import { HomePage } from '@/pages/home-page';
+import { ReferencesPage } from '@/pages/references-page';
 import { TutorialPage } from '@/pages/tutorial-page';
 import { collections } from '@/modules';
+import { RouteObject } from 'react-router-dom';
 
 export interface NavigationItem {
   name: string;
@@ -23,7 +26,7 @@ export const routes = {
   },
   references: {
     path: '/references',
-    element: <HomePage />,
+    element: <ReferencesPage />,
   },
   templates: {
     path: '/templates',
@@ -31,11 +34,21 @@ export const routes = {
   },
   collections: {
     path: '/collections/',
-    element: collections.pages.CollectionsPage,
+    element: <collections.pages.CollectionsPage />,
+    feature: FEATURE_COLLECTION,
   },
 } as const;
 
-export const navigation: NavigationItem[] = [
+export const routeList = Object.values(routes).filter((item) => {
+  if ('feature' in item) {
+    console.log({ feature: item.feature });
+    return item.feature as boolean;
+  }
+  return true;
+}) as RouteObject[];
+
+const navigation: NavigationItem[] = [];
+navigation.push(
   {
     name: 'Главная',
     url: routes.home.path,
@@ -45,12 +58,18 @@ export const navigation: NavigationItem[] = [
     name: 'Референсы',
     url: routes.references.path,
     icon: 'fe:link',
-  },
-  {
+  }
+);
+
+if (FEATURE_COLLECTION) {
+  navigation.push({
     name: 'Коллекции',
     url: routes.collections.path,
     icon: 'fe:layer',
-  },
+  });
+}
+
+navigation.push(
   {
     name: 'Шаблоны',
     url: routes.templates.path,
@@ -60,5 +79,7 @@ export const navigation: NavigationItem[] = [
     name: 'Настройки',
     url: '/settings',
     icon: 'fe:gear',
-  },
-];
+  }
+);
+
+export { navigation };
