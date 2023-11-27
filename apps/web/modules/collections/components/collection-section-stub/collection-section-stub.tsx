@@ -8,12 +8,12 @@ export const CollectionsSectionStub = ({
 }: CollectionSectionStubProperties) => {
   return (
     <SectionStub className="grow">
-      <Icon fontSize={120} icon="fluent-emoji:anguished-face" />
+      <Icon fontSize={120} icon="fluent-emoji:bubbles" />
       <Heading className="mt-4" level={1} theme="primary">
         Нет коллекций
       </Heading>
       <Text theme="secondary" className="mt-1">
-        На данный момент у вас отсутствуют коллекции
+        На данный момент у вас отсутствуют коллекции.
       </Text>
       <Text theme="secondary">
         Вы можете создать новую коллекцию с помощью кнопки внизу:

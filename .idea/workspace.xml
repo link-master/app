@@ -4,21 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09f6e1da-80c2-4212-8c5c-63ad3fde2165" name="Changes" comment="feat(web): done with references">
-      <change afterPath="$PROJECT_DIR$/apps/web/.env.development" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/.env.production" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/data/feature.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/modules/collections/components/collection-section-stub/collection-section-stub.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/modules/collections/components/collection-section-stub/collection-section-stub.types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/modules/collections/components/collection-section-stub/index.ts" afterDir="false" />
+    <list default="true" id="09f6e1da-80c2-4212-8c5c-63ad3fde2165" name="Changes" comment="feat(env): add features functionality and .env types">
+      <change afterPath="$PROJECT_DIR$/apps/web/modules/collections/components/collection-popup/collection-popup.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/modules/collections/components/collection-popup/collection-popup.types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/modules/collections/components/collection-popup/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/uikit/lib/components/select/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/uikit/lib/components/select/select.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/data/navigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/data/navigation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/modules/collections/components/collections-section/collections-section-stub.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/modules/collections/components/collections-section/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/collections/components/collections-section/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/components/popup/reference-popup/reference-popup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/components/popup/reference-popup/reference-popup.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/modules/collections/components/collection-section-stub/collection-section-stub.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/collections/components/collection-section-stub/collection-section-stub.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/modules/collections/components/collection/collection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/collections/components/collection/collection.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/web/modules/collections/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/collections/components/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/web/modules/collections/pages/collections-page/collections-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/collections/pages/collections-page/collections-page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/router/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/router/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/vite-env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/vite-env.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/tailwind.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/types/collection.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/types/collection.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/types/reference.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/types/reference.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/uikit/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/button/button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/button/button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/button/button.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/button/button.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/input/input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/input/input.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +185,9 @@
       <workItem from="1700996551256" duration="4249000" />
       <workItem from="1701006520852" duration="1966000" />
       <workItem from="1701019560271" duration="598000" />
-      <workItem from="1701068426489" duration="3837000" />
+      <workItem from="1701068426489" duration="5001000" />
+      <workItem from="1701077237145" duration="7078000" />
+      <workItem from="1701108725308" duration="469000" />
     </task>
     <task id="LOCAL-00001" summary="feat(init): initialize new project">
       <option name="closed" value="true" />
@@ -407,7 +413,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701069108916</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="feat(env): add features functionality and .env types">
+      <option name="closed" value="true" />
+      <created>1701072504102</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1701072504102</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -443,7 +457,8 @@
     <MESSAGE value="fix(uikit): add another attributes for input" />
     <MESSAGE value="fix(eslint): remove some rules" />
     <MESSAGE value="feat(web): done with references" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(web): done with references" />
+    <MESSAGE value="feat(env): add features functionality and .env types" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(env): add features functionality and .env types" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

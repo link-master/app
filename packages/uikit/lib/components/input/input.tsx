@@ -10,6 +10,7 @@ export const Input = ({
   label,
   type = 'text',
   innerRef,
+  required,
   ...attributes
 }: InputProperties) => {
   const classes: string[] = [
@@ -43,10 +44,12 @@ export const Input = ({
           className={clsx('block text-xs text-zinc-400 mb-[2px] ml-[2px]')}
         >
           {label}
+          {required && <span className="text-sm text-pink-500">*</span>}
         </label>
       )}
       <input
         {...attributes}
+        required
         className={clsx(classes)}
         ref={innerRef}
         type={type}

@@ -55,6 +55,7 @@ export const Button = ({
   disabled,
   className,
   onClick,
+  ...attributes
 }: PropsWithChildren<ButtonProperties>) => {
   const classes = [
     'rounded-md',
@@ -76,7 +77,11 @@ export const Button = ({
   };
 
   return (
-    <button onClick={handleClick} className={clsx(...classes, className)}>
+    <button
+      {...attributes}
+      onClick={handleClick}
+      className={clsx(...classes, className)}
+    >
       {children}
     </button>
   );

@@ -1,5 +1,8 @@
+import { useAppSelector } from '@/hooks/useRedux.ts';
+import { selectCollection } from '@/modules/collections/store';
+import { Collection } from '@/types/collection.types.ts';
 import { Reference } from '@/types/reference.types.ts';
-import { Popup, Heading, Input, Button } from '@linkmaster/uikit';
+import { Popup, Heading, Input, Button, Select } from '@linkmaster/uikit';
 import {
   FormEvent,
   FormEventHandler,
@@ -29,7 +32,15 @@ export const ReferencePopup = ({
     name: name ?? '',
     link: link ?? '',
     id: Date.now().toString(),
+    collection: '',
   });
+  const collections = useAppSelector(selectCollection);
+
+  const collectionOptions = collections.map((collection) => ({
+    id: collection.id,
+    text: collection.name,
+    value: collection.id,
+  }));
 
   useEffect(() => {
     if (nameInputReference.current) {
@@ -63,6 +74,13 @@ export const ReferencePopup = ({
     if (isEscape) {
       handleCancel();
     }
+  };
+
+  const handleSelect = (collection: (typeof collectionOptions)[number]) => {
+    setReference((state) => ({
+      ...state,
+      collection: collection.id,
+    }));
   };
 
   const handleInput: FormEventHandler<HTMLInputElement> = (event) => {
@@ -115,6 +133,11 @@ export const ReferencePopup = ({
           name="link"
           className="mt-3"
           placeholder="Ссылка"
+        />
+        <Select
+          placeholder="Коллекция"
+          onChange={handleSelect}
+          options={collectionOptions}
         />
         <div className="flex mt-4 justify-between gap-4">
           <Button onClick={handleCancel} theme="secondary">
