@@ -10,6 +10,7 @@ export const Input = ({
   label,
   type = 'text',
   innerRef,
+  ...attributes
 }: InputProperties) => {
   const classes: string[] = [
     'px-2',
@@ -23,15 +24,17 @@ export const Input = ({
     'w-full',
   ];
 
-  if (errors?.length) {
+  if (errors && errors?.length) {
     classes.push('border-red-400');
   }
 
-  const errorList = errors?.map((item) => (
-    <div key={item} className={clsx('text-red-400', 'text-sm')}>
-      {item}
-    </div>
-  ));
+  const errorList =
+    errors &&
+    errors?.map((item) => (
+      <div key={item} className={clsx('text-red-400', 'text-sm')}>
+        {item}
+      </div>
+    ));
 
   return (
     <div className={clsx(className)}>
@@ -43,6 +46,7 @@ export const Input = ({
         </label>
       )}
       <input
+        {...attributes}
         className={clsx(classes)}
         ref={innerRef}
         type={type}

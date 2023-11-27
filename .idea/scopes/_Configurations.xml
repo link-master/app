@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="🙌 Configurations" pattern="file[linkmaster]:configurations//*" />
+</component>
