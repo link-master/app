@@ -12,7 +12,6 @@ export const DefaultLayout = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    console.log({ tutorialShowed });
     if (!tutorialShowed) {
       navigate(routes.tutorial.path);
       setTutorialShowed(true);

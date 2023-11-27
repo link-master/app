@@ -1,7 +1,9 @@
 import { routes } from '@/data/navigation.tsx';
 import { DefaultLayout } from '@/layouts/default-layout';
 import { ErrorPage } from '@/pages/error-page';
+import { ReferencesPage } from '@/pages/references-page';
 import { createBrowserRouter } from 'react-router-dom';
+import { collections } from '@/modules';
 
 const router = createBrowserRouter([
   {
@@ -20,11 +22,11 @@ const router = createBrowserRouter([
       },
       {
         path: routes.references.path,
-        element: routes.home.element,
+        element: <ReferencesPage />,
       },
       {
         path: routes.collections.path,
-        element: routes.home.element,
+        element: <routes.collections.element />,
       },
       {
         path: routes.settings.path,

@@ -1,5 +1,6 @@
 import { HomePage } from '@/pages/home-page';
 import { TutorialPage } from '@/pages/tutorial-page';
+import { collections } from '@/modules';
 
 export interface NavigationItem {
   name: string;
@@ -30,7 +31,7 @@ export const routes = {
   },
   collections: {
     path: '/collections/',
-    element: <HomePage />,
+    element: collections.pages.CollectionsPage,
   },
 } as const;
 
@@ -41,7 +42,7 @@ export const navigation: NavigationItem[] = [
     icon: 'fe:home',
   },
   {
-    name: 'Референсы / Рефы',
+    name: 'Референсы',
     url: routes.references.path,
     icon: 'fe:link',
   },
