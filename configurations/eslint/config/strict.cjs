@@ -6,6 +6,8 @@ const strictConfig = {
   ],
   rules: {
     'unicorn/prefer-module': ["off"],
+    'unicorn/no-null': ['off'],
+    'unicorn/consistent-function-scoping': ['off'],
   }
 }
 
