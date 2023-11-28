@@ -1,0 +1,44 @@
+{
+  "name": "@linkmaster/hooks",
+  "version": "1.0.0",
+  "description": "Hooks for linkmaster's react app",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "lint": "eslint --fix .",
+    "build": "NODE_ENV=production rollup --config rollup.config.ts --configPlugin typescript",
+    "watch": "rollup --config rollup.config.ts --configPlugin typescript -w"
+  },
+  "keywords": [
+    "react",
+    "hooks"
+  ],
+  "author": "Daniil Shilo [tokiory] <tokiory.work@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "immer": "^10.0.3",
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@linkmaster/eslint-config": "workspace:^",
+    "@linkmaster/prettier-config": "workspace:^",
+    "@linkmaster/ts-config": "workspace:^",
+    "@linkmaster/types": "workspace:^",
+    "@rollup/plugin-alias": "^5.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.5",
+    "@types/node": "^20.8.9",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "eslint": "^8.53.0",
+    "prettier": "^3.1.0",
+    "react-dom": "^18.2.0",
+    "rollup": "^4.1.4",
+    "tsc-alias": "^1.8.8",
+    "tslib": "^2.6.2",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5"
+  }
+}
