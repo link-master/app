@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["*"]
+    },
+    "module": "ES2020",
+  },
+  "extends": "@linkmaster/ts-config/tsconfig.json",
+  "include": [
+    "./index.ts",
+    "lib",
+  ],
+  "exclude": ["node_modules", "dist", "rollup.config.ts"]
+}

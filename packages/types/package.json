@@ -1,0 +1,22 @@
+{
+  "name": "@linkmaster/types",
+  "version": "1.0.0",
+  "description": "Types for linkmaster",
+  "main": "index.ts",
+  "keywords": [
+    "types"
+  ],
+  "author": "Daniil Shilo [tokiory] <tokiory.work@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@linkmaster/eslint-config": "workspace:^",
+    "@linkmaster/prettier-config": "workspace:^",
+    "@linkmaster/ts-config": "workspace:^",
+    "@types/node": "^20.8.9",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "eslint": "^8.53.0",
+    "prettier": "^3.1.0",
+    "typescript": "^5.0.2"
+  }
+}
