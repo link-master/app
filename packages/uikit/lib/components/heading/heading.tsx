@@ -1,7 +1,7 @@
-import { Theme } from '@/types/theme.types.ts';
+import { Theme } from '@/types/theme.types';
 import clsx from 'clsx';
 import { PropsWithChildren } from 'react';
-import { HeadingLevel, HeadingProperties } from './heading.types.ts';
+import { HeadingLevel, HeadingProperties } from './heading.types';
 
 const getHeadingLevel = (level: HeadingLevel) => {
   switch (level) {

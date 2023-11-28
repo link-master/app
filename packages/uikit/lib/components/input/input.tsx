@@ -1,5 +1,5 @@
 import { clsx } from 'clsx';
-import { InputProperties } from './input.types.ts';
+import { InputProperties } from './input.types';
 
 export const Input = ({
   value,

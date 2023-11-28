@@ -1,4 +1,4 @@
-import { storybookThemeArgumentTypes } from '@/data/storybook.ts';
+import { storybookThemeArgumentTypes } from '@/data/storybook';
 import type { Meta, StoryObj } from '@storybook/react';
 import { ComponentProps } from 'react';
 import { Link } from './link.tsx';

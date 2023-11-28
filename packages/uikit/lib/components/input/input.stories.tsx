@@ -1,4 +1,4 @@
-import { AVAILABLE_INPUT_TYPES } from '@/components/Input/input.data.ts';
+import { AVAILABLE_INPUT_TYPES } from '@/components/Input/input.data';
 import type { Meta, StoryObj } from '@storybook/react';
 import { useArgs } from '@storybook/preview-api';
 import { ComponentProps, FormEvent } from 'react';

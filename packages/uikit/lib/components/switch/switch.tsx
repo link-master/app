@@ -1,7 +1,7 @@
-import { Theme } from '@/types/theme.types.ts';
+import { Theme } from '@/types/theme.types';
 import clsx from 'clsx';
 import { useRef } from 'react';
-import { SwitchProperties } from './switch.types.ts';
+import { SwitchProperties } from './switch.types';
 
 const getSwitchTheme = (theme: Theme) => {
   switch (theme) {

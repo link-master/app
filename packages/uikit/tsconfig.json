@@ -3,12 +3,16 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["lib/*"]
-    }
+    },
+    "module": "ES2020",
+    "declaration": true,
+    "declarationDir": "dist",
+    "outDir": "dist"
   },
   "extends": "@linkmaster/ts-config/tsconfig.json",
   "include": [
     "lib",
-    "index.ts",
+    "index.ts"
   ],
   "exclude": ["node_modules", "dist", "rollup.config.ts"]
 }

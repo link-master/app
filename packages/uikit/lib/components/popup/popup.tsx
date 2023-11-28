@@ -1,6 +1,6 @@
-import { PropsWithChildren, useEffect } from 'react';
+import { PropsWithChildren, ReactPortal, useEffect } from 'react';
 import { Card } from '@/components/card';
-import { PopupProperties, PopupWrapperProperties } from './popup.types.ts';
+import { PopupProperties, PopupWrapperProperties } from './popup.types';
 import { createPortal } from 'react-dom';
 import { clsx } from 'clsx';
 
@@ -25,7 +25,7 @@ export const Popup = ({
   onClose,
   active,
   className,
-}: PropsWithChildren<PopupProperties>) => {
+}: PropsWithChildren<PopupProperties>): ReactPortal => {
   const popup = active && (
     <PopupWrapper onClose={onClose}>
       <Card className={clsx('z-20', className)}>{children}</Card>

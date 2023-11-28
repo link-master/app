@@ -1,4 +1,4 @@
-import { AVAILABLE_INPUT_TYPES } from '@/components/input/input.data.ts';
+import { AVAILABLE_INPUT_TYPES } from '@/components/input/input.data';
 import { HTMLProps, RefObject } from 'react';
 
 export type AvailableInputTypes = (typeof AVAILABLE_INPUT_TYPES)[number];

@@ -1,4 +1,4 @@
-import { storybookThemeArgumentTypes } from '@/data/storybook.ts';
+import { storybookThemeArgumentTypes } from '@/data/storybook';
 import { useArgs } from '@storybook/preview-api';
 import type { Meta, StoryObj } from '@storybook/react';
 import { ComponentProps } from 'react';

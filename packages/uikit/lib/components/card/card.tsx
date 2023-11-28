@@ -1,5 +1,5 @@
-import { CardProperties } from '@/components/card/card.types.ts';
-import { Size, Theme } from '@/types/theme.types.ts';
+import { CardProperties } from '@/components/card/card.types';
+import { Size, Theme } from '@/types/theme.types';
 import clsx from 'clsx';
 import { PropsWithChildren } from 'react';
 
@@ -32,6 +32,7 @@ export const Card = ({
   theme = 'primary',
   children,
   className,
+  ...attributes
 }: PropsWithChildren<CardProperties>) => {
   const classes = [
     'border',
@@ -42,5 +43,9 @@ export const Card = ({
     getCardTheme(theme),
   ];
 
-  return <div className={clsx(classes, className)}>{children}</div>;
+  return (
+    <div {...attributes} className={clsx(classes, className)}>
+      {children}
+    </div>
+  );
 };

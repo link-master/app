@@ -1,7 +1,7 @@
-import { Size, Theme } from '@/types/theme.types.ts';
+import { Size, Theme } from '@/types/theme.types';
 import clsx from 'clsx';
 import { MouseEvent, PropsWithChildren } from 'react';
-import { ButtonProperties } from './button.types.ts';
+import { ButtonProperties } from './button.types';
 
 const getButtonSize = (size: Size): string[] => {
   switch (size) {

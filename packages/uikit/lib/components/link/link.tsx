@@ -1,5 +1,5 @@
-import { LinkProperties } from '@/components/link/link.types.ts';
-import { Size, Theme } from '@/types/theme.types.ts';
+import { LinkProperties } from '@/components/link/link.types';
+import { Size, Theme } from '@/types/theme.types';
 import { clsx } from 'clsx';
 import { PropsWithChildren } from 'react';
 

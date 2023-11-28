@@ -1,4 +1,4 @@
-import { Size, Theme } from '@/types/theme.types.ts';
+import { Size, Theme } from '@/types/theme.types';
 import { MouseEvent } from 'react';
 
 export interface LinkProperties {

@@ -1,4 +1,4 @@
-import { Theme } from '@/types/theme.types.ts';
+import { Theme } from '@/types/theme.types';
 
 export type HeadingLevel = 1 | 2 | 3 | 4;
 

@@ -1,4 +1,4 @@
-import { Size, Theme } from '@/types/theme.types.ts';
+import { Size, Theme } from '@/types/theme.types';
 import { ButtonHTMLAttributes } from 'react';
 
 export interface ButtonProperties

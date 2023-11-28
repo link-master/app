@@ -1,20 +1,8 @@
 import { Card } from '@/components/card';
+import { Text } from '@/components/text';
+import { SelectOption, SelectProperties } from './select.types';
 import { clsx } from 'clsx';
 import { useState } from 'react';
-
-interface SelectOption {
-  id: string;
-  text: string;
-  value: string;
-}
-
-interface SelectProperties {
-  options: SelectOption[];
-  value?: SelectOption['id'];
-  className?: string;
-  onChange: (option: SelectOption) => void;
-  placeholder?: string;
-}
 
 export const Select = ({
   options,
@@ -23,39 +11,52 @@ export const Select = ({
   placeholder,
   onChange,
 }: SelectProperties) => {
-  const [currentOptionIndex, setCurrentOptionIndex] = useState<
-    SelectOption['id'] | null
-  >(value || null);
   const [isActive, setIsActive] = useState(false);
+  const currentOption = options.find((option) => option.id === value);
 
-  const currentOption = options.find(
-    (option) => option.id === currentOptionIndex
-  );
+  const toggleActive = () => {
+    setIsActive((isActive) => !isActive);
+    console.log({ isActive });
+  };
 
-  const dispayedValue = currentOption?.text ? (
-    <div>{currentOption.text}</div>
-  ) : (
-    <div className="text-zinc-500">{placeholder}</div>
+  const dispayedValue = (
+    <div onClick={toggleActive}>
+      {currentOption?.text ? (
+        <div>{currentOption?.text}</div>
+      ) : (
+        <div className="text-zinc-500">{placeholder ?? '---'}</div>
+      )}
+    </div>
   );
 
   const handleSelectOption = (option: SelectOption) => {
-    setCurrentOptionIndex(option.id);
-    setIsActive(false);
+    console.log('Handle!');
     onChange(option);
+    toggleActive();
   };
 
   const optionsList = (
-    <Card theme="secondary" className="absolute -bottom-0.5">
+    <Card
+      theme="secondary"
+      className="!py-2 !px-2 flex flex-col gap-1 absolute top-[104%] left-0 right-0"
+    >
       {options.map((option) => (
-        <div onClick={() => handleSelectOption(option)} key={option.id}>
+        <Text
+          className="hover:bg-zinc-300 px-2 rounded-md"
+          onClick={() => handleSelectOption(option)}
+          key={option.id}
+        >
           {option.text}
-        </div>
+        </Text>
       ))}
     </Card>
   );
 
   return (
-    <Card theme="primary" className={clsx('!py-2 !px-3 relative', className)}>
+    <Card
+      theme="primary"
+      className={clsx('!py-2 !px-4 w-full relative', className)}
+    >
       {dispayedValue}
       {isActive && optionsList}
     </Card>

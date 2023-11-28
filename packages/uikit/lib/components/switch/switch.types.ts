@@ -1,4 +1,4 @@
-import { Theme } from '@/types/theme.types.ts';
+import { Theme } from '@/types/theme.types';
 
 export interface SwitchProperties {
   theme?: Theme;

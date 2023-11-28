@@ -1,7 +1,7 @@
-import { Size, Theme } from '@/types/theme.types.ts';
+import { Size, Theme } from '@/types/theme.types';
 import clsx from 'clsx';
 import { PropsWithChildren } from 'react';
-import { TextProperties } from './text.types.ts';
+import { TextProperties } from './text.types';
 
 const getTextColor = (theme: Theme) => {
   switch (theme) {
@@ -36,6 +36,7 @@ export const Text = ({
   italic,
   className,
   inline,
+  ...attributes
 }: PropsWithChildren<TextProperties>) => {
   const classes = [
     'text-base',
@@ -48,5 +49,9 @@ export const Text = ({
     },
   ];
 
-  return <div className={clsx(classes, className)}>{children}</div>;
+  return (
+    <div {...attributes} className={clsx(classes, className)}>
+      {children}
+    </div>
+  );
 };

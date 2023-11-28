@@ -4,25 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09f6e1da-80c2-4212-8c5c-63ad3fde2165" name="Changes" comment="feat(env): add features functionality and .env types">
-      <change afterPath="$PROJECT_DIR$/apps/web/modules/collections/components/collection-popup/collection-popup.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/modules/collections/components/collection-popup/collection-popup.types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/modules/collections/components/collection-popup/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/uikit/lib/components/select/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/uikit/lib/components/select/select.tsx" afterDir="false" />
+    <list default="true" id="09f6e1da-80c2-4212-8c5c-63ad3fde2165" name="Changes" comment="feat(collections): add collections module">
+      <change afterPath="$PROJECT_DIR$/packages/uikit/lib/components/select/select.stories.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/uikit/lib/components/select/select.types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/web/components/popup/reference-popup/reference-popup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/components/popup/reference-popup/reference-popup.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/modules/collections/components/collection-section-stub/collection-section-stub.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/collections/components/collection-section-stub/collection-section-stub.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/modules/collections/components/collection/collection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/collections/components/collection/collection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/modules/collections/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/collections/components/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/modules/collections/pages/collections-page/collections-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/collections/pages/collections-page/collections-page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/tailwind.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/types/collection.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/types/collection.types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/types/reference.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/types/reference.types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/uikit/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/uikit/.storybook/preview.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/.storybook/preview.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/button/button.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/button/button.stories.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/button/button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/button/button.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/button/button.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/button/button.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/card/card.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/card/card.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/card/card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/card/card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/card/card.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/card/card.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/heading/heading.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/heading/heading.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/heading/heading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/heading/heading.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/heading/heading.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/heading/heading.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/input/input.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/input/input.stories.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/input/input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/input/input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/input/input.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/input/input.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/link/link.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/link/link.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/link/link.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/link/link.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/link/link.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/link/link.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/popup/popup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/popup/popup.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/select/select.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/select/select.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/switch/switch.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/switch/switch.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/switch/switch.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/switch/switch.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/switch/switch.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/switch/switch.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/text/text.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/text/text.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/text/text.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/text/text.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/text/text.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/text/text.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/uikit/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/uikit/rollup.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/rollup.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/uikit/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,29 +74,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.CodyProjectSettingsMigration&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.0.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.0.0&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/tokiory/Software/linkmaster/apps/web/modules/collections/pages&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/tokiory/Software/linkmaster/apps/web/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.CodyProjectSettingsMigration": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "javascript.nodejs.core.library.configured.version": "18.0.0",
+    "javascript.nodejs.core.library.typings.version": "18.0.0",
+    "last_opened_file_path": "/Users/tokiory/Software/linkmaster/packages/uikit/lib",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "inlay.hints",
+    "ts.external.directory.path": "/Users/tokiory/Software/linkmaster/apps/web/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -108,7 +122,7 @@
       <recent name="$PROJECT_DIR$/apps/web/components/popup/create-reference-popup" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.Web: Development">
+  <component name="RunManager" selected="npm.UI Kit: Build">
     <list>
       <item itemvalue="npm.UI Kit: Storybook" />
       <item itemvalue="npm.UI Kit: Watch" />
@@ -187,7 +201,9 @@
       <workItem from="1701019560271" duration="598000" />
       <workItem from="1701068426489" duration="5001000" />
       <workItem from="1701077237145" duration="7078000" />
-      <workItem from="1701108725308" duration="469000" />
+      <workItem from="1701108725308" duration="784000" />
+      <workItem from="1701109630294" duration="1841000" />
+      <workItem from="1701155502095" duration="5219000" />
     </task>
     <task id="LOCAL-00001" summary="feat(init): initialize new project">
       <option name="closed" value="true" />
@@ -421,7 +437,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701072504102</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="feat(collections): add collections module">
+      <option name="closed" value="true" />
+      <created>1701109218196</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1701109218196</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -458,7 +482,8 @@
     <MESSAGE value="fix(eslint): remove some rules" />
     <MESSAGE value="feat(web): done with references" />
     <MESSAGE value="feat(env): add features functionality and .env types" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(env): add features functionality and .env types" />
+    <MESSAGE value="feat(collections): add collections module" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(collections): add collections module" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
