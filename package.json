@@ -13,7 +13,9 @@
   "author": "Daniil Shilo [tokiory] <tokiory.work@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@parcel/transformer-typescript-types": "2.10.3",
     "turbo": "^1.10.16",
+    "typescript": ">=3.0.0",
     "vercel": "^32.5.0"
   }
 }

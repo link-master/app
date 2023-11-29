@@ -2,7 +2,7 @@ import { storybookThemeArgumentTypes } from '@/data/storybook';
 import { useArgs } from '@storybook/preview-api';
 import type { Meta, StoryObj } from '@storybook/react';
 import { ComponentProps } from 'react';
-import { Switch } from './switch.tsx';
+import { Switch } from './switch';
 
 const Render = (arguments_: ComponentProps<typeof Switch>) => {
   const [{ value }, setArguments] = useArgs();

@@ -2,7 +2,7 @@ import { SelectOption } from '@/components/select/select.types';
 import type { Meta, StoryObj } from '@storybook/react';
 import { useArgs } from '@storybook/preview-api';
 import { ComponentProps } from 'react';
-import { Select } from './select.tsx';
+import { Select } from './select';
 
 const Render = (arguments_: ComponentProps<typeof Select>) => {
   const [{ value }, setValue] = useArgs();

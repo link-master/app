@@ -1,7 +1,7 @@
 import { storybookThemeArgumentTypes } from '@/data/storybook';
 import type { Meta, StoryObj } from '@storybook/react';
 import { ComponentProps } from 'react';
-import { Card } from './card.tsx';
+import { Card } from './card';
 import { Text } from '@/components/text';
 
 const render = (arguments_: ComponentProps<typeof Card>) => (

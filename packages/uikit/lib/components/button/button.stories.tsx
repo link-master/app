@@ -1,7 +1,7 @@
 import { storybookThemeArgumentTypes } from '@/data/storybook';
 import type { Meta, StoryObj } from '@storybook/react';
 import { ComponentProps } from 'react';
-import { Button } from './button.tsx';
+import { Button } from './button';
 
 const render = (arguments_: ComponentProps<typeof Button>) => (
   <Button {...arguments_}>Some text</Button>

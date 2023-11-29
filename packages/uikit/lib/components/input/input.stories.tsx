@@ -1,8 +1,8 @@
-import { AVAILABLE_INPUT_TYPES } from '@/components/Input/input.data';
+import { AVAILABLE_INPUT_TYPES } from '@/components/input/input.data';
 import type { Meta, StoryObj } from '@storybook/react';
 import { useArgs } from '@storybook/preview-api';
 import { ComponentProps, FormEvent } from 'react';
-import { Input } from './input.tsx';
+import { Input } from './input';
 
 const Render = (arguments_: ComponentProps<typeof Input>) => {
   const [{ value }, setValue] = useArgs();
