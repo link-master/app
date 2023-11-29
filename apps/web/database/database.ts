@@ -1,5 +1,4 @@
-import { Collection } from '@/types/collection.types.ts';
-import { Reference } from '@/types/reference.types.ts';
+import { Collection, Reference } from '@linkmaster/types';
 import { DBSchema, IDBPDatabase, openDB } from 'idb';
 
 const DATABASE_NAME = 'linkmaster';
@@ -7,14 +6,14 @@ const DATABASE_VERSION = 1;
 
 interface LinkmasterDatabase extends DBSchema {
   reference: {
-    key: Reference['id'];
-    value: Reference;
-    indexes: { id: Reference['id'] };
+    key: Reference.Reference['id'];
+    value: Reference.Reference;
+    indexes: { id: Reference.Reference['id'] };
   };
   collection: {
-    key: Collection['id'];
-    value: Collection;
-    indexes: { id: Collection['id'] };
+    key: Collection.Collection['id'];
+    value: Collection.Collection;
+    indexes: { id: Collection.Collection['id'] };
   };
 }
 

@@ -1,4 +1,5 @@
-import { useAppSelector } from '@/hooks/useRedux.ts';
+import { useAppSelector } from '@/hooks/use-redux.ts';
+import { AddCollectionForm } from '@/modules/collections/components/add-collection-form';
 import { selectCollection } from '@/modules/collections/store';
 import { Collection } from '@/types/collection.types.ts';
 import { FormEvent, MouseEvent, useEffect, useRef, useState } from 'react';
@@ -16,18 +17,6 @@ export const CollectionPopup = ({
   const descriptionInputReference = useRef<HTMLInputElement>(null);
 
   const collections = useAppSelector(selectCollection);
-  const [form, setForm] = useState<Collection>({
-    name: '',
-    description: '',
-    id: '',
-    items: [],
-  });
-
-  const handleSubmit = (event: MouseEvent) => {
-    event.preventDefault();
-    const id = Date.now().toString();
-    onSubmit({ ...form, id });
-  };
 
   const handleCancel = (event?: MouseEvent) => {
     event?.preventDefault();
@@ -60,19 +49,6 @@ export const CollectionPopup = ({
       descriptionInputReference.current.value = foundCollection.description;
   }, [collectionId, collections]);
 
-  const handleInput = (event: FormEvent<HTMLInputElement>) => {
-    const input = event.target as HTMLInputElement;
-
-    if (!input) {
-      return;
-    }
-
-    setForm({
-      ...form,
-      [input.name]: input.value,
-    });
-  };
-
   return (
     <Popup
       className="w-full max-w-[420px]"
@@ -81,31 +57,7 @@ export const CollectionPopup = ({
       root="#popup"
     >
       <Heading level={3}>{title}</Heading>
-      <form>
-        <Input
-          className="mt-2"
-          required
-          onInput={handleInput}
-          label="Название"
-          name="name"
-          innerRef={nameInputReference}
-        />
-        <Input
-          className="mt-2"
-          onInput={handleInput}
-          label="Описание"
-          name="description"
-          innerRef={descriptionInputReference}
-        />
-        <div className="flex mt-4 justify-between gap-4">
-          <Button onClick={handleCancel} theme="secondary">
-            Отменить
-          </Button>
-          <Button type="submit" onClick={handleSubmit}>
-            Создать
-          </Button>
-        </div>
-      </form>
+      <AddCollectionForm />
     </Popup>
   );
 };

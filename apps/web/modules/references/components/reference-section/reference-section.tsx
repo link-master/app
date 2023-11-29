@@ -1,19 +1,19 @@
-import { ReferenceItem } from '@/components/reference-item';
-import { Reference } from '@/types/reference.types.ts';
+import { Reference } from '@/modules/references/components';
+import { Reference as ReferenceTypes } from '@linkmaster/types';
 import { GridList } from '@/widgets/grid-list';
 import { Button } from '@linkmaster/uikit';
 
 interface ReferencesSectionProperties {
   onShowCreatePopup: () => void;
-  references: Reference[];
+  references: ReferenceTypes.Reference[];
 }
 
-export const ReferencesSection = ({
+export const ReferenceSection = ({
   onShowCreatePopup,
   references,
 }: ReferencesSectionProperties) => {
   const referenceList = references.map((reference) => (
-    <ReferenceItem key={reference.id} {...reference} />
+    <Reference key={reference.id} {...reference} />
   ));
 
   return (

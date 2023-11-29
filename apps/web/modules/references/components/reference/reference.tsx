@@ -1,9 +1,9 @@
 import {
   ReferenceContextMenuProperties,
   ReferenceItemProperties,
-} from '@/components/reference-item/reference-item.types.ts';
-import { useAppDispatch } from '@/hooks/useRedux.ts';
-import { removeReference } from '@/store/features/referenceSlice.ts';
+} from './reference.types.ts';
+import { useAppDispatch } from '@/hooks/use-redux.ts';
+import { removeReference } from '@/modules/references/store/reference-slice.ts';
 import { PropsWithClassname } from '@/types/utils.types.ts';
 import { Icon } from '@iconify/react';
 import { Heading, Text, Card } from '@linkmaster/uikit';
@@ -36,7 +36,7 @@ const ContextMenu = ({
   );
 };
 
-export const ReferenceItem = ({
+export const Reference = ({
   id,
   link,
   name,
@@ -83,7 +83,7 @@ export const ReferenceItem = ({
   }, [hasContextMenu, toggleContextMenu]);
 
   return (
-    <Card hover className="!p-0 hover:border-zinc-300">
+    <Card className="!p-0 hover:border-zinc-300">
       <Link
         target="_blank"
         id={id}

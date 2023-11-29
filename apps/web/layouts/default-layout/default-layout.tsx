@@ -1,6 +1,6 @@
 import { Navigation } from '@/components/navigation';
 import { routes } from '@/data/navigation.tsx';
-import useLocalStorage, { LocalStorageKey } from '@/hooks/useLocalStorage.ts';
+import useLocalStorage, { LocalStorageKey } from '@/hooks/use-local-storage.ts';
 import { useEffect } from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
 

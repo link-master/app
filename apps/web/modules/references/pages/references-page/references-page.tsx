@@ -1,19 +1,20 @@
-import { ReferencePopup } from '@/components/popup';
+import { ReferencePopup } from '@/modules/references/components';
 import {
-  ReferencesSection,
-  ReferencesSectionStub,
-} from '@/components/references-section';
-import { referenceDatabaseStore } from '@/database/referenceDatabaseStore.ts';
-import { useAppDispatch, useAppSelector } from '@/hooks/useRedux.ts';
+  ReferenceSection,
+  ReferenceSectionStub,
+} from '@/modules/references/components';
+import { referenceDatabaseStore } from '@/modules/references/database';
+import { useAppDispatch, useAppSelector } from '@/hooks/use-redux.ts';
 import {
   addReference,
+  selectReferences,
   setRawReferences,
-} from '@/store/features/referenceSlice.ts';
-import { Reference } from '@/types/reference.types.ts';
+} from '@/modules/references/store';
+import { Reference } from '@linkmaster/types';
 import { useEffect, useState } from 'react';
 
 export const ReferencesPage = () => {
-  const references = useAppSelector((state) => state.reference.references);
+  const references = useAppSelector(selectReferences);
   const [pastedUrl, setPastedUrl] = useState<string | null>(null);
   const [isCreatingReference, setIsCreatingReference] = useState(false);
   const appDispatch = useAppDispatch();
@@ -39,19 +40,19 @@ export const ReferencesPage = () => {
     return () => removeEventListener('paste', onPaste);
   }, []);
 
-  const onCreateReference = (reference: Reference) => {
+  const onCreateReference = (reference: Reference.Reference) => {
     appDispatch(addReference(reference));
   };
 
   return (
     <div className="min-h-screen w-full flex">
       {references.length > 0 ? (
-        <ReferencesSection
+        <ReferenceSection
           references={references}
           onShowCreatePopup={() => setIsCreatingReference(true)}
         />
       ) : (
-        <ReferencesSectionStub
+        <ReferenceSectionStub
           onShowCreatePopup={() => setIsCreatingReference(true)}
         />
       )}

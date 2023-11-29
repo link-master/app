@@ -1,6 +1,6 @@
 import { FEATURE_COLLECTION } from '@/data/feature';
 import { HomePage } from '@/pages/home-page';
-import { ReferencesPage } from '@/pages/references-page';
+import { ReferencesPage } from '@/modules/references/pages/references-page';
 import { TutorialPage } from '@/pages/tutorial-page';
 import { collections } from '@/modules';
 import { RouteObject } from 'react-router-dom';

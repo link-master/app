@@ -1,9 +1,9 @@
-import useResizer from '@/hooks/useResizer.ts';
+import useResizer from '@/hooks/use-resizer.ts';
 import { ContainerProps } from '@/types/utils.types.ts';
 import { clsx } from 'clsx';
 // import { useSelector } from 'react-redux';
 
-interface SidebarProps {
+interface SidebarProperties {
   resizeable?: boolean;
 }
 
@@ -11,7 +11,7 @@ export const Sidebar = ({
   children,
   className,
   resizeable,
-}: ContainerProps<SidebarProps>) => {
+}: ContainerProps<SidebarProperties>) => {
   const { resizerRef, containerRef } = useResizer();
 
   return (

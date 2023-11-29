@@ -1,5 +1,4 @@
 import '@/styles/main.css';
-import '@linkmaster/uikit/styles';
 import router from '@/router';
 import store from '@/store';
 import React from 'react';

@@ -2,13 +2,13 @@ import { SectionStub } from '@/widgets/section-stub';
 import { Icon } from '@iconify/react';
 import { Button, Heading, Text } from '@linkmaster/uikit';
 
-interface ReferencesSectionStubProps {
+interface ReferencesSectionStubProperties {
   onShowCreatePopup: () => void;
 }
 
-export const ReferencesSectionStub = ({
+export const ReferenceSectionStub = ({
   onShowCreatePopup,
-}: ReferencesSectionStubProps) => {
+}: ReferencesSectionStubProperties) => {
   return (
     <SectionStub className="grow">
       <Icon fontSize={120} icon="fluent-emoji:sad-but-relieved-face" />

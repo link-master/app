@@ -1,7 +1,6 @@
-import { useAppSelector } from '@/hooks/useRedux.ts';
+import { useAppSelector } from '@/hooks/use-redux.ts';
 import { selectCollection } from '@/modules/collections/store';
-import { Collection } from '@/types/collection.types.ts';
-import { Reference } from '@/types/reference.types.ts';
+import { Reference } from '@linkmaster/types';
 import { Popup, Heading, Input, Button, Select } from '@linkmaster/uikit';
 import {
   FormEvent,
@@ -13,10 +12,10 @@ import {
   useState,
 } from 'react';
 
-interface ReferencePopupProperties extends Partial<Reference> {
+interface ReferencePopupProperties extends Partial<Reference.Reference> {
   active: boolean;
   onClose: () => void;
-  onCreate: (reference: Reference) => void;
+  onCreate: (reference: Reference.Reference) => void;
 }
 
 export const ReferencePopup = ({
@@ -28,11 +27,11 @@ export const ReferencePopup = ({
 }: ReferencePopupProperties) => {
   const nameInputReference = useRef<HTMLInputElement>(null);
   const linkInputReference = useRef<HTMLInputElement>(null);
-  const [reference, setReference] = useState<Reference>({
+  const [reference, setReference] = useState<Reference.Reference>({
     name: name ?? '',
     link: link ?? '',
     id: Date.now().toString(),
-    collection: '',
+    parent: '',
   });
   const collections = useAppSelector(selectCollection);
 
@@ -76,7 +75,7 @@ export const ReferencePopup = ({
     }
   };
 
-  const handleSelect = (collection: (typeof collectionOptions)[number]) => {
+  const handleSelect = (collection: { id: string }) => {
     setReference((state) => ({
       ...state,
       collection: collection.id,

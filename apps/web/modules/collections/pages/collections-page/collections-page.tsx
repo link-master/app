@@ -1,4 +1,4 @@
-import { useAppDispatch, useAppSelector } from '@/hooks/useRedux.ts';
+import { useAppDispatch, useAppSelector } from '@/hooks/use-redux.ts';
 import {
   CollectionsSection,
   CollectionsSectionStub,

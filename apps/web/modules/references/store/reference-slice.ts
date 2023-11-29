@@ -1,11 +1,11 @@
-import { referenceDatabaseStore } from '@/database/referenceDatabaseStore.ts';
+import { referenceDatabaseStore } from '@/modules/references/database';
 import { RootState } from '@/store';
 import { StoreCollection } from '@/store/collections.ts';
-import { Reference } from '@/types/reference.types.ts';
+import { Reference } from '@linkmaster/types';
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface ReferenceSliceState {
-  references: Reference[];
+  references: Reference.Reference[];
 }
 
 const initialState: ReferenceSliceState = {
@@ -14,7 +14,7 @@ const initialState: ReferenceSliceState = {
 
 export const removeReference = createAsyncThunk(
   `${StoreCollection.reference}/remove`,
-  async (payload: Reference['id']) => {
+  async (payload: Reference.Reference['id']) => {
     await referenceDatabaseStore.remove(payload);
     return payload;
   }
@@ -22,7 +22,7 @@ export const removeReference = createAsyncThunk(
 
 export const addReference = createAsyncThunk(
   `${StoreCollection.reference}/add`,
-  async (payload: Reference) => {
+  async (payload: Reference.Reference) => {
     await referenceDatabaseStore.add(payload);
     return payload;
   }
@@ -32,7 +32,7 @@ const referenceSlice = createSlice({
   name: StoreCollection.reference,
   initialState,
   reducers: {
-    setRawReferences: (state, action: PayloadAction<Reference[]>) => {
+    setRawReferences: (state, action: PayloadAction<Reference.Reference[]>) => {
       state.references = action.payload;
     },
   },
@@ -40,13 +40,13 @@ const referenceSlice = createSlice({
     builder
       .addCase(
         addReference.fulfilled,
-        (state, action: PayloadAction<Reference>) => {
+        (state, action: PayloadAction<Reference.Reference>) => {
           state.references.push(action.payload);
         }
       )
       .addCase(
         removeReference.fulfilled,
-        (state, action: PayloadAction<Reference['id']>) => {
+        (state, action: PayloadAction<Reference.Reference['id']>) => {
           state.references = state.references.filter(
             (reference) => reference.id !== action.payload
           );

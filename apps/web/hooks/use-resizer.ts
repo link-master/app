@@ -1,8 +1,8 @@
 import { useEffect, useRef } from 'react';
 
 const useResizer = () => {
-  const containerRef = useRef<HTMLDivElement | null>(null);
-  const resizerRef = useRef<HTMLDivElement | null>(null);
+  const containerReference = useRef<HTMLDivElement | null>(null);
+  const resizerReference = useRef<HTMLDivElement | null>(null);
   const containerWidth = useRef<number>(0);
 
   const eventPairs = [
@@ -20,42 +20,42 @@ const useResizer = () => {
     containerWidth.current += differenceX;
 
     // Resize container
-    if (containerRef.current?.style) {
-      containerRef.current.style.width = `${containerWidth.current}px`;
+    if (containerReference.current?.style) {
+      containerReference.current.style.width = `${containerWidth.current}px`;
     }
   }
 
   function onMouseup() {
-    eventPairs.forEach((pair) => {
+    for (const pair of eventPairs) {
       document.body.removeEventListener(pair[0], pair[1]);
-    });
+    }
   }
 
   function onMousedown(e: globalThis.MouseEvent) {
     e.preventDefault();
-    eventPairs.forEach((pair) => {
+    for (const pair of eventPairs) {
       document.body.addEventListener(pair[0], pair[1]);
-    });
+    }
   }
 
   useEffect(() => {
-    if (!(resizerRef.current && containerRef.current)) {
+    if (!(resizerReference.current && containerReference.current)) {
       return;
     }
 
-    const resizerElement = resizerRef.current;
+    const resizerElement = resizerReference.current;
     resizerElement?.addEventListener('mousedown', onMousedown);
 
-    containerWidth.current = containerRef.current?.offsetWidth || 0;
+    containerWidth.current = containerReference.current?.offsetWidth || 0;
 
     return () => {
       resizerElement?.removeEventListener('mousedown', onMousedown);
     };
-  }, [containerRef, resizerRef]);
+  }, [containerReference, resizerReference]);
 
   return {
-    containerRef,
-    resizerRef,
+    containerRef: containerReference,
+    resizerRef: resizerReference,
   };
 };
 

@@ -1,5 +1,5 @@
 import collectionReducer from '@/modules/collections/store/collection-slice.ts';
-import referenceReducer from '@/store/features/referenceSlice.ts';
+import referenceReducer from '@/modules/references/store/reference-slice.ts';
 import { configureStore } from '@reduxjs/toolkit';
 
 const store = configureStore({

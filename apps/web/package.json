@@ -16,6 +16,7 @@
     "idb-keyval": "^6.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.48.2",
     "react-intl": "^6.5.1",
     "react-redux": "^8.1.3",
     "react-router-dom": "^6.17.0"
@@ -27,6 +28,7 @@
     "@linkmaster/prettier-config": "workspace:^",
     "@linkmaster/tailwind-config": "workspace:^",
     "@linkmaster/ts-config": "workspace:^",
+    "@linkmaster/types": "workspace:^",
     "@linkmaster/uikit": "workspace:^",
     "@types/node": "^20.8.9",
     "@types/react": "^18.2.37",
