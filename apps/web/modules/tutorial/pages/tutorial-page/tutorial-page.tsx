@@ -13,9 +13,9 @@ import {
   TutorialSlideRefs,
   TutorialSlideWelcome,
   TutorialSlideWorkspaces,
-} from '@/components/tutorial-slide';
-import { SlidePair } from '@/components/tutorial-slide/tutorial-slide.types.ts';
-import { stepReducer } from '@/pages/tutorial-page/tutorial-page.reducers.ts';
+} from '@/modules/tutorial/components';
+import { SlidePair } from '@/modules/tutorial/types';
+import { stepReducer } from '@/modules/tutorial/reducers';
 import calculatePercentage from '@/utils/calculate-percentage.ts';
 import { Progressbar } from '@/widgets/progressbar';
 import { useEffect, useReducer, useState } from 'react';

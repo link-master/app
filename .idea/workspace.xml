@@ -4,74 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09f6e1da-80c2-4212-8c5c-63ad3fde2165" name="Changes" comment="feat(idea): update .idea">
-      <change afterPath="$PROJECT_DIR$/apps/web/modules/collections/components/add-collection-form/add-collection-form.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/modules/collections/components/add-collection-form/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/modules/references/components/reference-section-stub/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/modules/references/database/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/modules/references/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/modules/references/pages/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/modules/references/store/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/uikit/.esbuild/build.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/uikit/.esbuild/options.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/uikit/.esbuild/watch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/uikit/rollup.config.mjs" afterDir="false" />
+    <list default="true" id="09f6e1da-80c2-4212-8c5c-63ad3fde2165" name="Changes" comment="refactor(app): add reference module">
+      <change afterPath="$PROJECT_DIR$/apps/web/modules/tutorial/components/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/modules/tutorial/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/modules/tutorial/pages/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/modules/tutorial/reducers/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/modules/tutorial/types/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/modules/tutorial/types/slide.types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/components/popup/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/components/popup/reference-popup/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/references/components/reference-popup/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/components/popup/reference-popup/reference-popup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/references/components/reference-popup/reference-popup.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/components/reference-item/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/references/components/reference/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/components/reference-item/reference-item-context-menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/references/components/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/components/reference-item/reference-item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/references/components/reference/reference.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/components/reference-item/reference-item.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/references/components/reference/reference.types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/components/references-section/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/references/components/reference-section/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/components/references-section/references-section-stub.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/references/components/reference-section-stub/reference-section-stub.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/components/references-section/references-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/references/components/reference-section/reference-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/components/tutorial-slide/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/tutorial/components/tutorial-slide/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/components/tutorial-slide/tutorial-slide-about.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/tutorial/components/tutorial-slide/tutorial-slide-about.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/components/tutorial-slide/tutorial-slide-features.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/tutorial/components/tutorial-slide/tutorial-slide-features.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/components/tutorial-slide/tutorial-slide-final.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/tutorial/components/tutorial-slide/tutorial-slide-final.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/components/tutorial-slide/tutorial-slide-references.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/tutorial/components/tutorial-slide/tutorial-slide-references.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/components/tutorial-slide/tutorial-slide-refs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/tutorial/components/tutorial-slide/tutorial-slide-refs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/components/tutorial-slide/tutorial-slide-welcome.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/tutorial/components/tutorial-slide/tutorial-slide-welcome.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/components/tutorial-slide/tutorial-slide-workspaces.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/tutorial/components/tutorial-slide/tutorial-slide-workspaces.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/components/tutorial-slide/tutorial-slide.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/tutorial/components/tutorial-slide/tutorial-slide.types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/web/data/navigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/data/navigation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/data/regex.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/data/validators.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/database/database.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/database/database.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/database/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/database/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/database/referenceDatabaseStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/references/database/reference-database-store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/hooks/use-input-validator.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/hooks/useLocalStorage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/hooks/use-local-storage.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/hooks/useRedux.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/hooks/use-redux.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/hooks/useResizer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/hooks/use-resizer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/layouts/default-layout/default-layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/layouts/default-layout/default-layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/modules/collections/components/collection-popup/collection-popup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/collections/components/collection-popup/collection-popup.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/modules/collections/pages/collections-page/collections-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/collections/pages/collections-page/collections-page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/web/modules/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/pages/references-page/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/references/pages/references-page/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/pages/references-page/references-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/references/pages/references-page/references-page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/public/vite.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/store/features/referenceSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/references/store/reference-slice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/store/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/store/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/widgets/sidebar/sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/widgets/sidebar/sidebar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/button/button.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/button/button.stories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/button/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/button/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/card/card.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/card/card.stories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/card/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/card/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/heading/heading.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/heading/heading.stories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/heading/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/heading/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/input/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/input/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/input/input.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/input/input.stories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/link/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/link/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/link/link.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/link/link.stories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/popup/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/popup/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/select/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/select/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/select/select.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/select/select.stories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/switch/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/switch/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/switch/switch.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/switch/switch.stories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/text/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/text/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/text/text.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/text/text.stories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/uikit/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/uikit/postcss.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/postcss.config.cjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/uikit/rollup.config.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/uikit/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/pages/tutorial-page/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/tutorial/pages/tutorial-page/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/pages/tutorial-page/tutorial-page.reducers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/tutorial/reducers/step-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/pages/tutorial-page/tutorial-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/tutorial/pages/tutorial-page/tutorial-page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/pages/tutorial-page/tutorial-page.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/tutorial/pages/tutorial-page/tutorial-page.types.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,11 +105,11 @@
       <recent name="$PROJECT_DIR$/apps/web/data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/web/modules/tutorial/reducers" />
+      <recent name="$PROJECT_DIR$/apps/web/modules/tutorial/pages" />
+      <recent name="$PROJECT_DIR$/apps/web/modules/tutorial/components" />
       <recent name="$PROJECT_DIR$/apps/web/modules/references/store" />
       <recent name="$PROJECT_DIR$/apps/web/modules/references/components/reference-section-stub" />
-      <recent name="$PROJECT_DIR$/apps/web/modules/references/database" />
-      <recent name="$PROJECT_DIR$/apps/web/modules/references/pages" />
-      <recent name="$PROJECT_DIR$/apps/web/modules/references/components" />
     </key>
   </component>
   <component name="RunManager" selected="npm.Web: Development">
@@ -242,7 +197,7 @@
       <workItem from="1701177835950" duration="9459000" />
       <workItem from="1701241191670" duration="6171000" />
       <workItem from="1701248285693" duration="1081000" />
-      <workItem from="1701249376340" duration="487000" />
+      <workItem from="1701249376340" duration="1480000" />
     </task>
     <task id="LOCAL-00001" summary="feat(init): initialize new project">
       <option name="closed" value="true" />
@@ -524,7 +479,23 @@
       <option name="project" value="LOCAL" />
       <updated>1701184984083</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="refactor(uikit): refactor rollup config">
+      <option name="closed" value="true" />
+      <created>1701250124306</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1701250124306</updated>
+    </task>
+    <task id="LOCAL-00037" summary="refactor(app): add reference module">
+      <option name="closed" value="true" />
+      <created>1701250136091</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1701250136091</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -542,7 +513,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat(init): initialize new project" />
     <MESSAGE value="feat(ui): add a few ui componentsff" />
     <MESSAGE value="feat(ui): add a few ui components" />
     <MESSAGE value="refactor(ui/button): move theme logic directly from button component" />
@@ -566,7 +536,9 @@
     <MESSAGE value="feat(hooks): add hooks package" />
     <MESSAGE value="feat(types): add types package" />
     <MESSAGE value="feat(idea): update .idea" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(idea): update .idea" />
+    <MESSAGE value="refactor(uikit): refactor rollup config" />
+    <MESSAGE value="refactor(app): add reference module" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor(app): add reference module" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

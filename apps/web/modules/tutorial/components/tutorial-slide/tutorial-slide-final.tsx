@@ -1,4 +1,4 @@
-import { TutorialSlideProps } from '@/components/tutorial-slide/tutorial-slide.types.ts';
+import { TutorialSlideProps } from '@/modules/tutorial/components/tutorial-slide/tutorial-slide.types.ts';
 import { routes } from '@/data/navigation.tsx';
 import { Icon } from '@iconify/react';
 import { Button, Heading, Text } from '@linkmaster/uikit';

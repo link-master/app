@@ -1,8 +1,8 @@
 import { FEATURE_COLLECTION } from '@/data/feature';
 import { HomePage } from '@/pages/home-page';
-import { ReferencesPage } from '@/modules/references/pages/references-page';
-import { TutorialPage } from '@/pages/tutorial-page';
-import { collections } from '@/modules';
+import { ReferencesPage } from '@/modules/references/pages';
+import { TutorialPage } from '@/modules/tutorial/pages';
+import { CollectionsPage } from '@/modules/collections/pages';
 import { RouteObject } from 'react-router-dom';
 
 export interface NavigationItem {
@@ -34,7 +34,7 @@ export const routes = {
   },
   collections: {
     path: '/collections/',
-    element: <collections.pages.CollectionsPage />,
+    element: <CollectionsPage />,
     feature: FEATURE_COLLECTION,
   },
 } as const;

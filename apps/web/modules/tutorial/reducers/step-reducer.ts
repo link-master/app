@@ -4,18 +4,20 @@ type StepState = number;
 type StepActionType = 'increment' | 'decrement';
 
 export const stepReducer: Reducer<StepState, StepActionType> = (
-  prevState,
+  previousState,
   action
 ) => {
   switch (action) {
-    case 'increment':
-      return prevState + 1;
-    case 'decrement':
-      return prevState - 1;
+    case 'increment': {
+      return previousState + 1;
+    }
+    case 'decrement': {
+      return previousState - 1;
+    }
     default: {
       const error = new Error(`No action ${action} in stepReducer`);
       console.error(error);
-      return prevState;
+      return previousState;
     }
   }
 };
