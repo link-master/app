@@ -1,16 +1,8 @@
-import { useAppSelector } from '@/hooks/use-redux.ts';
-import { selectCollection } from '@/modules/collections/store';
+import { AddReferenceForm } from '@/modules/references/components/add-reference-form';
+import referenceSlice from '@/modules/references/store/reference-slice.ts';
 import { Reference } from '@linkmaster/types';
-import { Popup, Heading, Input, Button, Select } from '@linkmaster/uikit';
-import {
-  FormEvent,
-  FormEventHandler,
-  KeyboardEvent,
-  MouseEvent,
-  useEffect,
-  useRef,
-  useState,
-} from 'react';
+import { Popup } from '@linkmaster/uikit';
+import { FormEvent, MouseEvent } from 'react';
 
 interface ReferencePopupProperties extends Partial<Reference.Reference> {
   active: boolean;
@@ -21,79 +13,21 @@ interface ReferencePopupProperties extends Partial<Reference.Reference> {
 export const ReferencePopup = ({
   active,
   onClose,
-  link,
-  name,
   onCreate,
 }: ReferencePopupProperties) => {
-  const nameInputReference = useRef<HTMLInputElement>(null);
-  const linkInputReference = useRef<HTMLInputElement>(null);
-  const [reference, setReference] = useState<Reference.Reference>({
-    name: name ?? '',
-    link: link ?? '',
-    id: Date.now().toString(),
-    parent: '',
-  });
-  const collections = useAppSelector(selectCollection);
-
-  const collectionOptions = collections.map((collection) => ({
-    id: collection.id,
-    text: collection.name,
-    value: collection.id,
-  }));
-
-  useEffect(() => {
-    if (nameInputReference.current) {
-      nameInputReference.current.value = name ?? '';
-      setReference((state) => ({
-        ...state,
-        name: name ?? '',
-      }));
-    }
-  }, [name]);
-
-  useEffect(() => {
-    if (linkInputReference.current) {
-      linkInputReference.current.value = link ?? '';
-      setReference((state) => ({
-        ...state,
-        link: link ?? '',
-      }));
-    }
-  }, [link]);
-
-  const handleHotkeys = (event: KeyboardEvent) => {
-    event.stopPropagation();
-    const isEnter = event.key === 'Enter';
-    const isEscape = event.key === 'Escape';
-
-    if (isEnter) {
-      handleSubmit();
-    }
-
-    if (isEscape) {
-      handleCancel();
-    }
-  };
-
-  const handleSelect = (collection: { id: string }) => {
-    setReference((state) => ({
-      ...state,
-      collection: collection.id,
-    }));
-  };
-
-  const handleInput: FormEventHandler<HTMLInputElement> = (event) => {
-    const input = event.target as HTMLInputElement;
-
-    if (!input.name) {
-      return;
-    }
-
-    setReference({
-      ...reference,
-      [input.name]: input.value,
-    });
-  };
+  // const handleHotkeys = (event: KeyboardEvent) => {
+  //   event.stopPropagation();
+  //   const isEnter = event.key === 'Enter';
+  //   const isEscape = event.key === 'Escape';
+  //
+  //   if (isEnter) {
+  //     handleSubmit();
+  //   }
+  //
+  //   if (isEscape) {
+  //     handleCancel();
+  //   }
+  // };
 
   const handleCancel = (
     event?: MouseEvent<HTMLButtonElement, globalThis.MouseEvent>
@@ -102,9 +36,14 @@ export const ReferencePopup = ({
     onClose();
   };
 
-  const handleSubmit = (event?: FormEvent) => {
-    event?.preventDefault();
-    onCreate(reference);
+  const handleSubmit = (reference: Partial<Reference.Reference>) => {
+    const id = `reference-${Date.now()}`;
+    onCreate({
+      id,
+      parent: reference.parent,
+      link: reference.link,
+      name: reference?.name || '',
+    });
     onClose();
   };
 
@@ -115,36 +54,10 @@ export const ReferencePopup = ({
       onClose={onClose}
       root="#popup"
     >
-      <form onKeyDown={handleHotkeys} onSubmit={handleSubmit}>
-        <Heading level={3}>Создание референса</Heading>
-        <Input
-          label="Название"
-          onInput={handleInput}
-          name="name"
-          id="reference-name-input"
-          className="mt-3"
-          placeholder="Ваше крутое название референса"
-        />
-        <Input
-          label="Ссылка*"
-          innerRef={linkInputReference}
-          onInput={handleInput}
-          name="link"
-          className="mt-3"
-          placeholder="Ссылка"
-        />
-        <Select
-          placeholder="Коллекция"
-          onChange={handleSelect}
-          options={collectionOptions}
-        />
-        <div className="flex mt-4 justify-between gap-4">
-          <Button onClick={handleCancel} theme="secondary">
-            Отменить
-          </Button>
-          <Button>Создать</Button>
-        </div>
-      </form>
+      <AddReferenceForm
+        onCancel={handleCancel}
+        onSubmit={(data) => handleSubmit(data)}
+      />
     </Popup>
   );
 };

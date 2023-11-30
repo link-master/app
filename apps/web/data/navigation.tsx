@@ -1,5 +1,5 @@
 import { FEATURE_COLLECTION } from '@/data/feature';
-import { HomePage } from '@/pages/home-page';
+import { DashboardPage } from '@/modules/dashboard/pages';
 import { ReferencesPage } from '@/modules/references/pages';
 import { TutorialPage } from '@/modules/tutorial/pages';
 import { CollectionsPage } from '@/modules/collections/pages';
@@ -14,7 +14,7 @@ export interface NavigationItem {
 export const routes = {
   home: {
     path: '/',
-    element: <HomePage />,
+    element: <DashboardPage />,
   },
   tutorial: {
     path: '/tutorial',
@@ -22,7 +22,7 @@ export const routes = {
   },
   settings: {
     path: '/settings',
-    element: <HomePage />,
+    element: <DashboardPage />,
   },
   references: {
     path: '/references',
@@ -30,7 +30,7 @@ export const routes = {
   },
   templates: {
     path: '/templates',
-    element: <HomePage />,
+    element: <DashboardPage />,
   },
   collections: {
     path: '/collections/',

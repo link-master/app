@@ -6,6 +6,7 @@ import { useLocation } from 'react-router-dom';
 import { NavigationProps as NavigationProperties } from './navigation.types.ts';
 import { NavigationItem } from './navigation-item.tsx';
 import { NavigationSynchronization } from './navigation-synchronization.tsx';
+import { FEATURE_SYNC } from '@/data/feature.ts';
 
 export const Navigation = ({ className }: NavigationProperties) => {
   const location = useLocation();
@@ -35,7 +36,7 @@ export const Navigation = ({ className }: NavigationProperties) => {
       >
         {navigationLinks}
       </nav>
-      <NavigationSynchronization />
+      {FEATURE_SYNC && <NavigationSynchronization />}
     </Sidebar>
   );
 };
