@@ -1,64 +1,80 @@
-import { Card } from '@/components/card';
-import { Text } from '@/components/text';
 import { SelectOption, SelectProperties } from './select.types';
 import { clsx } from 'clsx';
-import { useState } from 'react';
+import { forwardRef, useState } from 'react';
 
-export const Select = ({
-  options,
-  value,
-  className,
-  placeholder,
-  onChange,
-}: SelectProperties) => {
-  const [isActive, setIsActive] = useState(false);
-  const currentOption = options.find((option) => option.id === value);
+// eslint-disable-next-line react/display-name
+export const Select = forwardRef<HTMLDivElement, SelectProperties>(
+  function Select(
+    { options, value, className, label, required, onChange, ...attributes },
+    reference
+  ) {
+    const [isActive, setIsActive] = useState(false);
+    const currentOption: SelectOption | null =
+      options.find((option) => option.value === value?.value) ??
+      options[0] ??
+      null;
 
-  const toggleActive = () => {
-    setIsActive((isActive) => !isActive);
-    console.log({ isActive });
-  };
+    const toggleActive = () => {
+      setIsActive((isActive) => !isActive);
+    };
 
-  const dispayedValue = (
-    <div onClick={toggleActive}>
-      {currentOption?.text ? (
-        <div>{currentOption?.text}</div>
-      ) : (
-        <div className="text-zinc-500">{placeholder ?? '---'}</div>
-      )}
-    </div>
-  );
+    const getListKey = (index: number, value: string): string => {
+      let uniqueKey = attributes['name'] || attributes['id'] || '';
+      uniqueKey &&= uniqueKey + '-';
 
-  const handleSelectOption = (option: SelectOption) => {
-    console.log('Handle!');
-    onChange(option);
-    toggleActive();
-  };
+      return `${uniqueKey}${index}-${value}`;
+    };
 
-  const optionsList = (
-    <Card
-      theme="secondary"
-      className="!py-2 !px-2 flex flex-col gap-1 absolute top-[104%] left-0 right-0"
-    >
-      {options.map((option) => (
-        <Text
-          className="hover:bg-zinc-300 px-2 rounded-md"
-          onClick={() => handleSelectOption(option)}
-          key={option.id}
+    const handleSelectOption = (option: SelectOption) => {
+      onChange(option);
+      toggleActive();
+    };
+
+    const optionsList = options.map((item, index) => (
+      <div
+        onClick={() => handleSelectOption(item)}
+        className="hover:bg-zinc-100 rounded-md px-2 py-1"
+        key={getListKey(index, item.value)}
+        data-value={item.value}
+      >
+        {item?.text}
+      </div>
+    ));
+
+    return (
+      <div className={className}>
+        {label && (
+          <label
+            className={clsx('block text-xs text-zinc-400 mb-[2px] ml-[2px]')}
+          >
+            {label}
+            {required && <span className="text-sm text-pink-500">*</span>}
+          </label>
+        )}
+        <div
+          className={clsx(
+            'select-none cursor-pointer bg-white relative px-2 py-1 border border-zinc-400 text-zinc-800 rounded-md shadow-sm w-full placeholder-zinc-300'
+          )}
         >
-          {option.text}
-        </Text>
-      ))}
-    </Card>
-  );
-
-  return (
-    <Card
-      theme="primary"
-      className={clsx('!py-2 !px-4 w-full relative', className)}
-    >
-      {dispayedValue}
-      {isActive && optionsList}
-    </Card>
-  );
-};
+          <div ref={reference} onClick={toggleActive}>
+            {currentOption?.text ?? '---'}
+          </div>
+          {isActive && (
+            <div className="absolute px-2 py-2 top-full left-1/2 -translate-x-1/2  bg-white mt-2 border rounded-md shadow-sm w-full border-zinc-400 text-zinc-800">
+              {optionsList}
+            </div>
+          )}
+        </div>
+      </div>
+    );
+    // return (
+    //   <Card
+    //     theme="primary"
+    //     className={clsx('!py-2 !px-4 w-full relative', className)}
+    //   >
+    //     {dispayedValue}
+    //     {isActive && optionsList}
+    //   </Card>
+    // );
+  }
+);

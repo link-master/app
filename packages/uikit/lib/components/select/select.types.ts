@@ -1,13 +1,17 @@
+import { HTMLProps, RefObject } from 'react';
+
 export interface SelectOption {
-  id: string;
   text: string;
   value: string;
 }
 
-export interface SelectProperties {
+export interface SelectProperties
+  extends Omit<HTMLProps<HTMLSelectElement>, 'onChange' | 'value'> {
   options: SelectOption[];
-  value?: SelectOption['id'];
-  className?: string;
+  label?: string;
+  innerRef?: RefObject<HTMLDivElement>;
+  required?: boolean;
+  value?: SelectOption;
   onChange: (option: SelectOption) => void;
   placeholder?: string;
 }

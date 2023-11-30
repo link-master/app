@@ -1,13 +1,9 @@
 import { AVAILABLE_INPUT_TYPES } from '@/components/input/input.data';
-import { HTMLProps, RefObject } from 'react';
+import { HTMLProps } from 'react';
 
 export type AvailableInputTypes = (typeof AVAILABLE_INPUT_TYPES)[number];
 
-type RestrictedInputFields = 'ref';
-
-export interface InputProperties
-  extends Omit<HTMLProps<HTMLInputElement>, RestrictedInputFields> {
+export interface InputProperties extends HTMLProps<HTMLInputElement> {
   label?: string;
-  innerRef?: RefObject<HTMLInputElement>;
   errors?: string[] | null;
 }

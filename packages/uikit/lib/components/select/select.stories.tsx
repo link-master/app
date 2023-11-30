@@ -8,7 +8,7 @@ const Render = (arguments_: ComponentProps<typeof Select>) => {
   const [{ value }, setValue] = useArgs();
 
   const onChange = (option: SelectOption) => {
-    setValue({ ...arguments_, value: option.id });
+    setValue({ ...arguments_, value: option.value });
   };
 
   return <Select {...arguments_} onChange={onChange} value={value} />;
@@ -30,12 +30,27 @@ export const Default: Story = {
   args: {
     options: [
       {
-        id: '1',
         text: 'Первое значение',
         value: 'first',
       },
       {
-        id: '2',
+        text: 'Второе значение',
+        value: 'second',
+      },
+    ],
+  },
+};
+
+export const WithLabel: Story = {
+  render: Render,
+  args: {
+    label: 'Значения',
+    options: [
+      {
+        text: 'Первое значение',
+        value: 'first',
+      },
+      {
         text: 'Второе значение',
         value: 'second',
       },
