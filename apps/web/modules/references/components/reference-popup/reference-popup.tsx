@@ -1,44 +1,30 @@
 import { AddReferenceForm } from '@/modules/references/components/add-reference-form';
-import referenceSlice from '@/modules/references/store/reference-slice.ts';
 import { Reference } from '@linkmaster/types';
 import { Popup } from '@linkmaster/uikit';
-import { FormEvent, MouseEvent } from 'react';
 
 interface ReferencePopupProperties extends Partial<Reference.Reference> {
   active: boolean;
   onClose: () => void;
-  onCreate: (reference: Reference.Reference) => void;
+  onSubmit: (reference: Reference.Reference) => void;
 }
 
 export const ReferencePopup = ({
   active,
   onClose,
-  onCreate,
+  onSubmit,
+  link,
+  name,
+  parent,
 }: ReferencePopupProperties) => {
-  // const handleHotkeys = (event: KeyboardEvent) => {
-  //   event.stopPropagation();
-  //   const isEnter = event.key === 'Enter';
-  //   const isEscape = event.key === 'Escape';
-  //
-  //   if (isEnter) {
-  //     handleSubmit();
-  //   }
-  //
-  //   if (isEscape) {
-  //     handleCancel();
-  //   }
-  // };
-
-  const handleCancel = (
-    event?: MouseEvent<HTMLButtonElement, globalThis.MouseEvent>
-  ) => {
-    event?.preventDefault();
-    onClose();
+  const providedReference: Omit<Reference.Reference, 'id'> = {
+    link,
+    name: name!,
+    parent,
   };
 
   const handleSubmit = (reference: Partial<Reference.Reference>) => {
     const id = `reference-${Date.now()}`;
-    onCreate({
+    onSubmit({
       id,
       parent: reference.parent,
       link: reference.link,
@@ -55,8 +41,9 @@ export const ReferencePopup = ({
       root="#popup"
     >
       <AddReferenceForm
-        onCancel={handleCancel}
-        onSubmit={(data) => handleSubmit(data)}
+        defaults={providedReference}
+        onCancel={onClose}
+        onSubmit={handleSubmit}
       />
     </Popup>
   );

@@ -50,20 +50,7 @@ export const AddReferenceForm = ({
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      {/* <Controller */}
-      {/*   control={control} */}
-      {/*   render={({ field }) => ( */}
-      {/*     <Input className="mt-2" {...field} label="Название" /> */}
-      {/*   )} */}
-      {/*   name={'name'} */}
-      {/* /> */}
       <Input className="mt-2" {...register('name')} label="Название" />
-      {/* <Controller */}
-      {/*   control={control} */}
-      {/*   render={({ field }) => ( */}
-      {/*   )} */}
-      {/*   name={'link'} */}
-      {/* /> */}
       <Input className="mt-2" {...register('link')} required label="Ссылка" />
       <Controller
         control={control}

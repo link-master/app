@@ -4,28 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09f6e1da-80c2-4212-8c5c-63ad3fde2165" name="Changes" comment="refactor(app): add tutorial module">
-      <change afterPath="$PROJECT_DIR$/apps/web/modules/dashboard/components/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/modules/dashboard/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/modules/dashboard/pages/dashboard-page/dashboard-page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/modules/dashboard/pages/dashboard-page/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/modules/dashboard/pages/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/modules/references/components/add-reference-form/add-reference-form.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/modules/references/components/add-reference-form/index.ts" afterDir="false" />
+    <list default="true" id="09f6e1da-80c2-4212-8c5c-63ad3fde2165" name="Changes" comment="feat(app): add reference form">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/components/navigation/navigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/components/navigation/navigation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/data/navigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/data/navigation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/modules/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/modules/references/components/add-reference-form/add-reference-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/references/components/add-reference-form/add-reference-form.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/web/modules/references/components/reference-popup/reference-popup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/references/components/reference-popup/reference-popup.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/pages/home-page/home-page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/pages/home-page/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/uikit/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/input/input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/input/input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/input/input.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/input/input.types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/select/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/select/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/select/select.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/select/select.stories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/select/select.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/select/select.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/select/select.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/select/select.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/modules/references/pages/references-page/references-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/references/pages/references-page/references-page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +94,7 @@
       <recent name="$PROJECT_DIR$/apps/web/modules/references/components/reference-section-stub" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.UI Kit: Build">
+  <component name="RunManager" selected="npm.Web: Development">
     <list>
       <item itemvalue="npm.UI Kit: Storybook" />
       <item itemvalue="npm.UI Kit: Watch" />
@@ -198,6 +181,8 @@
       <workItem from="1701248285693" duration="1081000" />
       <workItem from="1701249376340" duration="7718000" />
       <workItem from="1701267527540" duration="6284000" />
+      <workItem from="1701332971605" duration="792000" />
+      <workItem from="1701334301289" duration="2001000" />
     </task>
     <task id="LOCAL-00001" summary="feat(init): initialize new project">
       <option name="closed" value="true" />
@@ -503,7 +488,23 @@
       <option name="project" value="LOCAL" />
       <updated>1701250903150</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="feat(uikit): add forwardRef to the input and select">
+      <option name="closed" value="true" />
+      <created>1701333003201</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1701333003201</updated>
+    </task>
+    <task id="LOCAL-00040" summary="feat(app): add reference form">
+      <option name="closed" value="true" />
+      <created>1701333023568</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1701333023568</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -526,8 +527,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat(ui): add a few ui components" />
-    <MESSAGE value="refactor(ui/button): move theme logic directly from button component" />
     <MESSAGE value="feat(ui): add more uikit components" />
     <MESSAGE value="feat(app): started making an application" />
     <MESSAGE value="feat(app): tutorial is done" />
@@ -551,7 +550,9 @@
     <MESSAGE value="refactor(uikit): refactor rollup config" />
     <MESSAGE value="refactor(app): add reference module" />
     <MESSAGE value="refactor(app): add tutorial module" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor(app): add tutorial module" />
+    <MESSAGE value="feat(uikit): add forwardRef to the input and select" />
+    <MESSAGE value="feat(app): add reference form" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(app): add reference form" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

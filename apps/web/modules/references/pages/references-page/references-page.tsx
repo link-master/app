@@ -58,7 +58,7 @@ export const ReferencesPage = () => {
       )}
 
       <ReferencePopup
-        onCreate={onCreateReference}
+        onSubmit={onCreateReference}
         link={pastedUrl ?? ''}
         onClose={onClose}
         active={isCreatingReference}
