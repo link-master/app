@@ -5,3 +5,5 @@ export interface Collection {
   name: string;
   description: string;
 }
+
+export type CollectionFields = Pick<Collection, 'name' | 'description'>;

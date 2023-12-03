@@ -4,11 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09f6e1da-80c2-4212-8c5c-63ad3fde2165" name="Changes" comment="feat(app): add reference form">
+    <list default="true" id="a106957e-c122-49f0-a741-e9498a5c37e9" name="#2 Сделать форму для добавления коллекции" comment="">
+      <change afterPath="$PROJECT_DIR$/apps/web/modules/collections/hooks/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/modules/collections/hooks/use-collection-popup.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/modules/collections/components/add-collection-form/add-collection-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/collections/components/collection-form/collection-form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/modules/collections/components/add-collection-form/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/collections/components/collection-form/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/modules/collections/components/collection-popup/collection-popup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/collections/components/collection-popup/collection-popup.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/modules/collections/components/collection-section-stub/collection-section-stub.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/collections/components/collection-section-stub/collection-section-stub.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/modules/collections/components/collection/collection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/collections/components/collection/collection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/modules/collections/components/collection/collection.types.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/modules/collections/components/collections-section/collections-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/collections/components/collections-section/collections-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/modules/collections/components/collections-section/collections-section.types.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/modules/collections/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/collections/components/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/modules/collections/database/collection-database-store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/collections/database/collection-database-store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/modules/collections/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/collections/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/modules/collections/pages/collections-page/collections-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/collections/pages/collections-page/collections-page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/modules/collections/store/collection-slice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/collections/store/collection-slice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/modules/references/components/add-reference-form/add-reference-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/references/components/reference-form/reference-form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/modules/references/components/add-reference-form/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/references/components/reference-form/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/types/lib/collection.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/types/lib/collection.ts" afterDir="false" />
+    </list>
+    <list id="09f6e1da-80c2-4212-8c5c-63ad3fde2165" name="Changes" comment="refactor(form): remove unused elements">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/modules/references/components/add-reference-form/add-reference-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/references/components/add-reference-form/add-reference-form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/modules/references/components/reference-popup/reference-popup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/references/components/reference-popup/reference-popup.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/modules/references/pages/references-page/references-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/references/pages/references-page/references-page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/modules/collections/components/collections-section/collections-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/collections/components/collections-section/collections-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/modules/collections/store/collection-slice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/collections/store/collection-slice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/modules/references/components/reference/reference.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/references/components/reference/reference.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/modules/references/components/reference/reference.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/references/components/reference/reference.types.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,16 +42,47 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="tokiory/feat/#2" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/apps/web/modules/collections/components/collections-section/collections-section.tsx">
+      <ranges>
+        <range start1="0" end1="2" start2="0" end2="13" changelist="a106957e-c122-49f0-a741-e9498a5c37e9" />
+        <range start1="4" end1="4" start2="15" end2="21" changelist="a106957e-c122-49f0-a741-e9498a5c37e9" />
+        <range start1="5" end1="9" start2="22" end2="53" changelist="a106957e-c122-49f0-a741-e9498a5c37e9" />
+        <range start1="10" end1="11" start2="54" end2="60" changelist="a106957e-c122-49f0-a741-e9498a5c37e9" />
+        <range start1="16" end1="16" start2="65" end2="70" changelist="a106957e-c122-49f0-a741-e9498a5c37e9" />
+        <range start1="19" end1="20" start2="73" end2="74" changelist="09f6e1da-80c2-4212-8c5c-63ad3fde2165" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/apps/web/modules/collections/store/collection-slice.ts">
+      <ranges>
+        <range start1="3" end1="4" start2="3" end2="4" changelist="09f6e1da-80c2-4212-8c5c-63ad3fde2165" />
+        <range start1="7" end1="8" start2="7" end2="8" changelist="09f6e1da-80c2-4212-8c5c-63ad3fde2165" />
+        <range start1="14" end1="15" start2="14" end2="15" changelist="a106957e-c122-49f0-a741-e9498a5c37e9" />
+        <range start1="16" end1="17" start2="16" end2="17" changelist="09f6e1da-80c2-4212-8c5c-63ad3fde2165" />
+        <range start1="21" end1="21" start2="21" end2="29" changelist="a106957e-c122-49f0-a741-e9498a5c37e9" />
+        <range start1="24" end1="27" start2="32" end2="39" changelist="a106957e-c122-49f0-a741-e9498a5c37e9" />
+        <range start1="34" end1="35" start2="46" end2="50" changelist="a106957e-c122-49f0-a741-e9498a5c37e9" />
+        <range start1="42" end1="43" start2="57" end2="58" changelist="a106957e-c122-49f0-a741-e9498a5c37e9" />
+        <range start1="46" end1="46" start2="61" end2="70" changelist="a106957e-c122-49f0-a741-e9498a5c37e9" />
+        <range start1="47" end1="49" start2="71" end2="73" changelist="09f6e1da-80c2-4212-8c5c-63ad3fde2165" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="NamedScopeManager">
     <order>
+      <scope name=" Configurations" />
       <scope name=" UI Kit" />
       <scope name="✨ Webapp" />
-      <scope name=" Configurations" />
     </order>
   </component>
   <component name="ProjectColorInfo">{
@@ -46,29 +98,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.CodyProjectSettingsMigration&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.0.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.0.0&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/tokiory/Software/linkmaster/packages/hooks&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.JavaScript&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/tokiory/Software/linkmaster/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.CodyProjectSettingsMigration": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "tokiory/feat/#2",
+    "javascript.nodejs.core.library.configured.version": "18.0.0",
+    "javascript.nodejs.core.library.typings.version": "18.0.0",
+    "last_opened_file_path": "/Users/tokiory/Software/linkmaster/packages/hooks",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "/Users/tokiory/Software/linkmaster/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -110,12 +162,13 @@
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
+    <task id="Default" summary="Default task">
+      <branch name="tokiory/feat/#2" repository="$PROJECT_DIR$" original="true" />
       <changelist id="09f6e1da-80c2-4212-8c5c-63ad3fde2165" name="Changes" comment="" />
       <created>1694351472739</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1694351472739</updated>
+      <updated>1701359054053</updated>
       <workItem from="1694351473826" duration="1191000" />
       <workItem from="1698231734823" duration="16785000" />
       <workItem from="1698254871641" duration="6305000" />
@@ -182,7 +235,8 @@
       <workItem from="1701249376340" duration="7718000" />
       <workItem from="1701267527540" duration="6284000" />
       <workItem from="1701332971605" duration="792000" />
-      <workItem from="1701334301289" duration="2001000" />
+      <workItem from="1701334301289" duration="6356000" />
+      <workItem from="1701357574067" duration="1478000" />
     </task>
     <task id="LOCAL-00001" summary="feat(init): initialize new project">
       <option name="closed" value="true" />
@@ -504,8 +558,43 @@
       <option name="project" value="LOCAL" />
       <updated>1701333023568</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
-    <servers />
+    <task id="LOCAL-00041" summary="refactor(form): remove unused elements">
+      <option name="closed" value="true" />
+      <created>1701336858742</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1701336858742</updated>
+    </task>
+    <task active="true" id="app-2" summary="Сделать форму для добавления коллекции">
+      <branch name="tokiory/feat/#2" repository="$PROJECT_DIR$" />
+      <changelist id="a106957e-c122-49f0-a741-e9498a5c37e9" name="#2 Сделать форму для добавления коллекции" comment="" />
+      <created>1701335347000</created>
+      <option name="issue" value="true" />
+      <url>https://github.com/link-master/app/issues/2</url>
+      <option name="number" value="2" />
+      <option name="presentableId" value="app-2" />
+      <option name="project" value="app" />
+      <option name="type" value="BUG" />
+      <updated>1701359054053</updated>
+      <workItem from="1701359054873" duration="1201000" />
+      <workItem from="1701424348599" duration="633000" />
+      <workItem from="1701436454581" duration="620000" />
+      <workItem from="1701437084546" duration="518000" />
+      <workItem from="1701437610647" duration="1513000" />
+      <workItem from="1701439135010" duration="990000" />
+      <workItem from="1701440136861" duration="6272000" />
+      <workItem from="1701596518719" duration="398000" />
+    </task>
+    <option name="localTasksCounter" value="42" />
+    <option name="createBranch" value="false" />
+    <option name="useBranch" value="true" />
+    <servers>
+      <GitHub url="https://github.com">
+        <option name="repoAuthor" value="link-master" />
+        <option name="repoName" value="app" />
+      </GitHub>
+    </servers>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
@@ -527,7 +616,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat(ui): add more uikit components" />
     <MESSAGE value="feat(app): started making an application" />
     <MESSAGE value="feat(app): tutorial is done" />
     <MESSAGE value="feat(tutorial): update tutorial" />
@@ -552,7 +640,8 @@
     <MESSAGE value="refactor(app): add tutorial module" />
     <MESSAGE value="feat(uikit): add forwardRef to the input and select" />
     <MESSAGE value="feat(app): add reference form" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(app): add reference form" />
+    <MESSAGE value="refactor(form): remove unused elements" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor(form): remove unused elements" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
