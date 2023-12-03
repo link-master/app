@@ -1,13 +1,21 @@
-import { CollectionProperties } from '@/modules/collections/components/collection/collection.types.ts';
 import { Icon } from '@iconify/react';
+import { Collection as CollectionType } from '@linkmaster/types';
+import { Common } from '@linkmaster/types';
 import { Card, Text } from '@linkmaster/uikit';
 import { clsx } from 'clsx';
+
+interface CollectionProperties extends CollectionType.Collection {
+  className?: string;
+  onChange: (id: Common.Identificator) => void;
+  onDelete: (id: Common.Identificator) => void;
+}
 
 export const Collection = ({
   className,
   name,
-  items,
   description,
+  onChange,
+  onDelete,
   id,
 }: CollectionProperties) => {
   return (
@@ -34,28 +42,16 @@ export const Collection = ({
         )}
       </div>
       <div className="flex-col flex justify-between gap-2 items-end">
-        {items?.length >= 0 && (
-          <div className="flex justify-start gap-1 items-center h-fit">
-            <Icon
-              className="text-zinc-400"
-              icon="fluent:hexagon-three-12-filled"
-            />
-            <Text
-              className="text-sm flex justify-center items-center"
-              theme="secondary"
-            >
-              {items.length}
-            </Text>
-          </div>
-        )}
         <div className="flex gap-2">
           <Icon
             icon="fluent:edit-24-filled"
+            onClick={() => onChange(id)}
             fontSize={18}
             className="text-zinc-400 hover:text-zinc-600"
           />
           <Icon
             icon="fluent:delete-24-filled"
+            onClick={() => onDelete(id)}
             fontSize={18}
             className="text-zinc-400 hover:text-zinc-600"
           />

@@ -3,25 +3,14 @@ import {
   CollectionsSection,
   CollectionsSectionStub,
 } from '@/modules/collections/components';
-import { CollectionPopup } from '@/modules/collections/components';
 import { collectionDatabaseStore } from '@/modules/collections/database';
-import { setRawCollections, addCollection } from '@/modules/collections/store';
-import { Collection } from '@/types/collection.types.ts';
-import { useEffect, useState } from 'react';
+import { setRawCollections } from '@/modules/collections/store';
+import { useEffect } from 'react';
 
 export const CollectionsPage = () => {
   // eslint-disable-next-line react-redux/useSelector-prefer-selectors
-  const references = useAppSelector((state) => state.collection.collections);
+  const collections = useAppSelector((state) => state.collection.collections);
   const appDispatch = useAppDispatch();
-  const [hasPopup, setHasPopup] = useState(false);
-
-  const handleClosePopup = () => {
-    setHasPopup(false);
-  };
-
-  const handlePopupSubmit = async (collection: Collection) => {
-    appDispatch(addCollection(collection));
-  };
 
   useEffect(() => {
     collectionDatabaseStore.list().then((collections) => {
@@ -31,19 +20,11 @@ export const CollectionsPage = () => {
 
   return (
     <div className="min-h-screen w-full flex">
-      {references.length > 0 ? (
-        <CollectionsSection
-          collections={references}
-          onShowCreatePopup={() => setHasPopup(true)}
-        />
+      {collections.length > 0 ? (
+        <CollectionsSection />
       ) : (
         <CollectionsSectionStub onShowCreatePopup={() => setHasPopup(true)} />
       )}
-      <CollectionPopup
-        onSubmit={handlePopupSubmit}
-        onClose={handleClosePopup}
-        active={hasPopup}
-      />
     </div>
   );
 };
