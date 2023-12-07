@@ -73,7 +73,7 @@ export const CollectionsSection = () => {
         className="fixed bottom-4 right-4"
         onClick={popupControl.showCreatePopup}
       >
-        Добавить референс
+        Добавить коллекцию
       </Button>
     </div>
   );

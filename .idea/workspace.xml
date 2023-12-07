@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09f6e1da-80c2-4212-8c5c-63ad3fde2165" name="Changes" comment="feat(init): add hook for initializing data (#1)">
-      <change afterPath="$PROJECT_DIR$/apps/web/modules/references/data/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/modules/references/data/regex.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/modules/references/components/reference-form/reference-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/references/components/reference-form/reference-form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/modules/references/pages/references-page/references-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/references/pages/references-page/references-page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/input/input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/input/input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/input/input.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/input/input.types.ts" afterDir="false" />
+    <list default="true" id="09f6e1da-80c2-4212-8c5c-63ad3fde2165" name="Changes" comment="feat(init): add validation for inputs in reference-form.tsx (#12)">
+      <change beforePath="$PROJECT_DIR$/apps/web/modules/collections/components/collection-form/collection-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/collections/components/collection-form/collection-form.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,14 +190,6 @@
       <workItem from="1701332971605" duration="792000" />
       <workItem from="1701334301289" duration="6356000" />
       <workItem from="1701357574067" duration="1478000" />
-    </task>
-    <task id="LOCAL-00002" summary="feat(ui): add a few ui components">
-      <option name="closed" value="true" />
-      <created>1698248091149</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1698248091149</updated>
     </task>
     <task id="LOCAL-00003" summary="feat(ui): add a few ui components">
       <option name="closed" value="true" />
@@ -601,7 +587,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701959493702</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="feat(init): add validation for inputs in reference-form.tsx (#12)">
+      <option name="closed" value="true" />
+      <created>1701961877836</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1701961877836</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <option name="createBranch" value="false" />
     <option name="useBranch" value="true" />
     <servers>
@@ -631,7 +625,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refactor(eslint): add eslint configuration" />
     <MESSAGE value="fix(uikit): fixed all eslint errors" />
     <MESSAGE value="fix(uikit): add another attributes for input" />
     <MESSAGE value="fix(eslint): remove some rules" />
@@ -656,7 +649,8 @@
     <MESSAGE value="refactor(reference-form): renamed reference-form.tsx (#4)" />
     <MESSAGE value="feat(reference): add change reference functionality (#4)" />
     <MESSAGE value="feat(init): add hook for initializing data (#1)" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(init): add hook for initializing data (#1)" />
+    <MESSAGE value="feat(init): add validation for inputs in reference-form.tsx (#12)" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(init): add validation for inputs in reference-form.tsx (#12)" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
