@@ -1,4 +1,3 @@
-import { ReferencePopup } from '@/modules/references/components';
 import {
   ReferenceSection,
   ReferenceSectionStub,

@@ -7,7 +7,7 @@ export const Input = forwardRef<HTMLInputElement, InputProperties>(
     {
       value,
       onInput,
-      errors,
+      error,
       className,
       placeholder,
       label,
@@ -29,17 +29,13 @@ export const Input = forwardRef<HTMLInputElement, InputProperties>(
       'placeholder-zinc-300',
     ];
 
-    if (errors && errors?.length) {
+    if (error && error?.length) {
       classes.push('border-red-400');
     }
 
-    const errorList =
-      errors &&
-      errors?.map((item) => (
-        <div key={item} className={clsx('text-red-400', 'text-sm')}>
-          {item}
-        </div>
-      ));
+    const errorMessage = error && (
+      <div className={clsx('text-red-400', 'text-sm')}>{error}</div>
+    );
 
     return (
       <div className={clsx(className)}>
@@ -61,7 +57,7 @@ export const Input = forwardRef<HTMLInputElement, InputProperties>(
           onInput={onInput}
           placeholder={placeholder}
         />
-        {errorList}
+        {errorMessage}
       </div>
     );
   }

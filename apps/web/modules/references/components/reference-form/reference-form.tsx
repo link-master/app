@@ -1,16 +1,31 @@
 import { useAppSelector } from '@/hooks/use-redux.ts';
 import { selectCollection } from '@/modules/collections/store';
+import { URL_REGEX } from '@/modules/references/data';
 import { ReferenceType } from '@linkmaster/types';
 import { Button, Input, Select, mapToSelect } from '@linkmaster/uikit';
 import { MouseEvent } from 'react';
-import { Controller, SubmitHandler, useForm } from 'react-hook-form';
+import {
+  Controller,
+  RegisterOptions,
+  SubmitHandler,
+  useForm,
+} from 'react-hook-form';
 
-interface ReferenceAddFormProperties {
-  initial?: ReferenceType.ReferenceFields | null;
-  onSubmit: SubmitHandler<ReferenceType.ReferenceFields>;
-  onClose: () => void;
-  submitText: string;
-}
+const validators = {
+  name: {
+    maxLength: {
+      value: 100,
+      message: 'Не более 100 символов',
+    },
+  },
+  link: {
+    required: 'Ссылку нужно ввести обязательно :)',
+    pattern: {
+      value: URL_REGEX,
+      message: 'Ссылка должна быть корректной',
+    },
+  },
+} as const satisfies Validations;
 
 export const ReferenceForm = ({
   onSubmit,
@@ -18,7 +33,7 @@ export const ReferenceForm = ({
   onClose,
   submitText,
 }: ReferenceAddFormProperties) => {
-  const { handleSubmit, control, register } =
+  const { handleSubmit, control, register, formState } =
     useForm<ReferenceType.ReferenceFields>({
       values: initial ?? undefined,
       shouldUseNativeValidation: false,
@@ -40,8 +55,19 @@ export const ReferenceForm = ({
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <Input className="mt-2" {...register('name')} label="Название" />
-      <Input className="mt-2" {...register('link')} required label="Ссылка" />
+      <Input
+        className="mt-2"
+        error={formState.errors.name?.message as string}
+        {...register('name', validators.name)}
+        label="Название"
+      />
+      <Input
+        className="mt-2"
+        error={formState.errors.link?.message as string}
+        {...register('link', validators.link)}
+        required
+        label="Ссылка"
+      />
       <Controller
         control={control}
         name="parent"
@@ -66,3 +92,22 @@ export const ReferenceForm = ({
     </form>
   );
 };
+
+interface ReferenceAddFormProperties {
+  initial?: ReferenceType.ReferenceFields | null;
+  onSubmit: SubmitHandler<ReferenceType.ReferenceFields>;
+  onClose: () => void;
+  submitText: string;
+}
+
+type Validations = Partial<
+  Record<
+    keyof ReferenceType.ReferenceFields,
+    Partial<
+      Pick<
+        RegisterOptions,
+        'minLength' | 'maxLength' | 'required' | 'validate' | 'pattern'
+      >
+    >
+  >
+>;
