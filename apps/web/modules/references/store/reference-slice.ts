@@ -20,11 +20,24 @@ export const removeReference = createAsyncThunk(
   }
 );
 
+export const updateReference = createAsyncThunk(
+  `${StoreCollection.reference}/update`,
+  async (payload: ReferenceType.Reference) => {
+    await referenceDatabaseStore.update(payload);
+    return payload;
+  }
+);
+
 export const addReference = createAsyncThunk(
   `${StoreCollection.reference}/add`,
-  async (payload: ReferenceType.Reference) => {
-    await referenceDatabaseStore.add(payload);
-    return payload;
+  async (payload: ReferenceType.ReferenceFields) => {
+    const reference: ReferenceType.Reference = {
+      id: `reference:${Date.now().toString()}`,
+      ...payload,
+    };
+
+    await referenceDatabaseStore.add(reference);
+    return reference;
   }
 );
 
@@ -45,6 +58,15 @@ const referenceSlice = createSlice({
         addReference.fulfilled,
         (state, action: PayloadAction<ReferenceType.Reference>) => {
           state.references.push(action.payload);
+        }
+      )
+      .addCase(
+        updateReference.fulfilled,
+        (state, action: PayloadAction<ReferenceType.Reference>) => {
+          const foundIndex = state.references.findIndex(
+            (reference) => reference.id === action.payload.id
+          );
+          state.references[foundIndex] = action.payload;
         }
       )
       .addCase(

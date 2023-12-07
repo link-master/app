@@ -10,4 +10,8 @@ export { Heading } from './lib/components/heading';
 export { Switch } from './lib/components/switch';
 export { Link } from './lib/components/link';
 export { Popup } from './lib/components/popup';
-export { Select, type SelectOption } from './lib/components/select';
+export {
+  Select,
+  type SelectOption,
+  mapToSelect,
+} from './lib/components/select';

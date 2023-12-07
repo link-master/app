@@ -1,51 +1,41 @@
 import { useAppSelector } from '@/hooks/use-redux.ts';
 import { selectCollection } from '@/modules/collections/store';
 import { ReferenceType } from '@linkmaster/types';
-import { Button, Input, Select, type SelectOption } from '@linkmaster/uikit';
+import { Button, Input, Select, mapToSelect } from '@linkmaster/uikit';
 import { MouseEvent } from 'react';
 import { Controller, SubmitHandler, useForm } from 'react-hook-form';
 
-type ReferenceFormFields = Omit<ReferenceType.Reference, 'id' | 'name'> & {
-  name?: string;
-};
-
 interface ReferenceAddFormProperties {
-  defaults?: ReferenceFormFields;
-  onSubmit: SubmitHandler<ReferenceFormFields>;
-  onCancel: () => void;
+  initial?: ReferenceType.ReferenceFields | null;
+  onSubmit: SubmitHandler<ReferenceType.ReferenceFields>;
+  onClose: () => void;
+  submitText: string;
 }
 
 export const ReferenceForm = ({
   onSubmit,
-  defaults,
-  onCancel,
+  initial,
+  onClose,
+  submitText,
 }: ReferenceAddFormProperties) => {
-  const { handleSubmit, control, register } = useForm<ReferenceFormFields>({
-    values: {
-      name: defaults?.name || '',
-      link: defaults?.link || '',
-      parent: defaults?.parent || '',
-    },
-    shouldUseNativeValidation: false,
-  });
+  const { handleSubmit, control, register } =
+    useForm<ReferenceType.ReferenceFields>({
+      values: initial ?? undefined,
+      shouldUseNativeValidation: false,
+    });
 
   const collections = useAppSelector(selectCollection);
-  const collectionOptions: SelectOption[] = [
+  const collectionOptions = [
     {
       value: 'default',
       text: 'Общая коллекция',
     },
-    ...collections.map((collection) => {
-      return {
-        value: collection.id,
-        text: collection.name,
-      };
-    }),
+    ...mapToSelect(collections, 'id', 'name'),
   ];
 
   const handleCancel = (event: MouseEvent) => {
     event.preventDefault();
-    onCancel();
+    onClose();
   };
 
   return (
@@ -70,7 +60,7 @@ export const ReferenceForm = ({
           Отменить
         </Button>
         <Button onClick={handleSubmit(onSubmit)} type="submit">
-          Создать
+          {submitText}
         </Button>
       </div>
     </form>

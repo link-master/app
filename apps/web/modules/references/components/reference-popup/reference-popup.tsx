@@ -1,49 +1,44 @@
-import { ReferenceForm } from '@/modules/references/components/add-reference-form';
+import { ReferenceForm } from '@/modules/references/components';
+import { PopupSubmitHandler, PopupInfoState } from '@/modules/references/hooks';
 import { ReferenceType } from '@linkmaster/types';
-import { Popup } from '@linkmaster/uikit';
+import { Popup, Heading } from '@linkmaster/uikit';
 
-interface ReferencePopupProperties extends Partial<ReferenceType.Reference> {
-  active: boolean;
+type ReferencePopupProperties = PopupInfoState & {
   onClose: () => void;
-  onSubmit: (reference: ReferenceType.Reference) => void;
-}
+  onSubmit: PopupSubmitHandler;
+};
 
 export const ReferencePopup = ({
-  active,
-  onClose,
+  type,
+  payload,
   onSubmit,
-  link,
-  name,
-  parent,
+  onClose,
 }: ReferencePopupProperties) => {
-  const providedReference: Omit<ReferenceType.Reference, 'id'> = {
-    link,
-    name: name!,
-    parent,
-  };
+  const title =
+    type === 'create' ? 'Создание референса' : 'Изменение референса';
+  const isActive = type !== 'hidden';
+  const submitText = type === 'create' ? 'Создать' : 'Изменить';
 
-  const handleSubmit = (reference: Partial<ReferenceType.Reference>) => {
-    const id = `reference-${Date.now()}`;
+  const handleSubmit = (fields: ReferenceType.ReferenceFields) => {
     onSubmit({
-      id,
-      parent: reference.parent,
-      link: reference.link,
-      name: reference?.name || '',
+      type,
+      payload: fields,
     });
-    onClose();
   };
 
   return (
     <Popup
-      active={active}
       className="w-full max-w-[420px]"
+      active={isActive}
       onClose={onClose}
       root="#popup"
     >
+      <Heading level={3}>{title}</Heading>
       <ReferenceForm
-        defaults={providedReference}
-        onCancel={onClose}
+        onClose={onClose}
+        submitText={submitText}
         onSubmit={handleSubmit}
+        initial={payload}
       />
     </Popup>
   );

@@ -5,24 +5,12 @@ import {
 } from '@/modules/references/components';
 import { referenceDatabaseStore } from '@/modules/references/database';
 import { useAppDispatch, useAppSelector } from '@/hooks/use-redux.ts';
-import {
-  addReference,
-  selectReferences,
-  setRawReferences,
-} from '@/modules/references/store';
-import { ReferenceType } from '@linkmaster/types';
-import { useEffect, useState } from 'react';
+import { selectReferences, setRawReferences } from '@/modules/references/store';
+import { useEffect } from 'react';
 
 export const ReferencesPage = () => {
   const references = useAppSelector(selectReferences);
-  const [pastedUrl, setPastedUrl] = useState<string | null>(null);
-  const [isCreatingReference, setIsCreatingReference] = useState(false);
   const appDispatch = useAppDispatch();
-
-  const onClose = () => {
-    setPastedUrl(null);
-    setIsCreatingReference(false);
-  };
 
   useEffect(() => {
     referenceDatabaseStore.list().then((references) => {
@@ -30,39 +18,9 @@ export const ReferencesPage = () => {
     });
   }, [appDispatch]);
 
-  useEffect(() => {
-    const onPaste = (event: ClipboardEvent) => {
-      setPastedUrl(event.clipboardData?.getData('text') ?? '');
-      setIsCreatingReference(true);
-    };
-
-    addEventListener('paste', onPaste);
-    return () => removeEventListener('paste', onPaste);
-  }, []);
-
-  const onCreateReference = (reference: ReferenceType.Reference) => {
-    appDispatch(addReference(reference));
-  };
-
   return (
     <div className="min-h-screen w-full flex">
-      {references.length > 0 ? (
-        <ReferenceSection
-          references={references}
-          onShowCreatePopup={() => setIsCreatingReference(true)}
-        />
-      ) : (
-        <ReferenceSectionStub
-          onShowCreatePopup={() => setIsCreatingReference(true)}
-        />
-      )}
-
-      <ReferencePopup
-        onSubmit={onCreateReference}
-        link={pastedUrl ?? ''}
-        onClose={onClose}
-        active={isCreatingReference}
-      />
+      {references.length > 0 ? <ReferenceSection /> : <ReferenceSectionStub />}
     </div>
   );
 };

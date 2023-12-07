@@ -1,5 +1,5 @@
-import { Collection } from '@/lib/collection.ts';
-import { Identificator, Link } from '@/lib/common.ts';
+import { Collection } from '@/lib/collection';
+import { Identificator, Link } from '@/lib/common';
 
 export interface Reference {
   name: string;
@@ -7,3 +7,5 @@ export interface Reference {
   link: Link;
   parent: Collection['id'];
 }
+
+export type ReferenceFields = Pick<Reference, 'name' | 'link' | 'parent'>;

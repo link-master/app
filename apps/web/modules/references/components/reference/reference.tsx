@@ -2,8 +2,6 @@ import {
   ReferenceContextMenuProperties,
   ReferenceItemProperties,
 } from './reference.types.ts';
-import { useAppDispatch } from '@/hooks/use-redux.ts';
-import { removeReference } from '@/modules/references/store/reference-slice.ts';
 import { PropsWithClassname } from '@/types/utils.types.ts';
 import { Icon } from '@iconify/react';
 import { Heading, Text, Card } from '@linkmaster/uikit';
@@ -41,14 +39,14 @@ export const Reference = ({
   link,
   name,
   className,
+  onChange,
+  onDelete,
 }: ReferenceItemProperties) => {
   const linkClasses = name
     ? 'block py-4 px-6'
     : 'w-full py-4 px-6 h-full flex justify-center items-center';
 
   const [hasContextMenu, setHasContextMenu] = useState(false);
-  const [isChanging, setIsChanging] = useState(false);
-  const appDispatch = useAppDispatch();
 
   const toggleContextMenu = useCallback(
     (event?: MouseEvent) => {
@@ -59,16 +57,14 @@ export const Reference = ({
     [hasContextMenu]
   );
 
-  const change = () => {};
-
-  const handleChange = (event: MouseEvent) => {
-    console.log('Change');
-    event.preventDefault();
+  const handleChange = (event?: MouseEvent) => {
+    event?.preventDefault();
+    onChange(id);
   };
 
-  const handleDelete = (event: MouseEvent) => {
-    event.preventDefault();
-    appDispatch(removeReference(id));
+  const handleDelete = (event?: MouseEvent) => {
+    event?.preventDefault();
+    onDelete(id);
   };
 
   useEffect(() => {
