@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09f6e1da-80c2-4212-8c5c-63ad3fde2165" name="Changes" comment="feat(init): add validation for inputs in reference-form.tsx (#12)">
-      <change beforePath="$PROJECT_DIR$/apps/web/modules/collections/components/collection-form/collection-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/collections/components/collection-form/collection-form.tsx" afterDir="false" />
+    <list default="true" id="09f6e1da-80c2-4212-8c5c-63ad3fde2165" name="Changes" comment="feat(collections): add validation for inputs in collection-form.tsx (#13)">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/modules/collections/components/collection/collection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/collections/components/collection/collection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/modules/collections/components/collections-section/collections-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/collections/components/collections-section/collections-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/modules/references/components/reference-section/reference-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/references/components/reference-section/reference-section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/modules/references/pages/references-page/references-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/references/pages/references-page/references-page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/select/select.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/select/select.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/select/select.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/select/select.types.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +22,9 @@
     <option name="groupingKeys">
       <option value="directory" />
     </option>
+  </component>
+  <component name="CodyActiveAccount">
+    <option name="activeAccountId" value="0bab6c7c-4f9a-468f-a680-e8efcf5153e7" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -59,8 +68,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "javascript.nodejs.core.library.configured.version": "18.0.0",
-    "javascript.nodejs.core.library.typings.version": "18.0.0",
+    "javascript.nodejs.core.library.configured.version": "18.12.0",
+    "javascript.nodejs.core.library.typings.version": "18.19.3",
     "last_opened_file_path": "/Users/tokiory/Software/linkmaster/packages/hooks",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
@@ -99,7 +108,7 @@
       <recent name="$PROJECT_DIR$/apps/web/modules/references/components/reference-section-stub" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.UI Kit: Build">
+  <component name="RunManager" selected="npm.Web: Development">
     <list>
       <item itemvalue="npm.UI Kit: Storybook" />
       <item itemvalue="npm.UI Kit: Watch" />
@@ -190,14 +199,6 @@
       <workItem from="1701332971605" duration="792000" />
       <workItem from="1701334301289" duration="6356000" />
       <workItem from="1701357574067" duration="1478000" />
-    </task>
-    <task id="LOCAL-00003" summary="feat(ui): add a few ui components">
-      <option name="closed" value="true" />
-      <created>1698254979285</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1698254979286</updated>
     </task>
     <task id="LOCAL-00004" summary="refactor(ui/button): move theme logic directly from button component">
       <option name="closed" value="true" />
@@ -505,7 +506,6 @@
     </task>
     <task active="true" id="app-2" summary="Сделать форму для добавления коллекции">
       <branch name="tokiory/feat/#2" repository="$PROJECT_DIR$" />
-      <changelist id="" name="#2 Сделать форму для добавления коллекции" comment="" />
       <created>1701335347000</created>
       <option name="issue" value="true" />
       <url>https://github.com/link-master/app/issues/2</url>
@@ -522,6 +522,7 @@
       <workItem from="1701439135010" duration="990000" />
       <workItem from="1701440136861" duration="6272000" />
       <workItem from="1701596518719" duration="398000" />
+      <workItem from="1701964123265" duration="34000" />
     </task>
     <task id="LOCAL-00042" summary="refactor(types): changed types names">
       <option name="closed" value="true" />
@@ -595,7 +596,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701961877836</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="feat(collections): add validation for inputs in collection-form.tsx (#13)">
+      <option name="closed" value="true" />
+      <created>1701962140335</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1701962140336</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <option name="createBranch" value="false" />
     <option name="useBranch" value="true" />
     <servers>
@@ -625,7 +634,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix(uikit): fixed all eslint errors" />
     <MESSAGE value="fix(uikit): add another attributes for input" />
     <MESSAGE value="fix(eslint): remove some rules" />
     <MESSAGE value="feat(web): done with references" />
@@ -650,7 +658,8 @@
     <MESSAGE value="feat(reference): add change reference functionality (#4)" />
     <MESSAGE value="feat(init): add hook for initializing data (#1)" />
     <MESSAGE value="feat(init): add validation for inputs in reference-form.tsx (#12)" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(init): add validation for inputs in reference-form.tsx (#12)" />
+    <MESSAGE value="feat(collections): add validation for inputs in collection-form.tsx (#13)" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(collections): add validation for inputs in collection-form.tsx (#13)" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">

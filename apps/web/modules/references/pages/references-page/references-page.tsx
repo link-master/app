@@ -2,20 +2,13 @@ import {
   ReferenceSection,
   ReferenceSectionStub,
 } from '@/modules/references/components';
-import { referenceDatabaseStore } from '@/modules/references/database';
-import { useAppDispatch, useAppSelector } from '@/hooks/use-redux.ts';
-import { selectReferences, setRawReferences } from '@/modules/references/store';
+import { useAppSelector } from '@/hooks/use-redux.ts';
+import { selectReferences } from '@/modules/references/store';
 import { useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 
 export const ReferencesPage = () => {
   const references = useAppSelector(selectReferences);
-  const appDispatch = useAppDispatch();
-
-  useEffect(() => {
-    referenceDatabaseStore.list().then((references) => {
-      appDispatch(setRawReferences(references));
-    });
-  }, [appDispatch]);
 
   return (
     <div className="min-h-screen w-full flex">

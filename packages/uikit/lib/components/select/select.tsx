@@ -10,9 +10,7 @@ export const Select = forwardRef<HTMLDivElement, SelectProperties>(
   ) {
     const [isActive, setIsActive] = useState(false);
     const currentOption: SelectOption | null =
-      options.find((option) => option.value === value?.value) ??
-      options[0] ??
-      null;
+      options.find((option) => option.value === value) ?? options[0] ?? null;
 
     const toggleActive = () => {
       setIsActive((isActive) => !isActive);
@@ -26,7 +24,7 @@ export const Select = forwardRef<HTMLDivElement, SelectProperties>(
     };
 
     const handleSelectOption = (option: SelectOption) => {
-      onChange(option);
+      onChange(option.value);
       toggleActive();
     };
 

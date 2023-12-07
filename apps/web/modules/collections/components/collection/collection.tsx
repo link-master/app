@@ -7,6 +7,7 @@ interface CollectionProperties extends CollectionType.Collection {
   className?: string;
   onChange: (id: CommonType.Identificator) => void;
   onDelete: (id: CommonType.Identificator) => void;
+  onClick: (id: CommonType.Identificator) => void;
 }
 
 export const Collection = ({
@@ -15,11 +16,13 @@ export const Collection = ({
   description,
   onChange,
   onDelete,
+  onClick,
   id,
 }: CollectionProperties) => {
   return (
     <Card
       id={id}
+      onClick={() => onClick(id)}
       className={clsx(
         'flex items-start justify-between hover:border-zinc-300 cursor-pointer !p-2 !px-4',
         className

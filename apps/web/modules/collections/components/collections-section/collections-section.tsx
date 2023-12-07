@@ -1,3 +1,4 @@
+import { routes } from '@/data/navigation.tsx';
 import { useAppDispatch, useAppSelector } from '@/hooks/use-redux.ts';
 import { CollectionPopup, Collection } from '@/modules/collections/components';
 import { CollectionType } from '@linkmaster/types';
@@ -14,11 +15,15 @@ import {
 import { LineList } from '@/widgets/line-list';
 import { Button } from '@linkmaster/uikit';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export const CollectionsSection = () => {
   // Redux
   const collections = useAppSelector(selectCollection);
   const appDispatch = useAppDispatch();
+
+  // Router
+  const navigate = useNavigate();
 
   // State
   const popupControl = useCollectionPopup();
@@ -26,9 +31,17 @@ export const CollectionsSection = () => {
     useState<CollectionType.Collection['id']>(null);
 
   // Handlers
-  const changeCollection = (id: CollectionType.Collection['id']) => {
+  const handleChange = (id: CollectionType.Collection['id']) => {
     setActiveCollectionId(id);
     popupControl.showChangePopup(id);
+  };
+
+  const handleNavigation = (id: CollectionType.Collection['id']) => {
+    const query = new URLSearchParams({
+      collection: id,
+    });
+
+    navigate(`${routes.references.path}?${query.toString()}`);
   };
 
   const handleDelete = (id: CollectionType.Collection['id']) => {
@@ -53,8 +66,9 @@ export const CollectionsSection = () => {
   // Lists
   const collectionList = collections.map((collection) => (
     <Collection
-      onChange={changeCollection}
+      onChange={handleChange}
       onDelete={handleDelete}
+      onClick={handleNavigation}
       key={collection.id}
       {...collection}
     />

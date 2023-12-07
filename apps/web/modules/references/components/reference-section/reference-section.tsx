@@ -14,10 +14,12 @@ import { CommonType } from '@linkmaster/types';
 import { GridList } from '@/widgets/grid-list';
 import { Button } from '@linkmaster/uikit';
 import { useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 
 export const ReferenceSection = () => {
   const references = useAppSelector(selectReferences);
   const appDispatch = useAppDispatch();
+  const [parameters] = useSearchParams();
 
   const popupControl = useReferencePopup();
   const [activeReferenceId, setActiveReferenceId] =
@@ -38,8 +40,8 @@ export const ReferenceSection = () => {
     if (action.type === 'change') {
       appDispatch(
         updateReference({
-          id: activeReferenceId,
           ...action.payload,
+          id: activeReferenceId,
         })
       );
       setActiveReferenceId(null);
@@ -48,14 +50,26 @@ export const ReferenceSection = () => {
     }
   };
 
-  const referenceList = references.map((reference) => (
-    <Reference
-      onChange={changeReference}
-      onDelete={handleDelete}
-      key={reference.id}
-      {...reference}
-    />
-  ));
+  const referenceList = references
+    .filter((reference) => {
+      const collectionId = parameters.get('collection');
+      console.log(reference.parent);
+      console.log(collectionId);
+
+      if (collectionId && reference.parent !== collectionId) {
+        return false;
+      }
+
+      return true;
+    })
+    .map((reference) => (
+      <Reference
+        onChange={changeReference}
+        onDelete={handleDelete}
+        key={reference.id}
+        {...reference}
+      />
+    ));
 
   return (
     <div className="grow p-4">

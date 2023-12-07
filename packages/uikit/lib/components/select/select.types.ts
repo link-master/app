@@ -11,7 +11,7 @@ export interface SelectProperties
   label?: string;
   innerRef?: RefObject<HTMLDivElement>;
   required?: boolean;
-  value?: SelectOption;
-  onChange: (option: SelectOption) => void;
+  value?: SelectOption['value'];
+  onChange: (option: SelectOption['value']) => void;
   placeholder?: string;
 }
