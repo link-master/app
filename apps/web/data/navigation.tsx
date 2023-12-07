@@ -1,4 +1,4 @@
-import { FEATURE_COLLECTION } from '@/data/feature';
+import { FEATURE_COLLECTION, FEATURE_TEMPLATE } from '@/data/feature';
 import { DashboardPage } from '@/modules/dashboard/pages';
 import { ReferencesPage } from '@/modules/references/pages';
 import { TutorialPage } from '@/modules/tutorial/pages';
@@ -31,6 +31,7 @@ export const routes = {
   templates: {
     path: '/templates',
     element: <DashboardPage />,
+    feature: FEATURE_TEMPLATE,
   },
   collections: {
     path: '/collections/',
@@ -41,7 +42,6 @@ export const routes = {
 
 export const routeList = Object.values(routes).filter((item) => {
   if ('feature' in item) {
-    console.log({ feature: item.feature });
     return item.feature as boolean;
   }
   return true;
@@ -69,17 +69,18 @@ if (FEATURE_COLLECTION) {
   });
 }
 
-navigation.push(
-  {
+if (FEATURE_TEMPLATE) {
+  navigation.push({
     name: 'Шаблоны',
     url: routes.templates.path,
     icon: 'fe:sitemap',
-  },
-  {
-    name: 'Настройки',
-    url: '/settings',
-    icon: 'fe:gear',
-  }
-);
+  });
+}
+
+navigation.push({
+  name: 'Настройки',
+  url: '/settings',
+  icon: 'fe:gear',
+});
 
 export { navigation };

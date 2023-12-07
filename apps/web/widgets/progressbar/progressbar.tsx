@@ -1,14 +1,14 @@
 import { PropsWithClassname } from '@/types/utils.types.ts';
 import { clsx } from 'clsx';
 
-interface ProgressbarProps {
+interface ProgressbarProperties {
   loading: `${number}%`;
 }
 
 export const Progressbar = ({
   className,
   loading,
-}: PropsWithClassname<ProgressbarProps>) => {
+}: PropsWithClassname<ProgressbarProperties>) => {
   return (
     <div
       className={clsx(

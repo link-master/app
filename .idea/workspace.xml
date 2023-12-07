@@ -4,14 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09f6e1da-80c2-4212-8c5c-63ad3fde2165" name="Changes" comment="feat(collections): add validation for inputs in collection-form.tsx (#13)">
+    <list default="true" id="09f6e1da-80c2-4212-8c5c-63ad3fde2165" name="Changes" comment="feat(collections): add collection navigation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/.env.development" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/.env.development" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/.env.production" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/.env.production" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/components/navigation/navigation-item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/components/navigation/navigation-item.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/components/navigation/navigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/components/navigation/navigation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/components/navigation/navigation.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/components/navigation/navigation.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/data/feature.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/data/feature.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/data/navigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/data/navigation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/hooks/use-redux.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/hooks/use-redux.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/web/modules/collections/components/collection/collection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/collections/components/collection/collection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/modules/collections/components/collections-section/collections-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/collections/components/collections-section/collections-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/modules/references/components/reference-section/reference-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/references/components/reference-section/reference-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/modules/references/pages/references-page/references-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/references/pages/references-page/references-page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/select/select.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/select/select.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/uikit/lib/components/select/select.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/uikit/lib/components/select/select.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/modules/tutorial/components/tutorial-slide/tutorial-slide.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/tutorial/components/tutorial-slide/tutorial-slide.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/vite-env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/vite-env.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/vite.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/widgets/progressbar/progressbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/widgets/progressbar/progressbar.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,14 +206,6 @@
       <workItem from="1701332971605" duration="792000" />
       <workItem from="1701334301289" duration="6356000" />
       <workItem from="1701357574067" duration="1478000" />
-    </task>
-    <task id="LOCAL-00004" summary="refactor(ui/button): move theme logic directly from button component">
-      <option name="closed" value="true" />
-      <created>1698255112656</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1698255112656</updated>
     </task>
     <task id="LOCAL-00005" summary="feat(ui): add more uikit components">
       <option name="closed" value="true" />
@@ -522,7 +521,7 @@
       <workItem from="1701439135010" duration="990000" />
       <workItem from="1701440136861" duration="6272000" />
       <workItem from="1701596518719" duration="398000" />
-      <workItem from="1701964123265" duration="34000" />
+      <workItem from="1701964123265" duration="626000" />
     </task>
     <task id="LOCAL-00042" summary="refactor(types): changed types names">
       <option name="closed" value="true" />
@@ -604,7 +603,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701962140336</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="feat(collections): add collection navigation">
+      <option name="closed" value="true" />
+      <created>1701964257072</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1701964257072</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <option name="createBranch" value="false" />
     <option name="useBranch" value="true" />
     <servers>
@@ -634,7 +641,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix(uikit): add another attributes for input" />
     <MESSAGE value="fix(eslint): remove some rules" />
     <MESSAGE value="feat(web): done with references" />
     <MESSAGE value="feat(env): add features functionality and .env types" />
@@ -659,7 +665,8 @@
     <MESSAGE value="feat(init): add hook for initializing data (#1)" />
     <MESSAGE value="feat(init): add validation for inputs in reference-form.tsx (#12)" />
     <MESSAGE value="feat(collections): add validation for inputs in collection-form.tsx (#13)" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(collections): add validation for inputs in collection-form.tsx (#13)" />
+    <MESSAGE value="feat(collections): add collection navigation" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(collections): add collection navigation" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">

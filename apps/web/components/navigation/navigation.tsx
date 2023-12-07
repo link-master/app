@@ -3,7 +3,7 @@ import { Sidebar } from '@/widgets/sidebar';
 import { Icon } from '@iconify/react';
 import { clsx } from 'clsx';
 import { useLocation } from 'react-router-dom';
-import { NavigationProps as NavigationProperties } from './navigation.types.ts';
+import { NavigationProperties } from './navigation.types.ts';
 import { NavigationItem } from './navigation-item.tsx';
 import { NavigationSynchronization } from './navigation-synchronization.tsx';
 import { FEATURE_SYNC } from '@/data/feature.ts';

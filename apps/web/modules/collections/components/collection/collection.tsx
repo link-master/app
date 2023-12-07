@@ -2,6 +2,7 @@ import { Icon } from '@iconify/react';
 import { CollectionType, CommonType } from '@linkmaster/types';
 import { Card, Text } from '@linkmaster/uikit';
 import { clsx } from 'clsx';
+import { MouseEvent } from 'react';
 
 interface CollectionProperties extends CollectionType.Collection {
   className?: string;
@@ -19,6 +20,15 @@ export const Collection = ({
   onClick,
   id,
 }: CollectionProperties) => {
+  const handleChange = (event: MouseEvent) => {
+    event.stopPropagation();
+    onChange(id);
+  };
+
+  const handleDelete = (event: MouseEvent) => {
+    event.stopPropagation();
+    onDelete(id);
+  };
   return (
     <Card
       id={id}
@@ -47,13 +57,13 @@ export const Collection = ({
         <div className="flex gap-2">
           <Icon
             icon="fluent:edit-24-filled"
-            onClick={() => onChange(id)}
+            onClick={handleChange}
             fontSize={18}
             className="text-zinc-400 hover:text-zinc-600"
           />
           <Icon
             icon="fluent:delete-24-filled"
-            onClick={() => onDelete(id)}
+            onClick={handleDelete}
             fontSize={18}
             className="text-zinc-400 hover:text-zinc-600"
           />

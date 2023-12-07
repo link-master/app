@@ -1,8 +1,8 @@
-export interface NavigationProps {
+export interface NavigationProperties {
   className?: string;
 }
 
-export interface NavigationItemsProps {
+export interface NavigationItemsProperties {
   active?: boolean;
   href: string;
 }

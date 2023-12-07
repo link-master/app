@@ -1,6 +1,6 @@
 import { JSX } from 'react';
 
-export interface TutorialSlideProps {
+export interface TutorialSlideProperties {
   onNext?: () => void;
   onPrevious?: () => void;
 }
