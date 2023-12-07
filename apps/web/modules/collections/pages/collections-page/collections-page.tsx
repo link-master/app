@@ -23,7 +23,7 @@ export const CollectionsPage = () => {
       {collections.length > 0 ? (
         <CollectionsSection />
       ) : (
-        <CollectionsSectionStub onShowCreatePopup={() => setHasPopup(true)} />
+        <CollectionsSectionStub />
       )}
     </div>
   );
