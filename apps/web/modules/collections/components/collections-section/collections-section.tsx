@@ -1,6 +1,6 @@
 import { useAppDispatch, useAppSelector } from '@/hooks/use-redux.ts';
 import { CollectionPopup, Collection } from '@/modules/collections/components';
-import { Collection as CollectionType } from '@linkmaster/types';
+import { CollectionType } from '@linkmaster/types';
 import {
   useCollectionPopup,
   PopupSubmitHandler,

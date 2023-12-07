@@ -1,11 +1,11 @@
 import { useAppSelector } from '@/hooks/use-redux.ts';
 import { selectCollection } from '@/modules/collections/store';
-import { Reference } from '@linkmaster/types';
+import { ReferenceType } from '@linkmaster/types';
 import { Button, Input, Select, type SelectOption } from '@linkmaster/uikit';
 import { MouseEvent } from 'react';
 import { Controller, SubmitHandler, useForm } from 'react-hook-form';
 
-type ReferenceFormFields = Omit<Reference.Reference, 'id' | 'name'> & {
+type ReferenceFormFields = Omit<ReferenceType.Reference, 'id' | 'name'> & {
   name?: string;
 };
 

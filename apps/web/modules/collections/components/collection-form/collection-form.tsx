@@ -1,11 +1,11 @@
 import { useForm } from 'react-hook-form';
 import { Button, Input } from '@linkmaster/uikit';
-import { Collection } from '@linkmaster/types';
+import { CollectionType } from '@linkmaster/types';
 
 interface CollectionFormProperties {
-  onSubmit: (fields: Collection.CollectionFields) => void;
+  onSubmit: (fields: CollectionType.CollectionFields) => void;
   onClose: () => void;
-  initial: Collection.CollectionFields | null;
+  initial: CollectionType.CollectionFields | null;
   submitText: string;
 }
 
@@ -15,7 +15,7 @@ export const CollectionForm = ({
   submitText,
   onClose,
 }: CollectionFormProperties) => {
-  const { register, handleSubmit } = useForm<Collection.CollectionFields>({
+  const { register, handleSubmit } = useForm<CollectionType.CollectionFields>({
     values: initial ?? undefined,
   });
 

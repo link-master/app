@@ -3,7 +3,7 @@ import {
   PopupSubmitHandler,
   PopupInfoState,
 } from '@/modules/collections/hooks';
-import { Collection } from '@linkmaster/types';
+import { CollectionType } from '@linkmaster/types';
 import { Popup, Heading } from '@linkmaster/uikit';
 
 type CollectionPopupProperties = PopupInfoState & {
@@ -22,7 +22,7 @@ export const CollectionPopup = ({
   const isActive = type !== 'hidden';
   const submitText = type === 'create' ? 'Создать' : 'Изменить';
 
-  const handleSubmit = (fields: Collection.CollectionFields) => {
+  const handleSubmit = (fields: CollectionType.CollectionFields) => {
     onSubmit({
       type,
       payload: fields,

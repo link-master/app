@@ -1,11 +1,11 @@
 import { AddReferenceForm } from '@/modules/references/components/add-reference-form';
-import { Reference } from '@linkmaster/types';
+import { ReferenceType } from '@linkmaster/types';
 import { Popup } from '@linkmaster/uikit';
 
-interface ReferencePopupProperties extends Partial<Reference.Reference> {
+interface ReferencePopupProperties extends Partial<ReferenceType.Reference> {
   active: boolean;
   onClose: () => void;
-  onSubmit: (reference: Reference.Reference) => void;
+  onSubmit: (reference: ReferenceType.Reference) => void;
 }
 
 export const ReferencePopup = ({
@@ -16,13 +16,13 @@ export const ReferencePopup = ({
   name,
   parent,
 }: ReferencePopupProperties) => {
-  const providedReference: Omit<Reference.Reference, 'id'> = {
+  const providedReference: Omit<ReferenceType.Reference, 'id'> = {
     link,
     name: name!,
     parent,
   };
 
-  const handleSubmit = (reference: Partial<Reference.Reference>) => {
+  const handleSubmit = (reference: Partial<ReferenceType.Reference>) => {
     const id = `reference-${Date.now()}`;
     onSubmit({
       id,

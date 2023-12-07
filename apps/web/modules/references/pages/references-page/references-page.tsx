@@ -10,7 +10,7 @@ import {
   selectReferences,
   setRawReferences,
 } from '@/modules/references/store';
-import { Reference } from '@linkmaster/types';
+import { ReferenceType } from '@linkmaster/types';
 import { useEffect, useState } from 'react';
 
 export const ReferencesPage = () => {
@@ -40,7 +40,7 @@ export const ReferencesPage = () => {
     return () => removeEventListener('paste', onPaste);
   }, []);
 
-  const onCreateReference = (reference: Reference.Reference) => {
+  const onCreateReference = (reference: ReferenceType.Reference) => {
     appDispatch(addReference(reference));
   };
 

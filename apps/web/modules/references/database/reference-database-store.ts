@@ -1,21 +1,22 @@
 import { getDatabase } from '@/database/database.ts';
-import { Reference } from '@linkmaster/types';
+import { ReferenceType } from '@linkmaster/types';
 
 export const referenceDatabaseStore = {
   list: async () => {
     const database = await getDatabase();
     return database.getAll('reference');
   },
-  add: async (reference: Reference.Reference) => {
+  add: async (reference: ReferenceType.Reference) => {
     const database = await getDatabase();
     await database.add('reference', reference);
   },
-  remove: async (id: Reference.Reference['id']) => {
+  remove: async (id: ReferenceType.Reference['id']) => {
     const database = await getDatabase();
     await database.delete('reference', id);
   },
   update: async (
-    reference: Partial<Reference.Reference> & Pick<Reference.Reference, 'id'>
+    reference: Partial<ReferenceType.Reference> &
+      Pick<ReferenceType.Reference, 'id'>
   ) => {
     const database = await getDatabase();
     const oldReference = await database.get('reference', reference.id);

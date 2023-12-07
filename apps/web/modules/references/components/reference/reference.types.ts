@@ -1,8 +1,8 @@
-import { Reference, Component } from '@linkmaster/types';
+import { ReferenceType, ComponentType } from '@linkmaster/types';
 import { MouseEvent } from 'react';
 
 export type ReferenceItemProperties =
-  Component.PropertiesWithClassname<Reference.Reference>;
+  ComponentType.PropertiesWithClassname<ReferenceType.Reference>;
 
 export interface ReferenceContextMenuProperties {
   onDelete: (event: MouseEvent) => void;

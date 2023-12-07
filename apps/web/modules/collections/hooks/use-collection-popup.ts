@@ -1,11 +1,7 @@
-import {
-  Collection as CollectionTypes,
-  Collection as CollectionType,
-} from '@linkmaster/types';
+import { CollectionType } from '@linkmaster/types';
 import { useAppSelector } from '@/hooks/use-redux.ts';
 import { selectCollection } from '@/modules/collections/store';
 import { useState } from 'react';
-import { Collection } from '@linkmaster/types';
 
 const useCollectionPopup = () => {
   const [popupInfo, setPopupInfo] = useState<PopupInfoState>({
@@ -56,7 +52,7 @@ interface PopupInfoActionCreate {
 
 interface PopupInfoActionChange {
   type: 'change';
-  payload: Collection.CollectionFields;
+  payload: CollectionType.CollectionFields;
 }
 
 interface PopupInfoActionHide {
@@ -71,7 +67,7 @@ export type PopupInfoState =
 
 export type PopupSubmitHandler = (info: {
   type: PopupInfoState['type'];
-  payload: CollectionTypes.CollectionFields;
+  payload: CollectionType.CollectionFields;
 }) => void;
 
 export { useCollectionPopup };

@@ -1,11 +1,11 @@
 import { Reference } from '@/modules/references/components';
-import { Reference as ReferenceTypes } from '@linkmaster/types';
+import { ReferenceType } from '@linkmaster/types';
 import { GridList } from '@/widgets/grid-list';
 import { Button } from '@linkmaster/uikit';
 
 interface ReferencesSectionProperties {
   onShowCreatePopup: () => void;
-  references: ReferenceTypes.Reference[];
+  references: ReferenceType.Reference[];
 }
 
 export const ReferenceSection = ({

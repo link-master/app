@@ -1,22 +1,22 @@
 import { getDatabase } from '@/database/database.ts';
-import { Collection } from '@linkmaster/types';
+import { CollectionType } from '@linkmaster/types';
 
 export const collectionDatabaseStore = {
   list: async () => {
     const database = await getDatabase();
     return database.getAll('collection');
   },
-  add: async (collection: Collection.Collection) => {
+  add: async (collection: CollectionType.Collection) => {
     const database = await getDatabase();
     await database.add('collection', collection);
   },
-  remove: async (id: Collection.Collection['id']) => {
+  remove: async (id: CollectionType.Collection['id']) => {
     const database = await getDatabase();
     await database.delete('collection', id);
   },
   update: async (
-    collection: Partial<Collection.Collection> &
-      Pick<Collection.Collection, 'id'>
+    collection: Partial<CollectionType.Collection> &
+      Pick<CollectionType.Collection, 'id'>
   ) => {
     const database = await getDatabase();
     const oldCollections = await database.get('collection', collection.id);

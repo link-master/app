@@ -1,4 +1,4 @@
-import { Collection, Reference } from '@linkmaster/types';
+import { CollectionType, ReferenceType } from '@linkmaster/types';
 import { DBSchema, IDBPDatabase, openDB } from 'idb';
 
 const DATABASE_NAME = 'linkmaster';
@@ -6,14 +6,14 @@ const DATABASE_VERSION = 1;
 
 interface LinkmasterDatabase extends DBSchema {
   reference: {
-    key: Reference.Reference['id'];
-    value: Reference.Reference;
-    indexes: { id: Reference.Reference['id'] };
+    key: ReferenceType.Reference['id'];
+    value: ReferenceType.Reference;
+    indexes: { id: ReferenceType.Reference['id'] };
   };
   collection: {
-    key: Collection.Collection['id'];
-    value: Collection.Collection;
-    indexes: { id: Collection.Collection['id'] };
+    key: CollectionType.Collection['id'];
+    value: CollectionType.Collection;
+    indexes: { id: CollectionType.Collection['id'] };
   };
 }
 

@@ -1,13 +1,12 @@
 import { Icon } from '@iconify/react';
-import { Collection as CollectionType } from '@linkmaster/types';
-import { Common } from '@linkmaster/types';
+import { CollectionType, CommonType } from '@linkmaster/types';
 import { Card, Text } from '@linkmaster/uikit';
 import { clsx } from 'clsx';
 
 interface CollectionProperties extends CollectionType.Collection {
   className?: string;
-  onChange: (id: Common.Identificator) => void;
-  onDelete: (id: Common.Identificator) => void;
+  onChange: (id: CommonType.Identificator) => void;
+  onDelete: (id: CommonType.Identificator) => void;
 }
 
 export const Collection = ({

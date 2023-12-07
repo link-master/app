@@ -1,11 +1,11 @@
 import { collectionDatabaseStore } from '@/modules/collections/database';
 import { RootState } from '@/store';
 import { StoreCollection } from '@/store/collections.ts';
-import { Collection } from '@linkmaster/types';
+import { CollectionType } from '@linkmaster/types';
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface CollectionSliceState {
-  collections: Collection.Collection[];
+  collections: CollectionType.Collection[];
 }
 
 const initialState: CollectionSliceState = {
@@ -14,7 +14,7 @@ const initialState: CollectionSliceState = {
 
 export const removeCollection = createAsyncThunk(
   `${StoreCollection.reference}/remove`,
-  async (payload: Collection.Collection['id']) => {
+  async (payload: CollectionType.Collection['id']) => {
     await collectionDatabaseStore.remove(payload);
     return payload;
   }
@@ -22,7 +22,7 @@ export const removeCollection = createAsyncThunk(
 
 export const updateCollection = createAsyncThunk(
   `${StoreCollection.collection}/update`,
-  async (payload: Collection.Collection) => {
+  async (payload: CollectionType.Collection) => {
     await collectionDatabaseStore.update(payload);
     return payload;
   }
@@ -30,8 +30,8 @@ export const updateCollection = createAsyncThunk(
 
 export const addCollection = createAsyncThunk(
   `${StoreCollection.reference}/add`,
-  async (payload: Collection.CollectionFields) => {
-    const collection: Collection.Collection = {
+  async (payload: CollectionType.CollectionFields) => {
+    const collection: CollectionType.Collection = {
       id: `collection:${Date.now()}`,
       ...payload,
     };
@@ -46,7 +46,7 @@ const collectionSlice = createSlice({
   reducers: {
     setRawCollections: (
       state,
-      action: PayloadAction<Collection.Collection[]>
+      action: PayloadAction<CollectionType.Collection[]>
     ) => {
       state.collections = action.payload;
     },
@@ -55,13 +55,13 @@ const collectionSlice = createSlice({
     builder
       .addCase(
         addCollection.fulfilled,
-        (state, action: PayloadAction<Collection.Collection>) => {
+        (state, action: PayloadAction<CollectionType.Collection>) => {
           state.collections.push(action.payload);
         }
       )
       .addCase(
         updateCollection.fulfilled,
-        (state, action: PayloadAction<Collection.Collection>) => {
+        (state, action: PayloadAction<CollectionType.Collection>) => {
           const foundIndex = state.collections.findIndex(
             (collection) => collection.id === action.payload.id
           );
@@ -70,7 +70,7 @@ const collectionSlice = createSlice({
       )
       .addCase(
         removeCollection.fulfilled,
-        (state, action: PayloadAction<Collection.Collection['id']>) => {
+        (state, action: PayloadAction<CollectionType.Collection['id']>) => {
           state.collections = state.collections.filter(
             (collection) => collection.id !== action.payload
           );

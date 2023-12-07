@@ -1,9 +1,9 @@
-import { Collection } from '@/types/collection.types.ts';
+import { CommonType, CollectionType } from '@linkmaster/types';
 
 export interface CreateCollectionPopupProperties {
   onClose: () => void;
-  onSubmit: (collection: Collection) => void;
+  onSubmit: (collection: CollectionType.Collection) => void;
   active: boolean;
   title?: string;
-  collectionId?: Collection['id'] | null;
+  collectionId?: CommonType.Identificator | null;
 }
