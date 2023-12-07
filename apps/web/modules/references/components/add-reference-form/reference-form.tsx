@@ -15,7 +15,7 @@ interface ReferenceAddFormProperties {
   onCancel: () => void;
 }
 
-export const AddReferenceForm = ({
+export const ReferenceForm = ({
   onSubmit,
   defaults,
   onCancel,

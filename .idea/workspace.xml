@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09f6e1da-80c2-4212-8c5c-63ad3fde2165" name="Changes" comment="refactor(types): changed types names (#10)">
-      <change beforePath="$PROJECT_DIR$/apps/web/database/database.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/database/database.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/modules/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/modules/references/components/add-reference-form/add-reference-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/references/components/add-reference-form/reference-form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/modules/references/components/add-reference-form/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/references/components/add-reference-form/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/modules/references/components/reference-popup/reference-popup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/references/components/reference-popup/reference-popup.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -564,7 +566,23 @@
       <option name="project" value="LOCAL" />
       <updated>1701948936037</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="refactor(types): changed types names (#10)">
+      <option name="closed" value="true" />
+      <created>1701949133963</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1701949133963</updated>
+    </task>
+    <task id="LOCAL-00046" summary="fix(modules): delete export as instructions (#11)">
+      <option name="closed" value="true" />
+      <created>1701949222750</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1701949222750</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <option name="createBranch" value="false" />
     <option name="useBranch" value="true" />
     <servers>
@@ -594,8 +612,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat(collections): add collections" />
-    <MESSAGE value="feat(atom): remove nanostores" />
     <MESSAGE value="feat(redux): add redux store" />
     <MESSAGE value="refactor(web): add new application" />
     <MESSAGE value="refactor(uikit): renamed items" />
@@ -618,8 +634,11 @@
     <MESSAGE value="refactor(form): remove unused elements" />
     <MESSAGE value="#2 Сделать форму для добавления коллекции" />
     <MESSAGE value="refactor(types): changed types names" />
+    <MESSAGE value="fix(database):" />
     <MESSAGE value="refactor(types): changed types names (#10)" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor(types): changed types names (#10)" />
+    <MESSAGE value="fix(modules): delete export as instructions (#11)" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix(modules): delete export as instructions (#11)" />
+    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

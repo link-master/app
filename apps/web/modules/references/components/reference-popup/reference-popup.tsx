@@ -1,4 +1,4 @@
-import { AddReferenceForm } from '@/modules/references/components/add-reference-form';
+import { ReferenceForm } from '@/modules/references/components/add-reference-form';
 import { ReferenceType } from '@linkmaster/types';
 import { Popup } from '@linkmaster/uikit';
 
@@ -40,7 +40,7 @@ export const ReferencePopup = ({
       onClose={onClose}
       root="#popup"
     >
-      <AddReferenceForm
+      <ReferenceForm
         defaults={providedReference}
         onCancel={onClose}
         onSubmit={handleSubmit}
