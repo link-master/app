@@ -4,23 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09f6e1da-80c2-4212-8c5c-63ad3fde2165" name="Changes" comment="feat(env): add templates feature">
-      <change afterPath="$PROJECT_DIR$/apps/web/modules/workspaces/components/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/modules/workspaces/components/workspace-changer/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/modules/workspaces/components/workspace-changer/workspace-changer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/modules/workspaces/components/workspace-form/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/modules/workspaces/components/workspace-form/workspace-form.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/modules/workspaces/components/workspace-popup/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/modules/workspaces/components/workspace-popup/workspace-popup.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/modules/workspaces/components/workspace/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/modules/workspaces/components/workspace/workspace.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/modules/workspaces/data/default-workspace.ts" afterDir="false" />
+    <list default="true" id="09f6e1da-80c2-4212-8c5c-63ad3fde2165" name="Changes" comment="feat(workspace): add workspace functionality">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/components/navigation/navigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/components/navigation/navigation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/database/database.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/database/database.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/hooks/use-local-storage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/hooks/use-local-storage.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configurations/typescript/tsconfig.node.json" beforeDir="false" afterPath="$PROJECT_DIR$/configurations/typescript/tsconfig.node.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/types/lib/workspace.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/types/lib/workspace.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/.env.development" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/.env.development" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/.env.production" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/.env.production" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/data/feature.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/data/feature.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/data/navigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/data/navigation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/vite-env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/vite-env.d.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,14 +201,6 @@
       <workItem from="1701332971605" duration="792000" />
       <workItem from="1701334301289" duration="6356000" />
       <workItem from="1701357574067" duration="1478000" />
-    </task>
-    <task id="LOCAL-00006" summary="feat(app): started making an application">
-      <option name="closed" value="true" />
-      <created>1698326835942</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1698326835942</updated>
     </task>
     <task id="LOCAL-00007" summary="feat(app): started making an application">
       <option name="closed" value="true" />
@@ -520,7 +502,7 @@
       <workItem from="1701596518719" duration="398000" />
       <workItem from="1701964123265" duration="3081000" />
       <workItem from="1702018631789" duration="11490000" />
-      <workItem from="1702123335283" duration="525000" />
+      <workItem from="1702123335283" duration="862000" />
     </task>
     <task id="LOCAL-00042" summary="refactor(types): changed types names">
       <option name="closed" value="true" />
@@ -618,7 +600,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701964793015</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="feat(workspace): add workspace functionality">
+      <option name="closed" value="true" />
+      <created>1702123941744</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1702123941745</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <option name="createBranch" value="false" />
     <option name="useBranch" value="true" />
     <servers>
@@ -648,7 +638,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat(web): done with references" />
     <MESSAGE value="feat(env): add features functionality and .env types" />
     <MESSAGE value="feat(collections): add collections module" />
     <MESSAGE value="fix(uikit): fixed declaration files imports" />
@@ -673,7 +662,8 @@
     <MESSAGE value="feat(collections): add validation for inputs in collection-form.tsx (#13)" />
     <MESSAGE value="feat(collections): add collection navigation" />
     <MESSAGE value="feat(env): add templates feature" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(env): add templates feature" />
+    <MESSAGE value="feat(workspace): add workspace functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(workspace): add workspace functionality" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">

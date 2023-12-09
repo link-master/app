@@ -1,4 +1,9 @@
-import { FEATURE_COLLECTION, FEATURE_TEMPLATE } from '@/data/feature';
+import {
+  FEATURE_COLLECTION,
+  FEATURE_HOME,
+  FEATURE_SETTINGS,
+  FEATURE_TEMPLATE,
+} from '@/data/feature';
 import { DashboardPage } from '@/modules/dashboard/pages';
 import { ReferencesPage } from '@/modules/references/pages';
 import { TutorialPage } from '@/modules/tutorial/pages';
@@ -15,6 +20,7 @@ export const routes = {
   home: {
     path: '/',
     element: <DashboardPage />,
+    feature: FEATURE_HOME,
   },
   tutorial: {
     path: '/tutorial',
@@ -23,6 +29,7 @@ export const routes = {
   settings: {
     path: '/settings',
     element: <DashboardPage />,
+    feature: FEATURE_SETTINGS,
   },
   references: {
     path: '/references',
@@ -47,19 +54,28 @@ export const routeList = Object.values(routes).filter((item) => {
   return true;
 }) as RouteObject[];
 
+if (!FEATURE_HOME) {
+  routeList.push({
+    path: '/',
+    element: <ReferencesPage />,
+  });
+}
+
 const navigation: NavigationItem[] = [];
-navigation.push(
-  {
+
+if (FEATURE_HOME) {
+  navigation.push({
     name: 'Главная',
     url: routes.home.path,
     icon: 'fe:home',
-  },
-  {
-    name: 'Референсы',
-    url: routes.references.path,
-    icon: 'fe:link',
-  }
-);
+  });
+}
+
+navigation.push({
+  name: 'Референсы',
+  url: routes.references.path,
+  icon: 'fe:link',
+});
 
 if (FEATURE_COLLECTION) {
   navigation.push({
@@ -77,10 +93,12 @@ if (FEATURE_TEMPLATE) {
   });
 }
 
-navigation.push({
-  name: 'Настройки',
-  url: '/settings',
-  icon: 'fe:gear',
-});
+if (FEATURE_SETTINGS) {
+  navigation.push({
+    name: 'Настройки',
+    url: '/settings',
+    icon: 'fe:gear',
+  });
+}
 
 export { navigation };
