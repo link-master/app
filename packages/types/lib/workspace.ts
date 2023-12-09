@@ -5,3 +5,5 @@ export interface Workspace {
   name: string;
   slug: string;
 }
+
+export type WorkspaceFields = Pick<Workspace, 'name' | 'slug'>;

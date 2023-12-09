@@ -1,13 +1,16 @@
 import { useState } from 'react';
+import { WorkspaceType, CommonType } from '@linkmaster/types';
 
 export enum LocalStorageKey {
   tutorial = 'tutorial',
-  currentWorkspace = 'workspace',
+  currentWorkspace = 'currentWorkspaceId',
+  workspaces = 'workspaces',
 }
 
 interface LocalStoragePair {
   [LocalStorageKey.tutorial]: boolean;
-  [LocalStorageKey.currentWorkspace]: boolean;
+  [LocalStorageKey.currentWorkspace]: CommonType.Identificator;
+  [LocalStorageKey.workspaces]: WorkspaceType.Workspace[];
 }
 
 const useLocalStorage = (key: keyof LocalStoragePair) => {

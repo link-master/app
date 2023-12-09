@@ -1,8 +1,16 @@
+import { LocalStorageKey } from '@/hooks/use-local-storage.ts';
 import { CollectionType, ReferenceType } from '@linkmaster/types';
 import { DBSchema, IDBPDatabase, openDB } from 'idb';
 
-const DATABASE_NAME = 'linkmaster';
+let currentDatabaseName = localStorage.getItem(
+  LocalStorageKey.currentWorkspace
+) as string;
+const DEFAULT_DATABASE_NAME = 'linkmaster';
 const DATABASE_VERSION = 1;
+if (!currentDatabaseName) {
+  localStorage.setItem('CURRENT_DB', DEFAULT_DATABASE_NAME);
+  currentDatabaseName = DEFAULT_DATABASE_NAME;
+}
 
 interface LinkmasterDatabase extends DBSchema {
   reference: {
@@ -35,21 +43,23 @@ const createCollectionStore = (database: IDBPDatabase<LinkmasterDatabase>) =>
   });
 
 let openedDatabase: IDBPDatabase<LinkmasterDatabase>;
+
+const openDatabase = () => {
+  const currentDatabaseName = localStorage.getItem(
+    LocalStorageKey.currentWorkspace
+  ) as string;
+  return openDB<LinkmasterDatabase>(currentDatabaseName, DATABASE_VERSION, {
+    upgrade(database) {
+      createReferenceStore(database);
+      createCollectionStore(database);
+    },
+  });
+};
+
 export const getDatabase = async () => {
   if (openedDatabase) {
     return openedDatabase;
   }
 
-  openedDatabase = await openDB<LinkmasterDatabase>(
-    DATABASE_NAME,
-    DATABASE_VERSION,
-    {
-      upgrade(database) {
-        createReferenceStore(database);
-        createCollectionStore(database);
-      },
-    }
-  );
-
-  return openedDatabase;
+  return openDatabase();
 };

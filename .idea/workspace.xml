@@ -4,21 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09f6e1da-80c2-4212-8c5c-63ad3fde2165" name="Changes" comment="feat(collections): add collection navigation">
+    <list default="true" id="09f6e1da-80c2-4212-8c5c-63ad3fde2165" name="Changes" comment="feat(env): add templates feature">
+      <change afterPath="$PROJECT_DIR$/apps/web/modules/workspaces/components/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/modules/workspaces/components/workspace-changer/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/modules/workspaces/components/workspace-changer/workspace-changer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/modules/workspaces/components/workspace-form/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/modules/workspaces/components/workspace-form/workspace-form.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/modules/workspaces/components/workspace-popup/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/modules/workspaces/components/workspace-popup/workspace-popup.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/modules/workspaces/components/workspace/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/modules/workspaces/components/workspace/workspace.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/modules/workspaces/data/default-workspace.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/.env.development" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/.env.development" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/.env.production" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/.env.production" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/components/navigation/navigation-item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/components/navigation/navigation-item.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/web/components/navigation/navigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/components/navigation/navigation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/components/navigation/navigation.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/components/navigation/navigation.types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/data/feature.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/data/feature.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/data/navigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/data/navigation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/hooks/use-redux.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/hooks/use-redux.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/modules/collections/components/collection/collection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/collections/components/collection/collection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/modules/tutorial/components/tutorial-slide/tutorial-slide.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/modules/tutorial/components/tutorial-slide/tutorial-slide.types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/vite-env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/vite-env.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/vite.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/widgets/progressbar/progressbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/widgets/progressbar/progressbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/database/database.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/database/database.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/hooks/use-local-storage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/hooks/use-local-storage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configurations/typescript/tsconfig.node.json" beforeDir="false" afterPath="$PROJECT_DIR$/configurations/typescript/tsconfig.node.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/types/lib/workspace.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/types/lib/workspace.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +42,9 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/node_modules/.pnpm/idb@7.1.1/node_modules/idb/build/entry.d.ts" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -85,7 +90,7 @@
     "node.js.selected.package.standard": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "inlay.hints",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "ts.external.directory.path": "/Users/tokiory/Projects/linkmaster/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -206,14 +211,6 @@
       <workItem from="1701332971605" duration="792000" />
       <workItem from="1701334301289" duration="6356000" />
       <workItem from="1701357574067" duration="1478000" />
-    </task>
-    <task id="LOCAL-00005" summary="feat(ui): add more uikit components">
-      <option name="closed" value="true" />
-      <created>1698326778376</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1698326778376</updated>
     </task>
     <task id="LOCAL-00006" summary="feat(app): started making an application">
       <option name="closed" value="true" />
@@ -521,7 +518,9 @@
       <workItem from="1701439135010" duration="990000" />
       <workItem from="1701440136861" duration="6272000" />
       <workItem from="1701596518719" duration="398000" />
-      <workItem from="1701964123265" duration="626000" />
+      <workItem from="1701964123265" duration="3081000" />
+      <workItem from="1702018631789" duration="11490000" />
+      <workItem from="1702123335283" duration="525000" />
     </task>
     <task id="LOCAL-00042" summary="refactor(types): changed types names">
       <option name="closed" value="true" />
@@ -611,7 +610,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701964257072</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="feat(env): add templates feature">
+      <option name="closed" value="true" />
+      <created>1701964793015</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1701964793015</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <option name="createBranch" value="false" />
     <option name="useBranch" value="true" />
     <servers>
@@ -641,7 +648,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix(eslint): remove some rules" />
     <MESSAGE value="feat(web): done with references" />
     <MESSAGE value="feat(env): add features functionality and .env types" />
     <MESSAGE value="feat(collections): add collections module" />
@@ -666,7 +672,8 @@
     <MESSAGE value="feat(init): add validation for inputs in reference-form.tsx (#12)" />
     <MESSAGE value="feat(collections): add validation for inputs in collection-form.tsx (#13)" />
     <MESSAGE value="feat(collections): add collection navigation" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(collections): add collection navigation" />
+    <MESSAGE value="feat(env): add templates feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(env): add templates feature" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">

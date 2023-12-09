@@ -1,4 +1,5 @@
 import { navigation } from '@/data/navigation.tsx';
+import { WorkspaceChanger } from '@/modules/workspaces/components';
 import { Sidebar } from '@/widgets/sidebar';
 import { Icon } from '@iconify/react';
 import { clsx } from 'clsx';
@@ -24,6 +25,7 @@ export const Navigation = ({ className }: NavigationProperties) => {
 
   return (
     <Sidebar className="max-w-[600px] min-w-[256px]" resizeable>
+      <WorkspaceChanger />
       <nav
         className={clsx(
           'p-4',
